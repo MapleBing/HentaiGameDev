@@ -1,0 +1,10 @@
+[gd_scene format=2]
+
+[node name="ItemSprite" type="TextureRect"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0

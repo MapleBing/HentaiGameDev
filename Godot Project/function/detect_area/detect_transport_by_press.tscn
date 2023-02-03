@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://function/detect_area/detect_transport_by_press.gd" type="Script" id=1]
+
+[node name="detect_transport" type="Area2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+modulate = Color( 0.811765, 0.12549, 0.933333, 1 )
+
+[connection signal="body_entered" from="." to="." method="_on_detect_transport_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_detect_transport_body_exited"]

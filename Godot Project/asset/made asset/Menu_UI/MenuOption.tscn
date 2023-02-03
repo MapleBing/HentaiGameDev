@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/example_balloon/font_normal.tres" type="DynamicFont" id=1]
+
+[node name="MenuOption" type="Control"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 22.0
+margin_right = 74.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+text = "Resume"
+
+[node name="Button" type="Button" parent="Label"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 31.0
+margin_bottom = 21.0
+rect_scale = Vector2( 1, 0.57 )

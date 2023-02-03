@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/moose5-attack-all effects-347x192.png-b0122c4f8fde88cb166b8d8c41a14ebf.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://asset/Rafael - EPIC RPG World Pack - Ancient Ruins V 1.7/Characters/Moose/moose5-attack-all effects-347x192.png"
+dest_files=[ "res://.import/moose5-attack-all effects-347x192.png-b0122c4f8fde88cb166b8d8c41a14ebf.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

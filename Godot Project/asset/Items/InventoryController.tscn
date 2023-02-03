@@ -1,0 +1,133 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://asset/Items/Scripts/InventoryController.gd" type="Script" id=1]
+[ext_resource path="res://asset/Rafael - EPIC RPG World Pack - Ancient Ruins V 1.7/Props/Obelisk1-stand.png" type="Texture" id=2]
+[ext_resource path="res://asset/Items/ItemSprite.tscn" type="PackedScene" id=4]
+
+[node name="InventoryController" type="Control"]
+script = ExtResource( 1 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 216.0
+margin_bottom = 94.0
+rect_clip_content = true
+size_flags_horizontal = 3
+custom_constants/separation = -3
+
+[node name="EquipContainer" type="PanelContainer" parent="HBoxContainer2"]
+margin_right = 60.0
+margin_bottom = 164.0
+rect_min_size = Vector2( 60, 164 )
+size_flags_stretch_ratio = 0.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer2/EquipContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 53.0
+margin_bottom = 157.0
+grow_horizontal = 0
+grow_vertical = 2
+rect_clip_content = true
+size_flags_horizontal = 3
+custom_constants/separation = -2
+
+[node name="Equips" type="RichTextLabel" parent="HBoxContainer2/EquipContainer/VBoxContainer2"]
+margin_right = 46.0
+margin_bottom = 15.0
+text = "Equips"
+fit_content_height = true
+
+[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer2/EquipContainer/VBoxContainer2"]
+margin_top = 13.0
+margin_right = 46.0
+margin_bottom = 59.0
+
+[node name="ItemSprite2" parent="HBoxContainer2/EquipContainer/VBoxContainer2/PanelContainer2" instance=ExtResource( 4 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 39.0
+margin_bottom = 39.0
+texture = ExtResource( 2 )
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer2/EquipContainer/VBoxContainer2"]
+margin_top = 57.0
+margin_right = 46.0
+margin_bottom = 65.0
+custom_constants/margin_bottom = 8
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer2/EquipContainer/VBoxContainer2"]
+margin_top = 63.0
+margin_right = 46.0
+margin_bottom = 109.0
+
+[node name="ItemSprite2" parent="HBoxContainer2/EquipContainer/VBoxContainer2/PanelContainer" instance=ExtResource( 4 )]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 39.0
+margin_bottom = 39.0
+texture = ExtResource( 2 )
+
+[node name="InventoryContainer" type="PanelContainer" parent="HBoxContainer2"]
+margin_left = 57.0
+margin_right = 281.0
+margin_bottom = 164.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer2/InventoryContainer"]
+margin_left = 7.0
+margin_top = 7.0
+margin_right = 217.0
+margin_bottom = 157.0
+rect_min_size = Vector2( 210, 0.871 )
+custom_constants/separation = 3
+
+[node name="Key Items" type="RichTextLabel" parent="HBoxContainer2/InventoryContainer/VBoxContainer"]
+margin_right = 210.0
+margin_bottom = 15.0
+text = "Key Items"
+fit_content_height = true
+
+[node name="KeyItems" type="HBoxContainer" parent="HBoxContainer2/InventoryContainer/VBoxContainer"]
+margin_top = 18.0
+margin_right = 210.0
+margin_bottom = 50.0
+
+[node name="ItemSprite" parent="HBoxContainer2/InventoryContainer/VBoxContainer/KeyItems" instance=ExtResource( 4 )]
+margin_right = 32.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+
+[node name="ItemSprite2" parent="HBoxContainer2/InventoryContainer/VBoxContainer/KeyItems" instance=ExtResource( 4 )]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+
+[node name="ItemSprite3" parent="HBoxContainer2/InventoryContainer/VBoxContainer/KeyItems" instance=ExtResource( 4 )]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 32.0
+texture = ExtResource( 2 )
+
+[node name="Consumable Container" type="RichTextLabel" parent="HBoxContainer2/InventoryContainer/VBoxContainer"]
+margin_top = 53.0
+margin_right = 210.0
+margin_bottom = 68.0
+text = "Consumables"
+fit_content_height = true
+
+[node name="ItemSprite" parent="HBoxContainer2/InventoryContainer/VBoxContainer/Consumable Container" instance=ExtResource( 4 )]
+
+[node name="ItemSprite" parent="HBoxContainer2/InventoryContainer/VBoxContainer" instance=ExtResource( 4 )]
+margin_top = 71.0
+margin_right = 210.0
+margin_bottom = 103.0
+rect_clip_content = true
+texture = ExtResource( 2 )
+stretch_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.163589, 0.163589 )

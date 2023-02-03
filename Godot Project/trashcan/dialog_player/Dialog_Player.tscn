@@ -1,0 +1,112 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://font/ARIALBD.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://font/ARIAL.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://asset/made asset/dialog_UI/chat_bar.png" type="Texture" id=3]
+[ext_resource path="res://trashcan/dialog_player/Dialog_Player.gd" type="Script" id=4]
+[ext_resource path="res://asset/made asset/dialog_UI/hint btn Z.png" type="Texture" id=5]
+[ext_resource path="res://asset/made asset/dialog_UI/hint box.png" type="Texture" id=6]
+[ext_resource path="res://asset/made asset/dialog_UI/hint describe interact.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "button"
+length = 0.5
+loop = true
+step = 0.0833333
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 281, 165 ), Vector2( 281, 164 ) ]
+}
+
+[node name="Dialogue_1" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 4 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_top = 0.589
+anchor_right = 0.05
+anchor_bottom = 0.589
+margin_left = -26.0
+margin_top = 1.98
+margin_right = 358.0
+margin_bottom = 75.98
+texture = ExtResource( 3 )
+region_rect = Rect2( -47.8131, 527.249, 1965.78, 578.71 )
+patch_margin_left = 124
+patch_margin_top = 49
+patch_margin_right = 93
+patch_margin_bottom = 41
+
+[node name="dialogue" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 114.0
+margin_top = 20.0
+margin_right = 318.0
+margin_bottom = 63.0
+custom_colors/default_color = Color( 0.454902, 0.133333, 0.882353, 1 )
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+
+[node name="ID" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 114.0
+margin_top = 4.0
+margin_right = 185.0
+margin_bottom = 19.0
+custom_colors/default_color = Color( 0.521569, 0.317647, 0.317647, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+
+[node name="button" type="CanvasLayer" parent="."]
+
+[node name="hint box" type="Sprite" parent="button"]
+position = Vector2( 287, 165 )
+scale = Vector2( 0.15, 0.16 )
+texture = ExtResource( 6 )
+
+[node name="hint characters" type="Sprite" parent="button"]
+position = Vector2( 293, 165 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="button"]
+position = Vector2( 281, 165 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="button/Sprite"]
+autoplay = "button"
+anims/button = SubResource( 3 )
+
+[node name="next-indicator" type="Sprite" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="next-indicator"]
+
+[node name="Tween" type="Tween" parent="."]
+playback_speed = 16.0
+playback/speed = 16.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="tween_completed" from="Tween" to="." method="_on_Tween_tween_completed"]
+[connection signal="tween_started" from="Tween" to="." method="_on_Tween_tween_started"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

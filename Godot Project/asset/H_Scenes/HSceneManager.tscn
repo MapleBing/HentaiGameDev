@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://asset/H_Scenes/HSceneManager.gd" type="Script" id=1]
+
+[node name="HScenes" type="Node2D"]
+script = ExtResource( 1 )
+hentai_scene = "res://asset/H_Scenes/HentaiScene1.tscn"

@@ -1,0 +1,177 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://addons/FishingMinigame/Assets/Fishing-Column.png" type="Texture" id=2]
+[ext_resource path="res://addons/FishingMinigame/Assets/Progress-Bar.png" type="Texture" id=3]
+[ext_resource path="res://addons/FishingMinigame/Assets/Progress-Empty.png" type="Texture" id=4]
+[ext_resource path="res://addons/FishingMinigame/Assets/Hook.png" type="Texture" id=5]
+[ext_resource path="res://addons/FishingMinigame/Game.gd" type="Script" id=7]
+[ext_resource path="res://addons/FishingMinigame/Button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://addons/FishingMinigame/Assets/Nunito/Nunito-SemiBoldItalic.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6.79924, 18.9973 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 10 )
+
+[node name="FishingGame" type="Node2D"]
+scale = Vector2( 0.454777, 0.555066 )
+script = ExtResource( 7 )
+
+[node name="Progress" type="TextureProgress" parent="."]
+margin_left = 662.844
+margin_top = 16.0
+margin_right = 672.844
+margin_bottom = 301.0
+max_value = 1000.0
+page = 1.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+
+[node name="FishingColumn" type="Sprite" parent="."]
+position = Vector2( 648.175, 158.597 )
+texture = ExtResource( 2 )
+
+[node name="Hook" type="Node2D" parent="."]
+position = Vector2( 648.669, 264.833 )
+scale = Vector2( 1, 1.7927 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Hook"]
+texture = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="Hook"]
+collision_layer = 32
+collision_mask = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hook/Area2D"]
+shape = SubResource( 1 )
+
+[node name="Clicker" type="TextureButton" parent="."]
+margin_left = -3.54941
+margin_right = 638.451
+margin_bottom = 319.0
+
+[node name="EndGame" parent="." instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 543.123
+margin_top = 273.841
+margin_right = 624.123
+margin_bottom = 308.841
+focus_mode = 0
+enabled_focus_mode = 0
+type = "End Game"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 543.123
+margin_top = 70.2619
+margin_right = 624.123
+margin_bottom = 261.262
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button" parent="GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 81.0
+margin_bottom = 35.0
+focus_mode = 0
+enabled_focus_mode = 0
+type = "Shota"
+
+[node name="Button2" parent="GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 39.0
+margin_right = 81.0
+margin_bottom = 74.0
+focus_mode = 0
+enabled_focus_mode = 0
+type = "Virgin"
+
+[node name="Button3" parent="GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 78.0
+margin_right = 81.0
+margin_bottom = 113.0
+focus_mode = 0
+enabled_focus_mode = 0
+type = "Adventurer"
+
+[node name="Button4" parent="GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 117.0
+margin_right = 81.0
+margin_bottom = 152.0
+focus_mode = 0
+enabled_focus_mode = 0
+type = "Futa"
+
+[node name="Button5" parent="GridContainer" instance=ExtResource( 9 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 156.0
+margin_right = 81.0
+margin_bottom = 191.0
+focus_mode = 0
+enabled_focus_mode = 0
+type = "Ugly Bast..."
+
+[node name="Message" type="Label" parent="."]
+margin_left = 11.2327
+margin_top = 111.92
+margin_right = 140.233
+margin_bottom = 160.92
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 507.941
+margin_top = 16.2143
+margin_right = 625.941
+margin_bottom = 50.2143
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Serve Customer"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 290.252
+margin_top = 264.833
+margin_right = 631.252
+margin_bottom = 298.833
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Click or tap anywhere to stroke"
+valign = 1
+
+[node name="Settings" type="Node2D" parent="."]
+position = Vector2( 412.933, 55.9204 )
+
+[node name="MessageTimer" type="Timer" parent="."]
+
+[connection signal="area_entered" from="Hook/Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Hook/Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="button_down" from="Clicker" to="." method="_on_Clicker_button_down"]
+[connection signal="button_down" from="EndGame" to="." method="_on_EndGame_button_down"]
+[connection signal="pressed" from="GridContainer/Button" to="." method="spawn_easy"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="spawn_medium"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="spawn_hard"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="spawn_impossible"]
+[connection signal="pressed" from="GridContainer/Button5" to="." method="spawn_seriously"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]

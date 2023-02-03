@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/3 tiles tall wall tileset template with some illustration and ids for exemplification.png-90653f271d9b9250c15d90a522f306f7.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://asset/Rafael - EPIC RPG World Pack - Ancient Ruins V 1.7/3 tiles tall wall tileset template with some illustration and ids for exemplification.png"
+dest_files=[ "res://.import/3 tiles tall wall tileset template with some illustration and ids for exemplification.png-90653f271d9b9250c15d90a522f306f7.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

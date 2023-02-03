@@ -1,0 +1,524 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 84
+syntax_version = 2
+raw_text = "~ test_ver1
+#波浪開頭就是標題
+do emit(\"portrait_right\")
+if has_met_nathan == false
+	Nathan: Hello
+	set has_met_nathan = true
+else
+	Nathan: How are you
+	
+do emit(\"portrait_right\")
+Nathan: Here are some choices.
+do emit(\"portrait_left\")
+- First one
+	Erie: Whats this about.
+	do emit(\"portrait_left\")
+	
+- Lets fish [if some_value > 10] #如果超過10才會顯示
+	do emit(\"setUpFishingGame\")
+	=> END
+	
+	Erie: Could you repeat that.
+- Start again 
+	set some_value = 20 #選擇start again的時候設置成20，達成上面的條件
+	=> test_ver1
+	
+- End the conversation 
+	do emit(\"portrait_none\")
+	=> END
+do emit(\"portrait_right\")
+Nathan: For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.
+do emit(\"portrait_none\")
+=> END
+
+~ test_2
+do emit(\"portrait_right\")
+Nathan: Wanna play with my beach ball?
+do emit(\"portrait_left\")
+- Inee
+	do emit(\"portrait_none\")
+	do emit(\"h_scene\")
+	do emit(\"text_anim_set\",\"hScene_1\")
+	Erie: Kimochii
+	do emit(\"h_scene_end\")
+- Yadaa
+	Erie: Yamette Kudasai
+do emit_signal(\"portrait_none\")
+=> END
+	
+"
+errors = [  ]
+titles = {
+"test_2": "34",
+"test_ver1": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "test_ver1",
+"type": "title"
+},
+"10": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "11",
+"replacements": [  ],
+"text": "Here are some choices.",
+"translation_key": "Here are some choices.",
+"type": "dialogue"
+},
+"11": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_left"
+} ] ]
+} ]
+},
+"next_id": "12",
+"type": "mutation"
+},
+"12": {
+"next_id": "13",
+"next_id_after": "28",
+"replacements": [  ],
+"responses": PoolStringArray( "12", "16", "21", "25" ),
+"text": "First one",
+"translation_key": "First one",
+"type": "response"
+},
+"13": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "14",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Whats this about.",
+"translation_key": "Whats this about.",
+"type": "dialogue"
+},
+"14": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_left"
+} ] ]
+} ]
+},
+"next_id": "28",
+"parent_id": "12",
+"type": "mutation"
+},
+"16": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "some_value"
+}, {
+"type": "comparison",
+"value": ">"
+}, {
+"type": "number",
+"value": 10
+} ]
+},
+"next_id": "17",
+"next_id_after": "28",
+"replacements": [  ],
+"text": "Lets fish",
+"translation_key": "Lets fish",
+"type": "response"
+},
+"17": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "setUpFishingGame"
+} ] ]
+} ]
+},
+"next_id": "18",
+"parent_id": "16",
+"type": "mutation"
+},
+"18": {
+"next_id": "end",
+"parent_id": "16",
+"type": "goto"
+},
+"2": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "3",
+"type": "mutation"
+},
+"20": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "28",
+"parent_id": "16",
+"replacements": [  ],
+"text": "Could you repeat that.",
+"translation_key": "Could you repeat that.",
+"type": "dialogue"
+},
+"21": {
+"next_id": "22",
+"next_id_after": "28",
+"replacements": [  ],
+"text": "Start again",
+"translation_key": "Start again",
+"type": "response"
+},
+"22": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "some_value"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 20
+} ]
+},
+"next_id": "23",
+"parent_id": "21",
+"type": "mutation"
+},
+"23": {
+"next_id": "2",
+"parent_id": "21",
+"type": "goto"
+},
+"25": {
+"next_id": "26",
+"next_id_after": "28",
+"replacements": [  ],
+"text": "End the conversation",
+"translation_key": "End the conversation",
+"type": "response"
+},
+"26": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "27",
+"parent_id": "25",
+"type": "mutation"
+},
+"27": {
+"next_id": "end",
+"parent_id": "25",
+"type": "goto"
+},
+"28": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "29",
+"type": "mutation"
+},
+"29": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "30",
+"replacements": [  ],
+"text": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
+"translation_key": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_nathan"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "6",
+"next_id": "4",
+"next_id_after": "9",
+"type": "condition"
+},
+"30": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "31",
+"type": "mutation"
+},
+"31": {
+"next_id": "end",
+"type": "goto"
+},
+"33": {
+"next_id": "34",
+"text": "test_2",
+"type": "title"
+},
+"34": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "35",
+"type": "mutation"
+},
+"35": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "36",
+"replacements": [  ],
+"text": "Wanna play with my beach ball?",
+"translation_key": "Wanna play with my beach ball?",
+"type": "dialogue"
+},
+"36": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_left"
+} ] ]
+} ]
+},
+"next_id": "37",
+"type": "mutation"
+},
+"37": {
+"next_id": "38",
+"next_id_after": "45",
+"replacements": [  ],
+"responses": PoolStringArray( "37", "43" ),
+"text": "Inee",
+"translation_key": "Inee",
+"type": "response"
+},
+"38": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "39",
+"parent_id": "37",
+"type": "mutation"
+},
+"39": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "h_scene"
+} ] ]
+} ]
+},
+"next_id": "40",
+"parent_id": "37",
+"type": "mutation"
+},
+"4": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "3",
+"replacements": [  ],
+"text": "Hello",
+"translation_key": "Hello",
+"type": "dialogue"
+},
+"40": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "text_anim_set"
+} ], [ {
+"type": "string",
+"value": "hScene_1"
+} ] ]
+} ]
+},
+"next_id": "41",
+"parent_id": "37",
+"type": "mutation"
+},
+"41": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "42",
+"parent_id": "37",
+"replacements": [  ],
+"text": "Kimochii",
+"translation_key": "Kimochii",
+"type": "dialogue"
+},
+"42": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "h_scene_end"
+} ] ]
+} ]
+},
+"next_id": "45",
+"parent_id": "37",
+"type": "mutation"
+},
+"43": {
+"next_id": "44",
+"next_id_after": "45",
+"replacements": [  ],
+"text": "Yadaa",
+"translation_key": "Yadaa",
+"type": "response"
+},
+"44": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "45",
+"parent_id": "43",
+"replacements": [  ],
+"text": "Yamette Kudasai",
+"translation_key": "Yamette Kudasai",
+"type": "dialogue"
+},
+"45": {
+"mutation": {
+"expression": [ {
+"function": "emit_signal",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "46",
+"type": "mutation"
+},
+"46": {
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_nathan"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "9",
+"parent_id": "3",
+"type": "mutation"
+},
+"6": {
+"next_conditional_id": "9",
+"next_id": "7",
+"next_id_after": "9",
+"type": "condition"
+},
+"7": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "9",
+"parent_id": "6",
+"replacements": [  ],
+"text": "How are you",
+"translation_key": "How are you",
+"type": "dialogue"
+},
+"9": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "10",
+"type": "mutation"
+}
+}
