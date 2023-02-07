@@ -1,8 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/FishingMinigame/icon.png" type="Texture" id=1]
+[ext_resource path="res://asset/Items/InventoryItem.gd" type="Script" id=2]
 
 [node name="ItemSprite" type="TextureRect"]
 margin_right = 40.0
 margin_bottom = 40.0
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 visible = false

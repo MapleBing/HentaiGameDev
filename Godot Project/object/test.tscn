@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://asset/Rafael - EPIC RPG World Pack - Ancient Ruins V 1.7/Props/generic_estructure1-1-on grass-topdown.png" type="Texture" id=1]
+[ext_resource path="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/generic_estructure1-1-on grass-topdown.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 9, 9 )
