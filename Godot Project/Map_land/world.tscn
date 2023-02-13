@@ -21,7 +21,7 @@
 [ext_resource path="res://trashcan/light_test.gd" type="Script" id=19]
 [ext_resource path="res://trashcan/study2.gd" type="Script" id=20]
 [ext_resource path="res://addons/h_scene_controller.tscn" type="PackedScene" id=21]
-[ext_resource path="res://asset/Ich.io_BGM/01TownBGM-guitar.wav" type="AudioStream" id=22]
+[ext_resource path="res://asset/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=22]
 [ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=23]
 [ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=24]
 [ext_resource path="res://Map_land/AudioController.gd" type="Script" id=25]
@@ -709,6 +709,7 @@ margin_right = 40.0
 margin_bottom = 39.0
 script = ExtResource( 26 )
 Pause_Menu = "res://asset/made asset/Menu_UI/PauseMenu.tscn"
+Inventory_Menu = "res://asset/Items/InventoryController.tscn"
 
 [node name="h_scene_controller" parent="CanvasLayer" instance=ExtResource( 21 )]
 
@@ -717,11 +718,12 @@ Pause_Menu = "res://asset/made asset/Menu_UI/PauseMenu.tscn"
 [node name="minigame_manager" parent="CanvasLayer" instance=ExtResource( 24 )]
 
 [node name="AudioController" type="Node2D" parent="CanvasLayer"]
+z_as_relative = false
 script = ExtResource( 25 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="CanvasLayer/AudioController"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/AudioController"]
 stream = ExtResource( 22 )
-volume_db = -33.076
+volume_db = -40.0
 
 [node name="SaveLoadDemo" type="Node2D" parent="."]
 position = Vector2( 0, 1 )

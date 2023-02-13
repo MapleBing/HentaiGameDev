@@ -29,17 +29,6 @@ func _ready() -> void:
 	# hide the player.
 	#_player.toggle_camera_offset(_ui_inventory.visible)
 
-
-# Toggles the inventory's visibility when pressing I.
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("toggle_inventory"):
-		if not _ui_inventory.visible:
-			_ui_inventory.show()
-		else:
-			_ui_inventory.hide()
-		_player.toggle_camera_offset(_ui_inventory.visible)
-
-
 #func _physics_process(delta: float) -> void:
 	#_ui_info_display.update_player_position(_player.global_position)
 

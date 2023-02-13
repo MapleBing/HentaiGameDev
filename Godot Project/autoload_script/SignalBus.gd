@@ -17,6 +17,7 @@ signal portrait_none
 signal setUpFishingGame
 signal setUpEndGame
 signal setUpPause
+signal setUpInventory
 signal playspeed_anim
 
 
