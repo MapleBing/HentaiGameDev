@@ -12,7 +12,7 @@ export var ui_info_display : NodePath
 
 
 onready var _player = get_node(player)
-onready var _ui_inventory = get_node(ui_inventory)
+#onready var _ui_inventory = get_node(ui_inventory)
 onready var _ui_save_panel = get_node(ui_save_panel)
 onready var _ui_info_display = get_node(ui_info_display)
 

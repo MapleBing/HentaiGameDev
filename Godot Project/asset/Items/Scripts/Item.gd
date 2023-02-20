@@ -10,10 +10,14 @@ export(int) var quantity
 export(String) var hover_text
 
 func setUpItem(Item_id = 0, Quantity = 0):
+	item_id = Item_id
 	item_name = ItemBus.getName(Item_id)
 	item_texture = ItemBus.getTexture(Item_id)
 	hover_text = ItemBus.getHoverText(Item_id)
 
+func getID():
+	return item_id
+	
 func getName():
 	return item_name
 
@@ -28,4 +32,6 @@ func getTexture() -> Texture:
 
 func getHoverText() -> String:
 	return hover_text
+	
+
 

@@ -6,6 +6,7 @@ signal portrait_change(Portrait)
 signal restart_anim(restart)
 signal change_anim(animName)
 signal text_anim_set(hScene_0)
+signal inventorySlotShift(x)
 
 signal dialogue_finished
 signal dialogue_started
@@ -19,5 +20,8 @@ signal setUpEndGame
 signal setUpPause
 signal setUpInventory
 signal playspeed_anim
+signal inventoryMenuShiftRight
+signal inventoryMenuShiftLeft
+signal inventoryMenuConfirm
 
 

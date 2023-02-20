@@ -7,17 +7,17 @@ var currentItem : String = ""
 func getItemDetails(ItemID)-> String:
 	match ItemID: #Name, SpriteFilePath, +/Description"
 		0:
-			itemData = "name,"
+			itemData = "Golden Pyramid 1,"
 			itemData += "res://asset/Sprites/Items/Obelisk1_01-stand.png,"
-			itemData += "Test item with no particular use"
+			itemData += "1st Test item with no particular use"
 		1: 
-			itemData = "name,"
+			itemData = "Golden Pyramid 2,"
 			itemData += "res://asset/Sprites/Items/Obelisk1_02-stand.png,"
-			itemData += "Test item with no particular use"
+			itemData += "2nd Test item with no particular use"
 		2: 
-			itemData = "name,"
+			itemData = "Golden Pyramid 3,"
 			itemData += "res://asset/Sprites/Items/Obelisk1_03-stand.png,"
-			itemData += "Test item with no particular use"
+			itemData += "3rd Test item with no particular use"
 	return itemData
 
 func getName(ItemID) -> String:

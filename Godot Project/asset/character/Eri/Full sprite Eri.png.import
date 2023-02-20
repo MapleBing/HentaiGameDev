@@ -1,0 +1,19 @@
+[remap]
+
+importer="texture_atlas"
+type="Texture"
+path="res://.import/Full sprite Eri.png-2128cc13542c869a27e7103f77d83588.res"
+group_file="res://asset/character/Eri/EriPLayer.tres"
+valid=true
+[deps]
+
+
+source_file="res://asset/character/Eri/Full sprite Eri.png"
+dest_files=[ "res://.import/Full sprite Eri.png-2128cc13542c869a27e7103f77d83588.res" ]
+
+[params]
+
+atlas_file="res://asset/character/Eri/EriPLayer.tres"
+import_mode=1
+crop_to_region=false
+trim_alpha_border_from_region=true

@@ -1,7 +1,6 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://player/player_control_v1.gd" type="Script" id=1]
-[ext_resource path="res://asset/character/Pixel Character/no_name chara/未命名角色 (主角).png" type="Texture" id=2]
 [ext_resource path="res://asset/Ich.io_BGM/HGameDev_mixedFootstep.wav" type="AudioStream" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -260,7 +259,7 @@ nodes/idle/node = SubResource( 17 )
 nodes/idle/position = Vector2( -380, 120 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -380, 300 )
-node_connections = [ "output", 0, "animation_speed", "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk" ]
+node_connections = [ "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition", "output", 0, "animation_speed" ]
 
 [node name="player" type="KinematicBody2D"]
 position = Vector2( 0, -13 )
@@ -268,8 +267,7 @@ script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, -1 )
-texture = ExtResource( 2 )
-hframes = 12
+hframes = 32
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

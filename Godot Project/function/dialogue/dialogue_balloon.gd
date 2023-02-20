@@ -131,12 +131,12 @@ func get_responses() -> Array:
 ### Signals
 
 
-func _on_response_mouse_entered(item):
+func _on_response_mouse_entered(item) -> void:
 	if not "disallowed" in item.name.to_lower():
 		item.grab_focus()
 
 
-func _on_response_gui_input(event, item):
+func _on_response_gui_input(event, item) -> void:
 	if "disallowed" in item.name.to_lower(): return
 	
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
@@ -146,7 +146,7 @@ func _on_response_gui_input(event, item):
 
 
 # When there are no response options the balloon itself is the clickable thing
-func _on_Balloon_gui_input(event):
+func _on_Balloon_gui_input(event) -> void:
 	if not is_waiting_for_input: return
 	
 	get_tree().set_input_as_handled()

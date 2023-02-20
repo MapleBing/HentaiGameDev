@@ -9,11 +9,10 @@ var currentItem = item.new()
 func setUpItemSprite(itemId = 0, quantity = 1) -> void:
 	currentItem.setUpItem(itemId,quantity)
 	set_texture(currentItem.getTexture())
-	get_child(0).set_text(str(quantity))
 	pass
 	
-func getID() -> int:
-	return currentItem.getID()
+func getItem() -> item:
+	return currentItem
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
