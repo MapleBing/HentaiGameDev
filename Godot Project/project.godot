@@ -60,7 +60,7 @@ SignalBus="*res://autoload_script/SignalBus.gd"
 ScenePos="*res://autoload_script/ScenePos.gd"
 DialogState="*res://autoload_script/dialog_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-HSceneManager="*res://asset/H_Scenes/HSceneManager.tscn"
+HSceneManager="*res://asset/HScenes/HSceneManager.tscn"
 ItemBus="*res://asset/Items/Scripts/ItemBus.gd"
 
 [display]

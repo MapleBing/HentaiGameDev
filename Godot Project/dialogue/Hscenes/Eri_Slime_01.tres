@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 85
+resource_version = 1
 syntax_version = 2
-raw_text = "~ test_ver1
+raw_text = "~ First Encounter
 #波浪開頭就是標題
 do emit(\"portrait_right\")
 if has_met_nathan == false
@@ -55,15 +55,21 @@ do emit_signal(\"portrait_none\")
 => END
 	
 "
-errors = [  ]
+errors = [ {
+"line": 0,
+"message": "Titles can only contain alphanumerics and underscores"
+}, {
+"line": 23,
+"message": "Unknown title"
+} ]
 titles = {
-"test_2": "34",
-"test_ver1": "2"
+"First Encounter": "2",
+"test_2": "34"
 }
 lines = {
 "0": {
 "next_id": "2",
-"text": "test_ver1",
+"text": "First Encounter",
 "type": "title"
 },
 "10": {
@@ -213,7 +219,7 @@ lines = {
 "type": "mutation"
 },
 "23": {
-"next_id": "2",
+"next_id": "error",
 "parent_id": "21",
 "type": "goto"
 },
