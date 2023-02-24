@@ -52,6 +52,8 @@ func _create_or_load_save() -> void:
 	#_ui_inventory.inventory = _save.inventory
 	_player.stats = _save.character
 	#_ui_info_display.character = _save.character
+	
+	#TL's testing changes
 
 
 func _save_game() -> void:
