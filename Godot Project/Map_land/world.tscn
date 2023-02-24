@@ -549,7 +549,7 @@ pause_mode = 1
 
 [node name="player" parent="YSort/MovingEntity" instance=ExtResource( 4 )]
 light_mask = 0
-position = Vector2( 368, 216 )
+position = Vector2( 362, 216 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/MovingEntity/player"]
 current = true
@@ -704,13 +704,13 @@ position = Vector2( 552, 191 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 pause_mode = 1
+visible = false
 color = Color( 0.141176, 0.145098, 0.164706, 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 script = ExtResource( 23 )
 
 [node name="UI_Container" type="Control" parent="CanvasLayer"]
-visible = false
 margin_top = -1.0
 margin_right = 40.0
 margin_bottom = 39.0
@@ -719,6 +719,7 @@ Pause_Menu = "res://asset/made asset/Menu_UI/PauseMenu.tscn"
 Inventory_Menu = "res://asset/Items/InventoryController_V2.tscn"
 
 [node name="InventoryController_V2" parent="CanvasLayer/UI_Container" instance=ExtResource( 29 )]
+visible = false
 margin_top = 1.0
 margin_bottom = 1.0
 
