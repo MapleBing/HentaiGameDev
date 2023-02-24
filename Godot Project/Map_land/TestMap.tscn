@@ -531,7 +531,7 @@ light_mask = 16
 position = Vector2( 147, 104 )
 
 [node name="Slime" parent="YSort/MovingEntity" instance=ExtResource( 2 )]
-position = Vector2( 306, 140 )
+position = Vector2( 306, 141 )
 
 [node name="maps" type="Node" parent="."]
 

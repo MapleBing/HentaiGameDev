@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Project"
-run/main_scene="res://Map_land/world.tscn"
+run/main_scene="res://Map_land/TestMap.tscn"
 config/icon="res://icon.png"
 
 [autoload]
