@@ -164,6 +164,7 @@ animation = "Idle_right"
 animation = "Idle_down"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=16]
+resource_local_to_scene = true
 blend_point_0/node = SubResource( 11 )
 blend_point_0/pos = Vector2( 0, 1.1 )
 blend_point_1/node = SubResource( 12 )
@@ -191,6 +192,7 @@ animation = "left"
 animation = "right"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id=23]
+resource_local_to_scene = true
 blend_point_0/node = SubResource( 19 )
 blend_point_0/pos = Vector2( 0, 1.1 )
 blend_point_1/node = SubResource( 20 )
@@ -209,7 +211,7 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id=17]
 states/idle/node = SubResource( 16 )
-states/idle/position = Vector2( 315, 77 )
+states/idle/position = Vector2( 319, 77 )
 states/walk/node = SubResource( 23 )
 states/walk/position = Vector2( 538, 77 )
 transitions = [ "idle", "walk", SubResource( 24 ), "walk", "idle", SubResource( 25 ) ]

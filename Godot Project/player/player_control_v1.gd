@@ -61,3 +61,4 @@ func _process(delta):
 
 	#於debugger介面輸出體力,力竭，動畫播放速度的參數
 	velocity = move_and_slide(velocity)
+	

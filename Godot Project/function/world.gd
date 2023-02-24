@@ -10,7 +10,11 @@ func dialogue_deactivate(): # TL新加的，用來接signal
 
 func set_dialogue(dialogue_key):
 	call_dialog = dialogue_key
-	play()
+	play(dialogue_file, dialogue_key)
+
+func set_hSceneDialogue(hScene_file,dialogue_key):
+	call_dialog = dialogue_key
+	play(hScene_file, dialogue_key)
 
 func _ready():
 	SignalBus.connect("display_dialog", self, "set_dialogue")
@@ -19,7 +23,7 @@ func _ready():
 		$YSort.get_node("MovingEntity").get_node("player").set_position(
 			get_node("maps").get_node(ScenePos.from_scene + "Pos").position)
 
-func play():
+func play(dialogue_file, dialogue_key):
 	get_tree().paused = true
 	if File.new().file_exists(dialogue_file):
 		DialogueManager.dialogue_box(call_dialog, resource)

@@ -1,17 +1,13 @@
 [remap]
 
-importer="texture_atlas"
-type="Texture"
-path="res://.import/Eri-chan 01-25-23.png-3171fa7bf93ec41104f8b9fa24b31813.res"
+importer="image"
+type="Image"
+path="res://.import/Eri-chan 01-25-23.png-3171fa7bf93ec41104f8b9fa24b31813.image"
 
 [deps]
 
 source_file="res://asset/character/Eri/Eri-chan 01-25-23.png"
-dest_files=[ "res://.import/Eri-chan 01-25-23.png-3171fa7bf93ec41104f8b9fa24b31813.res" ]
+dest_files=[ "res://.import/Eri-chan 01-25-23.png-3171fa7bf93ec41104f8b9fa24b31813.image" ]
 
 [params]
 
-atlas_file="res://asset/character/Eri/Full sprite Eri.png"
-import_mode=0
-crop_to_region=false
-trim_alpha_border_from_region=true

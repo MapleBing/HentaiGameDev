@@ -1,38 +1,27 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=23 format=2]
 
-[ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png" type="Texture" id=1]
-[ext_resource path="res://asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Dirt2_pipo.png" type="Texture" id=2]
-[ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" type="Texture" id=3]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://object/StaticBody2D.tscn" type="PackedScene" id=5]
-[ext_resource path="res://function/world.gd" type="Script" id=6]
-[ext_resource path="res://function/detect_area/detect_transport.tscn" type="PackedScene" id=7]
-[ext_resource path="res://asset/made asset/Lights/light_sight3.png" type="Texture" id=8]
-[ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=9]
-[ext_resource path="res://function/detect_area/detect_dialog_by_press_global.tscn" type="PackedScene" id=10]
-[ext_resource path="res://NPCs/青行燈.tscn" type="PackedScene" id=11]
-[ext_resource path="res://object/test.tscn" type="PackedScene" id=12]
-[ext_resource path="res://asset/HScenes/HSceneManager.tscn" type="PackedScene" id=13]
-[ext_resource path="res://NPCs/巫女.tscn" type="PackedScene" id=14]
-[ext_resource path="res://asset/made asset/Lights/mask.png" type="Texture" id=15]
-[ext_resource path="res://asset/made asset/Lights/lampu.png" type="Texture" id=16]
-[ext_resource path="res://function/rotation.gd" type="Script" id=17]
-[ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Player.png" type="Texture" id=18]
-[ext_resource path="res://trashcan/light_test.gd" type="Script" id=19]
-[ext_resource path="res://trashcan/study2.gd" type="Script" id=20]
-[ext_resource path="res://addons/h_scene_controller.tscn" type="PackedScene" id=21]
-[ext_resource path="res://asset/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=22]
-[ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=23]
-[ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=24]
-[ext_resource path="res://Map_land/AudioController.gd" type="Script" id=25]
-[ext_resource path="res://Map_land/UI_Container.gd" type="Script" id=26]
-[ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=27]
-[ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=28]
-[ext_resource path="res://asset/Items/InventoryController_V2.tscn" type="PackedScene" id=29]
+[ext_resource path="res://function/world.gd" type="Script" id=1]
+[ext_resource path="res://NPCs/Slime.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png" type="Texture" id=4]
+[ext_resource path="res://asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Dirt2_pipo.png" type="Texture" id=5]
+[ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" type="Texture" id=6]
+[ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=8]
+[ext_resource path="res://Map_land/UI_Container.gd" type="Script" id=9]
+[ext_resource path="res://Map_land/AudioController.gd" type="Script" id=11]
+[ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=13]
+[ext_resource path="res://asset/Items/InventoryController_V2.tscn" type="PackedScene" id=14]
+[ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=16]
+[ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=18]
+[ext_resource path="res://addons/h_scene_controller.tscn" type="PackedScene" id=20]
+[ext_resource path="res://NPCs/巫女.tscn" type="PackedScene" id=21]
+[ext_resource path="res://asset/HScenes/HSceneManager.tscn" type="PackedScene" id=23]
+[ext_resource path="res://NPCs/青行燈.tscn" type="PackedScene" id=24]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=25]
+[ext_resource path="res://asset/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=28]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
-0/texture = ExtResource( 1 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 256, 128 )
@@ -53,7 +42,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "TX Tileset Grass.png 1"
-1/texture = ExtResource( 1 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 256, 128 )
@@ -76,7 +65,7 @@
 
 [sub_resource type="TileSet" id=2]
 0/name = "[A]Dirt2_pipo.png 0"
-0/texture = ExtResource( 2 )
+0/texture = ExtResource( 5 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 256, 128 )
@@ -99,7 +88,7 @@
 0/shapes = [  ]
 0/z_index = 0
 1/name = "[A]Dirt2_pipo.png 1"
-1/texture = ExtResource( 2 )
+1/texture = ExtResource( 5 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 0, 0, 256, 192 )
@@ -122,7 +111,7 @@
 1/shapes = [  ]
 1/z_index = 0
 2/name = "[A]Dirt2_pipo.png 2"
-2/texture = ExtResource( 2 )
+2/texture = ExtResource( 5 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 0, 0, 256, 192 )
@@ -150,7 +139,7 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [sub_resource type="TileSet" id=3]
 0/name = "TX Tileset Stone Ground.png 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 6 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 256, 256 )
@@ -474,28 +463,10 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=14]
-
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 10, 6.5 )
-
-[sub_resource type="OccluderPolygon2D" id=12]
-cull_mode = 1
-polygon = PoolVector2Array( 47, -57, 67, -57, 67, -70, 47, -70 )
-
-[sub_resource type="OccluderPolygon2D" id=11]
-polygon = PoolVector2Array( -5, 1, 5, 1, 5, -5, -5, -5, -5, -5 )
-
-[sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 10, 8 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 11, 31 )
-
 [node name="world" type="Node2D"]
 pause_mode = 2
-position = Vector2( 0, -1 )
-script = ExtResource( 6 )
+position = Vector2( -2, -1 )
+script = ExtResource( 1 )
 dialogue_file = "res://dialogue/dialog_text(Dialog_manager)/dialog_manager.tres"
 
 [node name="Land" type="Node2D" parent="."]
@@ -526,28 +497,12 @@ tile_data = PoolIntArray( -5, 0, 3, -65532, 0, 0, -65531, 0, 393220, -65530, 0, 
 [node name="dialog_areas" type="Node2D" parent="."]
 pause_mode = 1
 
-[node name="detect_dialog_by_press" parent="dialog_areas" instance=ExtResource( 10 )]
-pause_mode = 0
-dialog_key = "test_ver1"
-
-[node name="CollisionShape2D" parent="dialog_areas/detect_dialog_by_press" index="0"]
-position = Vector2( 420, 211 )
-shape = SubResource( 14 )
-
-[node name="detect_dialog_by_press2" parent="dialog_areas" instance=ExtResource( 10 )]
-pause_mode = 0
-dialog_key = "test_2"
-
-[node name="CollisionShape2D" parent="dialog_areas/detect_dialog_by_press2" index="0"]
-position = Vector2( 452, 211 )
-shape = SubResource( 14 )
-
 [node name="YSort" type="YSort" parent="."]
 pause_mode = 1
 
 [node name="MovingEntity" type="YSort" parent="YSort"]
 
-[node name="player" parent="YSort/MovingEntity" instance=ExtResource( 4 )]
+[node name="player" parent="YSort/MovingEntity" instance=ExtResource( 25 )]
 light_mask = 0
 position = Vector2( 368, 216 )
 
@@ -565,193 +520,60 @@ smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
 
-[node name="Light2D" type="Light2D" parent="YSort/MovingEntity/player/Camera2D"]
-visible = false
-scale = Vector2( 0.315521, 0.186931 )
-texture = ExtResource( 15 )
-mode = 3
-range_item_cull_mask = 16
-shadow_item_cull_mask = 0
-
-[node name="lamp_light" type="Light2D" parent="YSort/MovingEntity/player"]
-visible = false
-scale = Vector2( 0.7, 0.5 )
-texture = ExtResource( 16 )
-offset = Vector2( 135, 0 )
-texture_scale = 1.2
-color = Color( 0.929412, 0.815686, 0.74902, 1 )
-mode = 2
-range_item_cull_mask = 31
-shadow_enabled = true
-shadow_color = Color( 0.227451, 0.2, 0.2, 0 )
-shadow_filter_smooth = 15.1
-shadow_item_cull_mask = 12
-script = ExtResource( 17 )
-
-[node name="Light_Sight2" type="Light2D" parent="YSort/MovingEntity/player"]
-visible = false
-scale = Vector2( 0.8, 0.8 )
-texture = ExtResource( 8 )
-texture_scale = 0.5
-color = Color( 0.929412, 0.815686, 0.74902, 0.486275 )
-mode = 2
-range_item_cull_mask = 31
-shadow_enabled = true
-shadow_color = Color( 0.227451, 0.2, 0.2, 0 )
-shadow_filter = 1
-shadow_filter_smooth = 19.0
-shadow_item_cull_mask = 12
-
-[node name="Light_Sight" type="Light2D" parent="YSort/MovingEntity/player"]
-visible = false
-scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 8 )
-texture_scale = 0.5
-color = Color( 0.929412, 0.815686, 0.74902, 1 )
-mode = 2
-range_item_cull_mask = 31
-shadow_enabled = true
-shadow_color = Color( 0.227451, 0.2, 0.2, 0 )
-shadow_filter = 1
-shadow_filter_smooth = 19.0
-shadow_item_cull_mask = 12
-
-[node name="Light_Sight3" type="Light2D" parent="YSort/MovingEntity/player"]
-visible = false
-scale = Vector2( 0.6, 0.6 )
-texture = ExtResource( 8 )
-texture_scale = 0.5
-color = Color( 0.929412, 0.815686, 0.74902, 1 )
-mode = 2
-range_item_cull_mask = 31
-shadow_enabled = true
-shadow_color = Color( 0.227451, 0.2, 0.2, 0 )
-shadow_filter = 1
-shadow_filter_smooth = 19.0
-shadow_item_cull_mask = 12
-
-[node name="巫女" parent="YSort/MovingEntity" instance=ExtResource( 14 )]
+[node name="巫女" parent="YSort/MovingEntity" instance=ExtResource( 21 )]
 position = Vector2( 271, 226 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="青行燈" parent="YSort/MovingEntity" instance=ExtResource( 11 )]
+[node name="青行燈" parent="YSort/MovingEntity" instance=ExtResource( 24 )]
 light_mask = 16
 position = Vector2( 147, 104 )
 
-[node name="test1" parent="YSort" instance=ExtResource( 12 )]
-light_mask = 0
-position = Vector2( 400, 120 )
-
-[node name="Steadicbody2D" parent="YSort" instance=ExtResource( 5 )]
-position = Vector2( 420, 198 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="test2" type="StaticBody2D" parent="YSort"]
-position = Vector2( 446, 258 )
-
-[node name="Sprite" type="Sprite" parent="YSort/test2"]
-light_mask = 2
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 18 )
-
-[node name="Area2D" type="Area2D" parent="YSort/test2"]
-script = ExtResource( 20 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/test2/Area2D"]
-position = Vector2( -82, -67.5 )
-shape = SubResource( 13 )
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="YSort/test2/Area2D"]
-light_mask = 8
-position = Vector2( -139, -4 )
-occluder = SubResource( 12 )
-light_mask = 8
-script = ExtResource( 19 )
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="YSort/test2"]
-light_mask = 8
-position = Vector2( -24, -5 )
-occluder = SubResource( 11 )
-light_mask = 8
+[node name="Slime" parent="YSort/MovingEntity" instance=ExtResource( 2 )]
+position = Vector2( 306, 140 )
 
 [node name="maps" type="Node" parent="."]
 
-[node name="A1" parent="maps" instance=ExtResource( 9 )]
-pause_mode = 1
-position = Vector2( 513, 199 )
-
-[node name="CollisionShape2D" parent="maps/A1" index="0"]
-shape = SubResource( 10 )
-
-[node name="A1Pos" type="Position2D" parent="maps"]
-pause_mode = 1
-position = Vector2( 513, 199 )
-
-[node name="A1-2" parent="maps" instance=ExtResource( 7 )]
-pause_mode = 1
-position = Vector2( 589, 192 )
-
-[node name="CollisionShape2D" parent="maps/A1-2" index="0"]
-shape = SubResource( 7 )
-
-[node name="A1-2Pos" type="Position2D" parent="maps"]
-pause_mode = 1
-position = Vector2( 552, 191 )
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-pause_mode = 1
-color = Color( 0.141176, 0.145098, 0.164706, 1 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource( 23 )
+script = ExtResource( 8 )
 
 [node name="UI_Container" type="Control" parent="CanvasLayer"]
 visible = false
 margin_top = -1.0
 margin_right = 40.0
 margin_bottom = 39.0
-script = ExtResource( 26 )
+script = ExtResource( 9 )
 Pause_Menu = "res://asset/made asset/Menu_UI/PauseMenu.tscn"
 Inventory_Menu = "res://asset/Items/InventoryController_V2.tscn"
 
-[node name="InventoryController_V2" parent="CanvasLayer/UI_Container" instance=ExtResource( 29 )]
+[node name="InventoryController_V2" parent="CanvasLayer/UI_Container" instance=ExtResource( 14 )]
 margin_top = 1.0
 margin_bottom = 1.0
 
-[node name="h_scene_controller" parent="CanvasLayer" instance=ExtResource( 21 )]
+[node name="h_scene_controller" parent="CanvasLayer" instance=ExtResource( 20 )]
 
-[node name="HScenes" parent="CanvasLayer" instance=ExtResource( 13 )]
+[node name="HScenes" parent="CanvasLayer" instance=ExtResource( 23 )]
 
-[node name="minigame_manager" parent="CanvasLayer" instance=ExtResource( 24 )]
+[node name="minigame_manager" parent="CanvasLayer" instance=ExtResource( 16 )]
 
 [node name="AudioController" type="Node2D" parent="CanvasLayer"]
 z_as_relative = false
-script = ExtResource( 25 )
+script = ExtResource( 11 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/AudioController"]
-stream = ExtResource( 22 )
+stream = ExtResource( 28 )
 volume_db = -40.0
 
 [node name="SaveLoadDemo" type="Node2D" parent="."]
 position = Vector2( 0, 1 )
-script = ExtResource( 28 )
+script = ExtResource( 13 )
 player = NodePath("../YSort/MovingEntity/player")
 ui_save_panel = NodePath("UI for SL and Inventory demo/UISavePanel")
 
 [node name="UI for SL and Inventory demo" type="CanvasLayer" parent="SaveLoadDemo"]
 
-[node name="UISavePanel" parent="SaveLoadDemo/UI for SL and Inventory demo" instance=ExtResource( 27 )]
+[node name="UISavePanel" parent="SaveLoadDemo/UI for SL and Inventory demo" instance=ExtResource( 18 )]
 margin_right = 0.0
 margin_bottom = 0.0
 rect_scale = Vector2( 0.5, 0.5 )
-
-[connection signal="body_entered" from="YSort/test2/Area2D" to="YSort/test2/Area2D" method="_on_Area2D_body_entered"]
-
-[editable path="dialog_areas/detect_dialog_by_press"]
-[editable path="dialog_areas/detect_dialog_by_press2"]
-[editable path="maps/A1"]
-[editable path="maps/A1-2"]
