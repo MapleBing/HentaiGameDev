@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 85
+resource_version = 86
 syntax_version = 2
 raw_text = "~ test_ver1
 #波浪開頭就是標題

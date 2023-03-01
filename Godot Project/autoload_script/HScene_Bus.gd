@@ -4,7 +4,7 @@ var itemID = 0
 var itemData: String  = ""
 var currentItem : String = ""
 
-func getHScene(ItemID)-> String:
+func getHScene(H )-> String:
 	match ItemID: #Name, SpriteFilePath, +/Description"
 		0:
 			itemData = "res://asset/HScenes/SpriteAnimations/HScene_Slime_eri V2-Sheet.png,"

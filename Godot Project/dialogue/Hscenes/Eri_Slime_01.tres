@@ -4,16 +4,16 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 1
+resource_version = 2
 syntax_version = 2
 raw_text = "~ First Encounter
 #波浪開頭就是標題
 do emit(\"portrait_right\")
 if has_met_nathan == false
-	Nathan: Hello
+	Slime: Jiggle*
 	set has_met_nathan = true
 else
-	Nathan: How are you
+	Slime: Jiggle*
 	
 do emit(\"portrait_right\")
 Nathan: Here are some choices.
@@ -392,13 +392,13 @@ lines = {
 "type": "mutation"
 },
 "4": {
-"character": "Nathan",
+"character": "Slime",
 "character_replacements": [  ],
 "next_id": "5",
 "parent_id": "3",
 "replacements": [  ],
-"text": "Hello",
-"translation_key": "Hello",
+"text": "Jiggle*",
+"translation_key": "Jiggle*",
 "type": "dialogue"
 },
 "40": {
@@ -504,13 +504,13 @@ lines = {
 "type": "condition"
 },
 "7": {
-"character": "Nathan",
+"character": "Slime",
 "character_replacements": [  ],
 "next_id": "9",
 "parent_id": "6",
 "replacements": [  ],
-"text": "How are you",
-"translation_key": "How are you",
+"text": "Jiggle*",
+"translation_key": "Jiggle*",
 "type": "dialogue"
 },
 "9": {
