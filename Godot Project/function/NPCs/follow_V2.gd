@@ -5,6 +5,9 @@ export var MAX_SPEED = 80
 export var Step_Amount = 10
 export var FRICTION = 200
 
+export(String, FILE) var dialogue_file
+onready var resource = load(dialogue_file)
+
 onready var PlayerDetectionZone = $PlayerDetectionZone
 onready var animation_player = $AnimationPlayer
 onready var animation_tree = $AnimationTree
@@ -67,3 +70,6 @@ func follow_player():
 		state = IDLE
 func step():
 	pass
+func getDialogueFile() -> String:
+	return dialogue_file
+	
