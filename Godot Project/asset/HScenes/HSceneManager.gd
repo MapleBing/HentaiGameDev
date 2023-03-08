@@ -8,15 +8,18 @@ export(String, FILE) var hentai_scene
 # var b: String = "text"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SignalBus.connect("h_scene", self, "openHScene")
-	SignalBus.connect("h_scene_end", self, "endHScene")
+	SignalBus.connect("start_h_scene", self, "startHScene")
+	SignalBus.connect("end_h_scene", self, "endHScene")
 	
-func openHScene():
-	scene = load("res://asset/H_Scenes/HentaiScene1.tscn")
+func startHScene(MonsterName):
+	if hScenes != null:
+		endHScene()
+	scene = load(HSceneBus.getHScene(MonsterName))
 	hScenes = scene.instance()
 	add_child(hScenes)
 func endHScene():
 	hScenes.queue_free()
+	hScenes = null
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

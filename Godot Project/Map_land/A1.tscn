@@ -4,7 +4,7 @@
 [ext_resource path="res://asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Dirt2_pipo.png" type="Texture" id=2]
 [ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" type="Texture" id=3]
 [ext_resource path="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Props.png" type="Texture" id=4]
-[ext_resource path="res://player/player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://trashcan/player/player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://function/world.gd" type="Script" id=7]
 [ext_resource path="res://function/rotation.gd" type="Script" id=8]
 [ext_resource path="res://asset/made asset/Lights/lampu.png" type="Texture" id=9]

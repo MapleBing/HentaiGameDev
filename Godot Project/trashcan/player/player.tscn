@@ -1,8 +1,9 @@
 [gd_scene load_steps=35 format=2]
 
-[ext_resource path="res://player/player_control_v1.gd" type="Script" id=1]
+[ext_resource path="res://trashcan/player/player_control_v1.gd" type="Script" id=1]
 [ext_resource path="res://asset/character/Eri/Full sprite Eri v2-Sheet.png" type="Texture" id=2]
 [ext_resource path="res://asset/Ich.io_BGM/HGameDev_mixedFootstep.wav" type="AudioStream" id=3]
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.0

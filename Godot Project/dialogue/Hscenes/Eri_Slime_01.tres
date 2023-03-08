@@ -4,129 +4,46 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 4
+resource_version = 33
 syntax_version = 2
-raw_text = "~ First Encounter
+raw_text = "~ encounter
 #波浪開頭就是標題
 do emit(\"portrait_none\")
-if has_met_ = 0
-	Slime: Jiggle*
-	Eri: Ahh 
-	openH
-if has_met_ = 1
-	Slime: Jiggle*
-	Eri: not again
-if has_met_ = 2
-	Slime: Jiggle*
-	Eri: Why is this happening
-else
-	Slime: Jiggle*
-	Eri: . . .
-	-Break free
-	=> END
-has_met_ ++
+Eri: AHHH
+
+do emit(\"start_h_scene\",\"slime\")
+Slime: Jiggle*
+Eri: Mhmm
+Slime: Jiggle*  Jiggle* Jiggle* 
+
+do emit(\"end_h_scene\")
 => END
 "
-errors = [ {
-"line": 0,
-"message": "Titles can only contain alphanumerics and underscores"
-} ]
+errors = [  ]
 titles = {
-"First Encounter": "2"
+"encounter": "2"
 }
 lines = {
 "0": {
 "next_id": "2",
-"text": "First Encounter",
+"text": "encounter",
 "type": "title"
 },
 "10": {
-"condition": {
+"mutation": {
 "expression": [ {
-"type": "variable",
-"value": "has_met_"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "number",
-"value": 2
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "end_h_scene"
+} ] ]
 } ]
 },
-"next_conditional_id": "13",
 "next_id": "11",
-"next_id_after": "18",
-"type": "condition"
+"type": "mutation"
 },
 "11": {
-"character": "Slime",
-"character_replacements": [  ],
-"next_id": "12",
-"parent_id": "10",
-"replacements": [  ],
-"text": "Jiggle*",
-"translation_key": "Jiggle*",
-"type": "dialogue"
-},
-"12": {
-"character": "Eri",
-"character_replacements": [  ],
-"next_id": "18",
-"parent_id": "10",
-"replacements": [  ],
-"text": "Why is this happening",
-"translation_key": "Why is this happening",
-"type": "dialogue"
-},
-"13": {
-"next_conditional_id": "18",
-"next_id": "14",
-"next_id_after": "18",
-"type": "condition"
-},
-"14": {
-"character": "Slime",
-"character_replacements": [  ],
-"next_id": "15",
-"parent_id": "13",
-"replacements": [  ],
-"text": "Jiggle*",
-"translation_key": "Jiggle*",
-"type": "dialogue"
-},
-"15": {
-"character": "Eri",
-"character_replacements": [  ],
-"next_id": "16",
-"parent_id": "13",
-"replacements": [  ],
-"text": ". . .",
-"translation_key": ". . .",
-"type": "dialogue"
-},
-"16": {
-"character": "",
-"next_id": "17",
-"parent_id": "13",
-"replacements": [  ],
-"text": "-Break free",
-"translation_key": "-Break free",
-"type": "dialogue"
-},
-"17": {
-"next_id": "end",
-"parent_id": "13",
-"type": "goto"
-},
-"18": {
-"character": "",
-"next_id": "19",
-"replacements": [  ],
-"text": "has_met_ ++",
-"translation_key": "has_met_ ++",
-"type": "dialogue"
-},
-"19": {
 "next_id": "end",
 "type": "goto"
 },
@@ -145,88 +62,56 @@ lines = {
 "type": "mutation"
 },
 "3": {
-"condition": {
-"expression": [ {
-"type": "variable",
-"value": "has_met_"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "number",
-"value": 0
-} ]
-},
-"next_conditional_id": "7",
-"next_id": "4",
-"next_id_after": "7",
-"type": "condition"
-},
-"4": {
-"character": "Slime",
+"character": "Eri",
 "character_replacements": [  ],
 "next_id": "5",
-"parent_id": "3",
+"replacements": [  ],
+"text": "AHHH",
+"translation_key": "AHHH",
+"type": "dialogue"
+},
+"5": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "start_h_scene"
+} ], [ {
+"type": "string",
+"value": "slime"
+} ] ]
+} ]
+},
+"next_id": "6",
+"type": "mutation"
+},
+"6": {
+"character": "Slime",
+"character_replacements": [  ],
+"next_id": "7",
 "replacements": [  ],
 "text": "Jiggle*",
 "translation_key": "Jiggle*",
 "type": "dialogue"
 },
-"5": {
+"7": {
 "character": "Eri",
 "character_replacements": [  ],
-"next_id": "6",
-"parent_id": "3",
-"replacements": [  ],
-"text": "Ahh",
-"translation_key": "Ahh",
-"type": "dialogue"
-},
-"6": {
-"character": "",
-"next_id": "7",
-"parent_id": "3",
-"replacements": [  ],
-"text": "openH",
-"translation_key": "openH",
-"type": "dialogue"
-},
-"7": {
-"condition": {
-"expression": [ {
-"type": "variable",
-"value": "has_met_"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "number",
-"value": 1
-} ]
-},
-"next_conditional_id": "10",
 "next_id": "8",
-"next_id_after": "10",
-"type": "condition"
+"replacements": [  ],
+"text": "Mhmm",
+"translation_key": "Mhmm",
+"type": "dialogue"
 },
 "8": {
 "character": "Slime",
 "character_replacements": [  ],
-"next_id": "9",
-"parent_id": "7",
-"replacements": [  ],
-"text": "Jiggle*",
-"translation_key": "Jiggle*",
-"type": "dialogue"
-},
-"9": {
-"character": "Eri",
-"character_replacements": [  ],
 "next_id": "10",
-"parent_id": "7",
 "replacements": [  ],
-"text": "not again",
-"translation_key": "not again",
+"text": "Jiggle*  Jiggle* Jiggle*",
+"translation_key": "Jiggle*  Jiggle* Jiggle*",
 "type": "dialogue"
 }
 }

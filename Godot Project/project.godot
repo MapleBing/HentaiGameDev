@@ -62,6 +62,7 @@ DialogState="*res://autoload_script/dialog_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 HSceneManager="*res://asset/HScenes/HSceneManager.tscn"
 ItemBus="*res://asset/Items/Scripts/ItemBus.gd"
+HSceneBus="*res://autoload_script/HSceneBus.gd"
 
 [display]
 
