@@ -11,7 +11,7 @@ onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get("parameters/playback")
 
 var player #from PlayerDetectionZone's script
-
+var talkingTo
 enum {
 	IDLE,
 	WANDER,
@@ -54,7 +54,8 @@ func _physics_process(delta):
 	else:
 		animation_state.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
+	if talkingTo:
+		animation_tree.set("parameters/idle/blend_position", velocity)
 	velocity = move_and_slide(velocity)
 
 func follow_player():
@@ -65,3 +66,8 @@ func follow_player():
 		state = FOLLOW
 	else:
 		state = IDLE
+
+
+func _on_detect_dialog_by_press_body_entered(body):
+	talkingTo = true
+	pass # Replace with function body.

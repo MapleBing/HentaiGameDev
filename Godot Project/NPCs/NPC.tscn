@@ -278,5 +278,7 @@ modulate = Color( 0.921569, 0.866667, 0.866667, 0.537255 )
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 shape = SubResource( 27 )
 
+[connection signal="body_entered" from="detect_dialog_by_press" to="." method="_on_detect_dialog_by_press_body_entered"]
+
 [editable path="detect_dialog_by_press"]
 [editable path="PlayerDetectionZone"]

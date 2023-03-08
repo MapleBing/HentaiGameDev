@@ -2,7 +2,7 @@ extends Area2D
 
 export var dialog_key = ""
 var area_active = false
-
+var parent = get_parent()
 func _input(event):
 	if area_active and event.is_action_pressed("interact"):
 		print ("fkku")
