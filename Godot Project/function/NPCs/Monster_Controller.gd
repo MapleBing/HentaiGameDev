@@ -5,7 +5,7 @@ export var ACCELERATION = 700
 export var MAX_SPEED = 80
 export var Step_Amount = 10
 export var FRICTION = 200
-
+export(int) var WANDER_RANGE_BOUNDS
 #internal Variables
 var timer = 0
 #Dialogue Variables
@@ -17,6 +17,7 @@ onready var PlayerDetectionZone = $PlayerDetectionZone
 onready var animation_player = $AnimationPlayer
 onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get("parameters/playback")
+onready var WanderController = $WanderController
 
 #Child Variable Connections
 var player #from PlayerDetectionZone's script
@@ -44,9 +45,15 @@ func _physics_process(delta):
 			#Switch to Follow if player is close
 			if player != null and global_position.distance_to(player.global_position) >= 25:
 				follow_player()
+			wander_state()
 				
 		WANDER:
-			pass
+			follow_player()
+			accelerate_towards(WanderController.target_position, delta)
+			wander_state()
+			
+			if global_position.distance_to(WanderController.target_position) <= WANDER_RANGE_BOUNDS:
+				state = pick_random_state([IDLE, WANDER])
 		
 		FOLLOW:
 			#If player isnt close Set state Idle
@@ -55,6 +62,8 @@ func _physics_process(delta):
 				velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 				if global_position.distance_to(player.global_position) <= 20:
 					follow_player()
+			else:
+				follow_player()
 		RECOVER:
 			timer-= delta
 			if timer<0:
@@ -85,8 +94,22 @@ func follow_player():
 		state = FOLLOW
 	else:
 		state = IDLE
+		
 func recover_player():
 	nearPlayer = false
 	state = RECOVER
 	timer = 10
+	
+func accelerate_towards(point, delta):
+	var direction = global_position.direction_to(point)
+	velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
+
+func wander_state():
+	if WanderController.get_time_left() == 0:
+			state = pick_random_state([IDLE, WANDER])
+			WanderController.start_wander_timer(rand_range(1, 2))
+
+func pick_random_state(state_list):
+	state_list.shuffle()
+	return state_list.pop_front()
 	

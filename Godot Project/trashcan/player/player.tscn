@@ -4,7 +4,6 @@
 [ext_resource path="res://asset/character/Eri/Full sprite Eri v2-Sheet.png" type="Texture" id=2]
 [ext_resource path="res://asset/Ich.io_BGM/HGameDev_mixedFootstep.wav" type="AudioStream" id=3]
 
-
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.0
 height = 2.0
@@ -378,7 +377,7 @@ nodes/idle/node = SubResource( 17 )
 nodes/idle/position = Vector2( -380, 120 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -380, 300 )
-node_connections = [ "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition", "output", 0, "animation_speed" ]
+node_connections = [ "output", 0, "animation_speed", "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk" ]
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )

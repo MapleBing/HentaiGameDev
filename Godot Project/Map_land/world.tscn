@@ -492,7 +492,7 @@ extents = Vector2( 10, 8 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 11, 31 )
 
-[node name="world" type="Node2D"]
+[node name="Start-0" type="Node2D"]
 pause_mode = 2
 position = Vector2( 0, -1 )
 script = ExtResource( 6 )

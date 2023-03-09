@@ -11,6 +11,7 @@ onready var animation_tree = $AnimationTree
 onready var animation_state = animation_tree.get("parameters/playback")
 
 var player #from PlayerDetectionZone's script
+var talking = false
 
 enum {
 	IDLE,
@@ -44,6 +45,8 @@ func _physics_process(delta):
 				velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 				if global_position.distance_to(player.global_position) <= 20:
 					state = IDLE
+				
+
 	
 	if velocity != Vector2.ZERO:
 		animation_tree.set("parameters/idle/blend_position", velocity)
@@ -54,9 +57,11 @@ func _physics_process(delta):
 	else:
 		animation_state.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-	
-	velocity = move_and_slide(velocity)
 
+	if talking:
+		talking = false
+	velocity = move_and_slide(velocity)
+	
 func follow_player():
 	#if PlayerDetectionZone.player:
 	if player and NPC_IS_STATIC:
@@ -65,3 +70,8 @@ func follow_player():
 		state = FOLLOW
 	else:
 		state = IDLE
+func update_direction():
+	var direction = global_position.direction_to(player.global_position)
+	animation_tree.set("parameters/idle/blend_position", direction)
+	animation_tree.advance(0)
+	print_debug("working")

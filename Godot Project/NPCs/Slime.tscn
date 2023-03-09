@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://function/NPCs/Monster_Controller.gd" type="Script" id=1]
 [ext_resource path="res://asset/character/Pixel Character/Slime/Slime_Enemy_Sheet.png" type="Texture" id=2]
 [ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=3]
 [ext_resource path="res://NPCs/Components/EnemyHurtBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://function/NPCs/WanderController.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=29]
 resource_name = "IdleLeft"
@@ -240,6 +241,7 @@ light_mask = 16
 collision_layer = 8
 collision_mask = 19
 script = ExtResource( 1 )
+WANDER_RANGE_BOUNDS = 20
 dialogue_file = "res://dialogue/Hscenes/Eri_Slime_01.tres"
 dialogue_key = "encounter"
 
@@ -284,6 +286,8 @@ collision_layer = 0
 [node name="CollisionShape2D" parent="EnemyHitBox" index="0"]
 rotation = 1.5708
 shape = SubResource( 39 )
+
+[node name="WanderController" parent="." instance=ExtResource( 5 )]
 
 [connection signal="body_entered" from="EnemyHitBox" to="EnemyHitBox" method="_on_EnemyHitBox_body_entered"]
 
