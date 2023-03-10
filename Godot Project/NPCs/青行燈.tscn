@@ -154,7 +154,7 @@ WANDER_RANGE_BOUNDS = 20
 light_mask = 16
 texture = ExtResource( 2 )
 hframes = 16
-frame = 10
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/down = SubResource( 2 )
