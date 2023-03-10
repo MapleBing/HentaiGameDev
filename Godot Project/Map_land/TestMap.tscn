@@ -914,7 +914,7 @@ position = Vector2( 147, 104 )
 position = Vector2( 306, 141 )
 
 [node name="Sprite" parent="YSort/MovingEntity/Slime" index="0"]
-frame = 9
+frame = 8
 
 [node name="AnimationTree" parent="YSort/MovingEntity/Slime" index="2"]
 tree_root = SubResource( 41 )
