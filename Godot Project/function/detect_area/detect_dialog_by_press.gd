@@ -10,12 +10,12 @@ func _input(event):
 		parent.update_direction()
 		parent.talking = true
 		SignalBus.emit_signal("display_dialog",dialog_key)
-		
+
 
 func _on_detect_dialog_by_press_2_body_entered(body):
 	area_active = true
 	SignalBus.emit_signal("display_dialog_button",true)
-	
+
 func _on_detect_dialog_by_press_2_body_exited(body):
 	area_active = false
 	SignalBus.emit_signal("display_dialog_button",false)
