@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/little fountain2 by the wall-Blood.png-b12aa79c368db6b52dea23fe8d65787e.stex"
+path="res://.import/little fountain2 by the wall-Blood.png-e62cd65e383a140f440dc0c595cfdca5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/little fountain2 by the wall-Blood.png"
-dest_files=[ "res://.import/little fountain2 by the wall-Blood.png-b12aa79c368db6b52dea23fe8d65787e.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/little fountain2 by the wall-Blood.png"
+dest_files=[ "res://.import/little fountain2 by the wall-Blood.png-e62cd65e383a140f440dc0c595cfdca5.stex" ]
 
 [params]
 

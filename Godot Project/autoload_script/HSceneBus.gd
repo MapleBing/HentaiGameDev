@@ -7,8 +7,8 @@ func getHScene(MonsterName)-> String:
 	match MonsterName: #Name, SpriteFilePath, +/Description"
 		"slime":
 			monsterScene = "res://asset/HScenes/AniCgs/EriXSlimeHScene.tscn"
-		"slime1": 
-			monsterScene = "res://asset/HScenes/AniCgs/EriXSlimeHScene.tscn"
+		"erix_maya": 
+			monsterScene = "res://asset/HScenes/StaticCgs/EriXMayaHScene.tscn"
 		"slime2": 
 			monsterScene = "res://asset/HScenes/AniCgs/EriXSlimeHScene.tscn"
 	return monsterScene

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/waterfall-160x128-transparency.png-e8a9d529e77e3134d6d804f93f2adba0.stex"
+path="res://.import/waterfall-160x128-transparency.png-6128eb2c917f1009a1e235cee9dab430.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/waterfall-160x128-transparency.png"
-dest_files=[ "res://.import/waterfall-160x128-transparency.png-e8a9d529e77e3134d6d804f93f2adba0.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/waterfall-160x128-transparency.png"
+dest_files=[ "res://.import/waterfall-160x128-transparency.png-6128eb2c917f1009a1e235cee9dab430.stex" ]
 
 [params]
 

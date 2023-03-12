@@ -6,6 +6,7 @@ export var MAX_SPEED = 80
 export var Step_Amount = 10
 export var FRICTION = 200
 export(int) var WANDER_RANGE_BOUNDS
+export var Recovery_Time = 5
 #internal Variables
 var timer = 0
 #Dialogue Variables
@@ -32,7 +33,7 @@ enum {
 
 #var distance = global_position.distance_to (player.global_position)
 var velocity = Vector2.ZERO
-var state = FOLLOW
+var state = IDLE
 
 func _physics_process(delta):
 	velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
@@ -66,21 +67,26 @@ func _physics_process(delta):
 				recovery = false
 				state = IDLE
 				follow_player()
+			
 				
 	#Set Character sprite to the corrisponding movement values
 	if velocity != Vector2.ZERO:
 		animation_tree.set("parameters/idle/blend_position", velocity)
 		animation_tree.set("parameters/walk/blend_position", velocity)
+		animation_tree.set("parameters/stun/blend_position", velocity)
 		animation_state.travel("walk")
 		
 	#Set Character sprite idle if the current value is zero
 	else:
-		animation_state.travel("idle")
+		if state == RECOVER:
+			animation_state.travel("stun")
+		else:
+			animation_state.travel("idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
 		
 		
 	#Emit hScene signal if the player touches monster hitbox
-	if nearPlayer:
+	if nearPlayer and !state == RECOVER:
 		SignalBus.emit_signal("display_enemy_hscene",dialogue_file, dialogue_key)
 		recover_player()
 		
@@ -95,7 +101,7 @@ func follow_player():
 func recover_player():
 	nearPlayer = false
 	state = RECOVER
-	timer = 10
+	timer = Recovery_Time
 	
 func accelerate_towards(point, delta):
 	var direction = global_position.direction_to(point)

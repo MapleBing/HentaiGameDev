@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/巫女_12frame.png-9aad45f20f58f6e11322da6b4b7da5cf.stex"
+path="res://.import/巫女_12frame.png-882d6ef5f7e345634473b5ff24aaf907.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Pixel Character/青行燈｜巫女/巫女_12frame.png"
-dest_files=[ "res://.import/巫女_12frame.png-9aad45f20f58f6e11322da6b4b7da5cf.stex" ]
+source_file="res://Asset/character/Pixel Character/青行燈｜巫女/巫女_12frame.png"
+dest_files=[ "res://.import/巫女_12frame.png-882d6ef5f7e345634473b5ff24aaf907.stex" ]
 
 [params]
 

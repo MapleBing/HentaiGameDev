@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/未命名角色 (主角).png-59924ca0b37d34746f8086687462d385.stex"
+path="res://.import/未命名角色 (主角).png-f40b2f3aea36415b5a87e04327c59598.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Pixel Character/no_name chara/未命名角色 (主角).png"
-dest_files=[ "res://.import/未命名角色 (主角).png-59924ca0b37d34746f8086687462d385.stex" ]
+source_file="res://Asset/character/Pixel Character/no_name chara/未命名角色 (主角).png"
+dest_files=[ "res://.import/未命名角色 (主角).png-f40b2f3aea36415b5a87e04327c59598.stex" ]
 
 [params]
 

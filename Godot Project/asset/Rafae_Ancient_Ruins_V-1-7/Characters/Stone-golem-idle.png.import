@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone-golem-idle.png-8460326f50f216391c7d0c92d47f2e90.stex"
+path="res://.import/Stone-golem-idle.png-33103c1187b4342a6d0f9789f39db97d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-idle.png"
-dest_files=[ "res://.import/Stone-golem-idle.png-8460326f50f216391c7d0c92d47f2e90.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-idle.png"
+dest_files=[ "res://.import/Stone-golem-idle.png-33103c1187b4342a6d0f9789f39db97d.stex" ]
 
 [params]
 

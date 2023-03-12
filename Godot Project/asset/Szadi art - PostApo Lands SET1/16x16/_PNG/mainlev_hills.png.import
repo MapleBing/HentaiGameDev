@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mainlev_hills.png-14a84ba3fada817ff56f5df3b071bf0b.stex"
+path="res://.import/mainlev_hills.png-df567f9b54dffa1aab75bd31f5a59bab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - PostApo Lands SET1/16x16/_PNG/mainlev_hills.png"
-dest_files=[ "res://.import/mainlev_hills.png-14a84ba3fada817ff56f5df3b071bf0b.stex" ]
+source_file="res://Asset/Szadi art - PostApo Lands SET1/16x16/_PNG/mainlev_hills.png"
+dest_files=[ "res://.import/mainlev_hills.png-df567f9b54dffa1aab75bd31f5a59bab.stex" ]
 
 [params]
 

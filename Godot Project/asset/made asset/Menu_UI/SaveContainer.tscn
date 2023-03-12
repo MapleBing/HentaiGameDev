@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://asset/made asset/Menu_UI/SaveSlotFilled.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/made asset/Menu_UI/SaveSlotFilled.tscn" type="PackedScene" id=1]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]

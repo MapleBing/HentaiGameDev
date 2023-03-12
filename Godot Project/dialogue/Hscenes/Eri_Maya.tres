@@ -1,0 +1,973 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+resource_version = 47
+syntax_version = 2
+raw_text = "~ Interact
+do portraitNone()
+- Dont Skip Dialogue
+- Skip Dialogue
+	set has_met_maya = true
+if has_met_maya == false
+	=> Interaction_Initial
+else
+	=> Interection_Main
+=> END
+
+~ Interaction_Initial
+if has_met_maya == false
+	do portraitRight()
+	Dark-skinned Elf: Eri-chan? Is that you?
+	do portraitLeft()
+	Eri: Huh?
+	do emit(\"portrait_right\")
+	Dark-skinned Elf: Eri-chan? Is it really you?
+	do portraitLeft()
+	Eri: Maya??!!
+	do emit(\"portrait_right\")
+	Maya: Yes, it’s me maya
+	do emit(\"portrait_none\")
+	*she grins*
+	
+	do portraitLeft()
+	Eri: Maya!!!! It’s been so long! I missed you so much.
+	do emit(\"portrait_none\")
+	Eri jumps into Maya’s arms and hugs her tightly
+	
+	do emit(\"portrait_right\")
+	Maya: Why didn’t you tell me you came home?
+	do portraitLeft()
+	Eri: A-ahh.. About that…
+	Eri: I was going through a lot of stuff and it was really hard to think about anything else during the time
+	do emit(\"portrait_right\")
+	Maya: I see… What seems to be troubling you Eri-chan?
+	do portraitLeft()
+	Eri: I recently graduated from University and I wasn’t able to find any internships or work 
+	Eri: afterwards… 
+	Eri: It’s been stressing me a lot lately and before I knew it, I have to pay off my student loans already…
+	Eri: And just a while ago I ran away from home because my mom kept nagging about my future…
+	do emit(\"portrait_right\")
+	Maya: That must be tough. I hope you’re okay Eri. Life gets harder after becoming an adult. As friends, we should support each other. I’m always here for you if you ever need me.
+	do portraitLeft()
+	Eri: M-Maya.. Waaaaahhh~~ You’re too kind
+	do emit(\"portrait_right\")
+	Maya: “There there…”
+	do emit(\"portrait_none\")
+	*Maya starts patting Eri’s back*
+	
+	do emit(\"portrait_right\")
+	Maya: Wanna head to my place and talk about it? I just finished a quest and I was just headed home just now
+	do portraitLeft()
+	Eri: Okay…
+	do emit(\"portrait_none\")
+	*sob sob*
+	set has_met_maya = true
+=> End_Interaction
+
+~ Interection_Main
+do emit(\"portrait_right\")
+Maya: Let me know when you're ready.
+do portraitLeft()
+- Erie: Could you check this out?
+	do emit(\"portrait_right\")
+	
+	if checkItem(1, 1)
+		maya: oh is that for me!
+	Maya: huh.
+- Erie: I missed you
+	=> Hscene_ErixMaya
+=> End_Interaction
+
+~ Hscene_ErixMaya
+do emit(\"start_h_scene\",\"erix_maya\")
+
+do emit(\"change_anim\",\"00_ScreenShake\")
+Eri: AHHH
+do emit(\"change_anim\",\"00_Main\")
+
+do emit(\"end_h_scene\")
+=> End_Interaction
+
+~ End_Interaction
+do emit(\"portrait_none\")
+=> END"
+errors = [  ]
+titles = {
+"End_Interaction": "86",
+"Hscene_ErixMaya": "76",
+"Interact": "1",
+"Interaction_Initial": "12",
+"Interection_Main": "62"
+}
+lines = {
+"0": {
+"next_id": "1",
+"text": "Interact",
+"type": "title"
+},
+"1": {
+"mutation": {
+"expression": [ {
+"function": "portraitNone",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "2",
+"type": "mutation"
+},
+"11": {
+"next_id": "12",
+"text": "Interaction_Initial",
+"type": "title"
+},
+"12": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_maya"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "59",
+"next_id": "13",
+"next_id_after": "59",
+"type": "condition"
+},
+"13": {
+"mutation": {
+"expression": [ {
+"function": "portraitRight",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "14",
+"parent_id": "12",
+"type": "mutation"
+},
+"14": {
+"character": "Dark-skinned Elf",
+"character_replacements": [  ],
+"next_id": "15",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Eri-chan? Is that you?",
+"translation_key": "Eri-chan? Is that you?",
+"type": "dialogue"
+},
+"15": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "16",
+"parent_id": "12",
+"type": "mutation"
+},
+"16": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "17",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Huh?",
+"translation_key": "Huh?",
+"type": "dialogue"
+},
+"17": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "18",
+"parent_id": "12",
+"type": "mutation"
+},
+"18": {
+"character": "Dark-skinned Elf",
+"character_replacements": [  ],
+"next_id": "19",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Eri-chan? Is it really you?",
+"translation_key": "Eri-chan? Is it really you?",
+"type": "dialogue"
+},
+"19": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "20",
+"parent_id": "12",
+"type": "mutation"
+},
+"2": {
+"next_id": "5",
+"next_id_after": "5",
+"replacements": [  ],
+"responses": PoolStringArray( "2", "3" ),
+"text": "Dont Skip Dialogue",
+"translation_key": "Dont Skip Dialogue",
+"type": "response"
+},
+"20": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "21",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Maya??!!",
+"translation_key": "Maya??!!",
+"type": "dialogue"
+},
+"21": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "22",
+"parent_id": "12",
+"type": "mutation"
+},
+"22": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "23",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Yes, it’s me maya",
+"translation_key": "Yes, it’s me maya",
+"type": "dialogue"
+},
+"23": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "24",
+"parent_id": "12",
+"type": "mutation"
+},
+"24": {
+"character": "",
+"next_id": "26",
+"parent_id": "12",
+"replacements": [  ],
+"text": "*she grins*",
+"translation_key": "*she grins*",
+"type": "dialogue"
+},
+"26": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "27",
+"parent_id": "12",
+"type": "mutation"
+},
+"27": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "28",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Maya!!!! It’s been so long! I missed you so much.",
+"translation_key": "Maya!!!! It’s been so long! I missed you so much.",
+"type": "dialogue"
+},
+"28": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "29",
+"parent_id": "12",
+"type": "mutation"
+},
+"29": {
+"character": "",
+"next_id": "31",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Eri jumps into Maya’s arms and hugs her tightly",
+"translation_key": "Eri jumps into Maya’s arms and hugs her tightly",
+"type": "dialogue"
+},
+"3": {
+"next_id": "4",
+"next_id_after": "5",
+"replacements": [  ],
+"text": "Skip Dialogue",
+"translation_key": "Skip Dialogue",
+"type": "response"
+},
+"31": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "32",
+"parent_id": "12",
+"type": "mutation"
+},
+"32": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "33",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Why didn’t you tell me you came home?",
+"translation_key": "Why didn’t you tell me you came home?",
+"type": "dialogue"
+},
+"33": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "34",
+"parent_id": "12",
+"type": "mutation"
+},
+"34": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "35",
+"parent_id": "12",
+"replacements": [  ],
+"text": "A-ahh.. About that…",
+"translation_key": "A-ahh.. About that…",
+"type": "dialogue"
+},
+"35": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "36",
+"parent_id": "12",
+"replacements": [  ],
+"text": "I was going through a lot of stuff and it was really hard to think about anything else during the time",
+"translation_key": "I was going through a lot of stuff and it was really hard to think about anything else during the time",
+"type": "dialogue"
+},
+"36": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "37",
+"parent_id": "12",
+"type": "mutation"
+},
+"37": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "38",
+"parent_id": "12",
+"replacements": [  ],
+"text": "I see… What seems to be troubling you Eri-chan?",
+"translation_key": "I see… What seems to be troubling you Eri-chan?",
+"type": "dialogue"
+},
+"38": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "39",
+"parent_id": "12",
+"type": "mutation"
+},
+"39": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "40",
+"parent_id": "12",
+"replacements": [  ],
+"text": "I recently graduated from University and I wasn’t able to find any internships or work",
+"translation_key": "I recently graduated from University and I wasn’t able to find any internships or work",
+"type": "dialogue"
+},
+"4": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_maya"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "5",
+"parent_id": "3",
+"type": "mutation"
+},
+"40": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "41",
+"parent_id": "12",
+"replacements": [  ],
+"text": "afterwards…",
+"translation_key": "afterwards…",
+"type": "dialogue"
+},
+"41": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "42",
+"parent_id": "12",
+"replacements": [  ],
+"text": "It’s been stressing me a lot lately and before I knew it, I have to pay off my student loans already…",
+"translation_key": "It’s been stressing me a lot lately and before I knew it, I have to pay off my student loans already…",
+"type": "dialogue"
+},
+"42": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "43",
+"parent_id": "12",
+"replacements": [  ],
+"text": "And just a while ago I ran away from home because my mom kept nagging about my future…",
+"translation_key": "And just a while ago I ran away from home because my mom kept nagging about my future…",
+"type": "dialogue"
+},
+"43": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "44",
+"parent_id": "12",
+"type": "mutation"
+},
+"44": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "45",
+"parent_id": "12",
+"replacements": [  ],
+"text": "That must be tough. I hope you’re okay Eri. Life gets harder after becoming an adult. As friends, we should support each other. I’m always here for you if you ever need me.",
+"translation_key": "That must be tough. I hope you’re okay Eri. Life gets harder after becoming an adult. As friends, we should support each other. I’m always here for you if you ever need me.",
+"type": "dialogue"
+},
+"45": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "46",
+"parent_id": "12",
+"type": "mutation"
+},
+"46": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "47",
+"parent_id": "12",
+"replacements": [  ],
+"text": "M-Maya.. Waaaaahhh~~ You’re too kind",
+"translation_key": "M-Maya.. Waaaaahhh~~ You’re too kind",
+"type": "dialogue"
+},
+"47": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "48",
+"parent_id": "12",
+"type": "mutation"
+},
+"48": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "49",
+"parent_id": "12",
+"replacements": [  ],
+"text": "“There there…”",
+"translation_key": "“There there…”",
+"type": "dialogue"
+},
+"49": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "50",
+"parent_id": "12",
+"type": "mutation"
+},
+"5": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_maya"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "7",
+"next_id": "6",
+"next_id_after": "9",
+"type": "condition"
+},
+"50": {
+"character": "",
+"next_id": "52",
+"parent_id": "12",
+"replacements": [  ],
+"text": "*Maya starts patting Eri’s back*",
+"translation_key": "*Maya starts patting Eri’s back*",
+"type": "dialogue"
+},
+"52": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "53",
+"parent_id": "12",
+"type": "mutation"
+},
+"53": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "54",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Wanna head to my place and talk about it? I just finished a quest and I was just headed home just now",
+"translation_key": "Wanna head to my place and talk about it? I just finished a quest and I was just headed home just now",
+"type": "dialogue"
+},
+"54": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "55",
+"parent_id": "12",
+"type": "mutation"
+},
+"55": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "56",
+"parent_id": "12",
+"replacements": [  ],
+"text": "Okay…",
+"translation_key": "Okay…",
+"type": "dialogue"
+},
+"56": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "57",
+"parent_id": "12",
+"type": "mutation"
+},
+"57": {
+"character": "",
+"next_id": "58",
+"parent_id": "12",
+"replacements": [  ],
+"text": "*sob sob*",
+"translation_key": "*sob sob*",
+"type": "dialogue"
+},
+"58": {
+"mutation": {
+"expression": [ {
+"type": "variable",
+"value": "has_met_maya"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_id": "59",
+"parent_id": "12",
+"type": "mutation"
+},
+"59": {
+"next_id": "86",
+"type": "goto"
+},
+"6": {
+"next_id": "12",
+"parent_id": "5",
+"type": "goto"
+},
+"61": {
+"next_id": "62",
+"text": "Interection_Main",
+"type": "title"
+},
+"62": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "63",
+"type": "mutation"
+},
+"63": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "64",
+"replacements": [  ],
+"text": "Let me know when you're ready.",
+"translation_key": "Let me know when you're ready.",
+"type": "dialogue"
+},
+"64": {
+"mutation": {
+"expression": [ {
+"function": "portraitLeft",
+"type": "function",
+"value": [  ]
+} ]
+},
+"next_id": "65",
+"type": "mutation"
+},
+"65": {
+"character": "Erie",
+"next_id": "65.2",
+"next_id_after": "73",
+"replacements": [  ],
+"responses": PoolStringArray( "65", "71" ),
+"text": "Could you check this out?",
+"translation_key": "Could you check this out?",
+"type": "response"
+},
+"65.2": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "66",
+"next_id_after": "73",
+"replacements": [  ],
+"text": "Could you check this out?",
+"translation_key": "Could you check this out?",
+"type": "dialogue"
+},
+"66": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_right"
+} ] ]
+} ]
+},
+"next_id": "68",
+"parent_id": "65",
+"type": "mutation"
+},
+"68": {
+"condition": {
+"expression": [ {
+"function": "checkItem",
+"type": "function",
+"value": [ [ {
+"type": "number",
+"value": 1
+} ], [ {
+"type": "number",
+"value": 1
+} ] ]
+} ]
+},
+"next_conditional_id": "70",
+"next_id": "69",
+"next_id_after": "70",
+"parent_id": "65",
+"type": "condition"
+},
+"69": {
+"character": "maya",
+"character_replacements": [  ],
+"next_id": "70",
+"parent_id": "68",
+"replacements": [  ],
+"text": "oh is that for me!",
+"translation_key": "oh is that for me!",
+"type": "dialogue"
+},
+"7": {
+"next_conditional_id": "9",
+"next_id": "8",
+"next_id_after": "9",
+"type": "condition"
+},
+"70": {
+"character": "Maya",
+"character_replacements": [  ],
+"next_id": "73",
+"parent_id": "65",
+"replacements": [  ],
+"text": "huh.",
+"translation_key": "huh.",
+"type": "dialogue"
+},
+"71": {
+"character": "Erie",
+"next_id": "71.2",
+"next_id_after": "73",
+"replacements": [  ],
+"text": "I missed you",
+"translation_key": "I missed you",
+"type": "response"
+},
+"71.2": {
+"character": "Erie",
+"character_replacements": [  ],
+"next_id": "72",
+"next_id_after": "73",
+"replacements": [  ],
+"text": "I missed you",
+"translation_key": "I missed you",
+"type": "dialogue"
+},
+"72": {
+"next_id": "76",
+"parent_id": "71",
+"type": "goto"
+},
+"73": {
+"next_id": "86",
+"type": "goto"
+},
+"75": {
+"next_id": "76",
+"text": "Hscene_ErixMaya",
+"type": "title"
+},
+"76": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "start_h_scene"
+} ], [ {
+"type": "string",
+"value": "erix_maya"
+} ] ]
+} ]
+},
+"next_id": "78",
+"type": "mutation"
+},
+"78": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "00_ScreenShake"
+} ] ]
+} ]
+},
+"next_id": "79",
+"type": "mutation"
+},
+"79": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "80",
+"replacements": [  ],
+"text": "AHHH",
+"translation_key": "AHHH",
+"type": "dialogue"
+},
+"8": {
+"next_id": "62",
+"parent_id": "7",
+"type": "goto"
+},
+"80": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "00_Main"
+} ] ]
+} ]
+},
+"next_id": "82",
+"type": "mutation"
+},
+"82": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "end_h_scene"
+} ] ]
+} ]
+},
+"next_id": "83",
+"type": "mutation"
+},
+"83": {
+"next_id": "86",
+"type": "goto"
+},
+"85": {
+"next_id": "86",
+"text": "End_Interaction",
+"type": "title"
+},
+"86": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "87",
+"type": "mutation"
+},
+"87": {
+"next_id": "end",
+"type": "goto"
+},
+"9": {
+"next_id": "end",
+"type": "goto"
+}
+}

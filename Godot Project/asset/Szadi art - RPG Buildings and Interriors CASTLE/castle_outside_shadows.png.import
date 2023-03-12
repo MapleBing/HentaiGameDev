@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/castle_outside_shadows.png-4c2998999c71e40d73e07704bfbad563.stex"
+path="res://.import/castle_outside_shadows.png-c6b0f96b95279baed68304dbec566797.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - RPG Buildings and Interriors CASTLE/castle_outside_shadows.png"
-dest_files=[ "res://.import/castle_outside_shadows.png-4c2998999c71e40d73e07704bfbad563.stex" ]
+source_file="res://Asset/Szadi art - RPG Buildings and Interriors CASTLE/castle_outside_shadows.png"
+dest_files=[ "res://.import/castle_outside_shadows.png-c6b0f96b95279baed68304dbec566797.stex" ]
 
 [params]
 

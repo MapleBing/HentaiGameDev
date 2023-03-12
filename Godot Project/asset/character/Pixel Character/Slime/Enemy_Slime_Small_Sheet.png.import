@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy_Slime_Small_Sheet.png-0513bffa7f8458e421d177bfd8f9f326.stex"
+path="res://.import/Enemy_Slime_Small_Sheet.png-4302735e1e0857751253a72a31461ae0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Pixel Character/Slime/Enemy_Slime_Small_Sheet.png"
-dest_files=[ "res://.import/Enemy_Slime_Small_Sheet.png-0513bffa7f8458e421d177bfd8f9f326.stex" ]
+source_file="res://Asset/character/Pixel Character/Slime/Enemy_Slime_Small_Sheet.png"
+dest_files=[ "res://.import/Enemy_Slime_Small_Sheet.png-4302735e1e0857751253a72a31461ae0.stex" ]
 
 [params]
 

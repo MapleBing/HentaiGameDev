@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mockup-portapngl.png-1eca8dfb3a6338d80932e40119a21cfc.stex"
+path="res://.import/mockup-portapngl.png-560de12863a84e7f5ef0c158e45a7fea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Mockups/mockup-portapngl.png"
-dest_files=[ "res://.import/mockup-portapngl.png-1eca8dfb3a6338d80932e40119a21cfc.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Mockups/mockup-portapngl.png"
+dest_files=[ "res://.import/mockup-portapngl.png-560de12863a84e7f5ef0c158e45a7fea.stex" ]
 
 [params]
 

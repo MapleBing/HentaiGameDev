@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LightShadow_pipo.png-6a20f0ac3836c7e5ae3c5687a06c0b2d.stex"
+path="res://.import/LightShadow_pipo.png-0714abb1ead1abad0206552f691cb9da.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Pipoya RPG Tileset 32x32/SampleMap/LightShadow_pipo.png"
-dest_files=[ "res://.import/LightShadow_pipo.png-6a20f0ac3836c7e5ae3c5687a06c0b2d.stex" ]
+source_file="res://Asset/Pipoya RPG Tileset 32x32/SampleMap/LightShadow_pipo.png"
+dest_files=[ "res://.import/LightShadow_pipo.png-0714abb1ead1abad0206552f691cb9da.stex" ]
 
 [params]
 

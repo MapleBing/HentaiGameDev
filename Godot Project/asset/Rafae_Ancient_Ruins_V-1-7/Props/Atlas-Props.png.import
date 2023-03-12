@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Atlas-Props.png-e03b00e284834fdbd5f666f34a54c262.stex"
+path="res://.import/Atlas-Props.png-71a650a0c26714398ffd7f6816f0c209.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Atlas-Props.png"
-dest_files=[ "res://.import/Atlas-Props.png-e03b00e284834fdbd5f666f34a54c262.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Atlas-Props.png"
+dest_files=[ "res://.import/Atlas-Props.png-71a650a0c26714398ffd7f6816f0c209.stex" ]
 
 [params]
 

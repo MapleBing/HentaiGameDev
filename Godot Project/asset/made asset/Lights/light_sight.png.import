@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light_sight.png-5d106036bc92d5e360ac577981b66252.stex"
+path="res://.import/light_sight.png-c2c265d92fe308c65facf433a411773f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/made asset/Lights/light_sight.png"
-dest_files=[ "res://.import/light_sight.png-5d106036bc92d5e360ac577981b66252.stex" ]
+source_file="res://Asset/made asset/Lights/light_sight.png"
+dest_files=[ "res://.import/light_sight.png-c2c265d92fe308c65facf433a411773f.stex" ]
 
 [params]
 

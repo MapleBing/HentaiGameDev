@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 91
+resource_version = 93
 syntax_version = 2
 raw_text = "~ test_ver1
 #波浪開頭就是標題
@@ -30,7 +30,6 @@ do emit(\"portrait_left\")
 - Start again 
 	set some_value = 20 #選擇start again的時候設置成20，達成上面的條件
 	=> test_ver1
-	
 - End the conversation 
 	do emit(\"portrait_none\")
 	=> END
@@ -57,7 +56,7 @@ do emit_signal(\"portrait_none\")
 "
 errors = [  ]
 titles = {
-"test_2": "34",
+"test_2": "33",
 "test_ver1": "2"
 }
 lines = {
@@ -91,9 +90,9 @@ lines = {
 },
 "12": {
 "next_id": "13",
-"next_id_after": "28",
+"next_id_after": "27",
 "replacements": [  ],
-"responses": PoolStringArray( "12", "16", "21", "25" ),
+"responses": PoolStringArray( "12", "16", "21", "24" ),
 "text": "First one",
 "translation_key": "First one",
 "type": "response"
@@ -119,7 +118,7 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "28",
+"next_id": "27",
 "parent_id": "12",
 "type": "mutation"
 },
@@ -137,7 +136,7 @@ lines = {
 } ]
 },
 "next_id": "17",
-"next_id_after": "28",
+"next_id_after": "27",
 "replacements": [  ],
 "text": "Lets fish",
 "translation_key": "Lets fish",
@@ -180,7 +179,7 @@ lines = {
 "20": {
 "character": "Erie",
 "character_replacements": [  ],
-"next_id": "28",
+"next_id": "27",
 "parent_id": "16",
 "replacements": [  ],
 "text": "Could you repeat that.",
@@ -189,7 +188,7 @@ lines = {
 },
 "21": {
 "next_id": "22",
-"next_id_after": "28",
+"next_id_after": "27",
 "replacements": [  ],
 "text": "Start again",
 "translation_key": "Start again",
@@ -217,15 +216,15 @@ lines = {
 "parent_id": "21",
 "type": "goto"
 },
-"25": {
-"next_id": "26",
-"next_id_after": "28",
+"24": {
+"next_id": "25",
+"next_id_after": "27",
 "replacements": [  ],
 "text": "End the conversation",
 "translation_key": "End the conversation",
 "type": "response"
 },
-"26": {
+"25": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -236,16 +235,16 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "27",
-"parent_id": "25",
+"next_id": "26",
+"parent_id": "24",
 "type": "mutation"
 },
-"27": {
+"26": {
 "next_id": "end",
-"parent_id": "25",
+"parent_id": "24",
 "type": "goto"
 },
-"28": {
+"27": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -256,17 +255,31 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "29",
+"next_id": "28",
 "type": "mutation"
 },
-"29": {
+"28": {
 "character": "Nathan",
 "character_replacements": [  ],
-"next_id": "30",
+"next_id": "29",
 "replacements": [  ],
 "text": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
 "translation_key": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
 "type": "dialogue"
+},
+"29": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "portrait_none"
+} ] ]
+} ]
+},
+"next_id": "30",
+"type": "mutation"
 },
 "3": {
 "condition": {
@@ -287,29 +300,15 @@ lines = {
 "type": "condition"
 },
 "30": {
-"mutation": {
-"expression": [ {
-"function": "emit",
-"type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_none"
-} ] ]
-} ]
-},
-"next_id": "31",
-"type": "mutation"
-},
-"31": {
 "next_id": "end",
 "type": "goto"
 },
-"33": {
-"next_id": "34",
+"32": {
+"next_id": "33",
 "text": "test_2",
 "type": "title"
 },
-"34": {
+"33": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -320,19 +319,19 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "35",
+"next_id": "34",
 "type": "mutation"
 },
-"35": {
+"34": {
 "character": "Nathan",
 "character_replacements": [  ],
-"next_id": "36",
+"next_id": "35",
 "replacements": [  ],
 "text": "Wanna play with my beach ball?",
 "translation_key": "Wanna play with my beach ball?",
 "type": "dialogue"
 },
-"36": {
+"35": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -343,19 +342,19 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "37",
+"next_id": "36",
 "type": "mutation"
 },
-"37": {
-"next_id": "38",
-"next_id_after": "45",
+"36": {
+"next_id": "37",
+"next_id_after": "44",
 "replacements": [  ],
-"responses": PoolStringArray( "37", "43" ),
+"responses": PoolStringArray( "36", "42" ),
 "text": "Inee",
 "translation_key": "Inee",
 "type": "response"
 },
-"38": {
+"37": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -366,11 +365,11 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "39",
-"parent_id": "37",
+"next_id": "38",
+"parent_id": "36",
 "type": "mutation"
 },
-"39": {
+"38": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -381,21 +380,11 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "40",
-"parent_id": "37",
+"next_id": "39",
+"parent_id": "36",
 "type": "mutation"
 },
-"4": {
-"character": "Nathan",
-"character_replacements": [  ],
-"next_id": "5",
-"parent_id": "3",
-"replacements": [  ],
-"text": "Hello",
-"translation_key": "Hello",
-"type": "dialogue"
-},
-"40": {
+"39": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -409,21 +398,31 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "41",
-"parent_id": "37",
+"next_id": "40",
+"parent_id": "36",
 "type": "mutation"
 },
-"41": {
+"4": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "5",
+"parent_id": "3",
+"replacements": [  ],
+"text": "Hello",
+"translation_key": "Hello",
+"type": "dialogue"
+},
+"40": {
 "character": "Erie",
 "character_replacements": [  ],
-"next_id": "42",
-"parent_id": "37",
+"next_id": "41",
+"parent_id": "36",
 "replacements": [  ],
 "text": "Kimochii",
 "translation_key": "Kimochii",
 "type": "dialogue"
 },
-"42": {
+"41": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -434,29 +433,29 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "45",
-"parent_id": "37",
+"next_id": "44",
+"parent_id": "36",
 "type": "mutation"
 },
-"43": {
-"next_id": "44",
-"next_id_after": "45",
+"42": {
+"next_id": "43",
+"next_id_after": "44",
 "replacements": [  ],
 "text": "Yadaa",
 "translation_key": "Yadaa",
 "type": "response"
 },
-"44": {
+"43": {
 "character": "Erie",
 "character_replacements": [  ],
-"next_id": "45",
-"parent_id": "43",
+"next_id": "44",
+"parent_id": "42",
 "replacements": [  ],
 "text": "Yamette Kudasai",
 "translation_key": "Yamette Kudasai",
 "type": "dialogue"
 },
-"45": {
+"44": {
 "mutation": {
 "expression": [ {
 "function": "emit_signal",
@@ -467,10 +466,10 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "46",
+"next_id": "45",
 "type": "mutation"
 },
-"46": {
+"45": {
 "next_id": "end",
 "type": "goto"
 },

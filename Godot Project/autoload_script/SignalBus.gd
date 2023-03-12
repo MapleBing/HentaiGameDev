@@ -1,13 +1,14 @@
 extends Node
 
-signal display_dialog(text_key)
 signal display_dialog_button(x)
+signal display_dialogue(dialogue_file, dialogue_key)
 signal display_enemy_hscene(dialogue_file, dialogue_key)
 signal portrait_change(Portrait)
 signal restart_anim(restart)
 signal change_anim(animName)
 signal text_anim_set(hScene_0)
 signal inventorySlotShift(x)
+signal check_for_item(itemID, quantity)
 
 signal start_h_scene(x)
 signal end_h_scene

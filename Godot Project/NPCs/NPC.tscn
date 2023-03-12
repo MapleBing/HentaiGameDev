@@ -2,7 +2,7 @@
 
 [ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=1]
 [ext_resource path="res://function/NPCs/follow.gd" type="Script" id=2]
-[ext_resource path="res://asset/character/Pixel Character/青行燈｜巫女/巫女_12frame.png" type="Texture" id=3]
+[ext_resource path="res://Asset/character/Pixel Character/青行燈｜巫女/巫女_12frame.png" type="Texture" id=3]
 [ext_resource path="res://function/detect_area/detect_dialog_by_press.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=7]

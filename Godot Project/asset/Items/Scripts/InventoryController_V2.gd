@@ -22,13 +22,15 @@ onready var ItemInfo = $ItemInfo
 # var b: String = "text"
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	setGroup("Equip(2,1,2,0,0,2,1,2,0,0,0)",equipObject)
-	setGroup("Key(0,1,0,0,0,0,1)",keyObject)
-	setGroup("Consumeable(2,1,0,1,2,2,0)",consumeableObject)
+	setGroup("Equip(1)",equipObject)
+	setGroup("Key(1,1)",keyObject)
+	setGroup("Consumeable(1)",consumeableObject)
 	SignalBus.connect("inventoryMenuShiftRight", self, "leftInventoryMenuShift")
 	SignalBus.connect("inventoryMenuShiftLeft", self, "rightInventoryMenuShift")
 	SignalBus.connect("inventorySlotShift", self, "shiftInventorySlot")
 	SignalBus.connect("inventoryMenuConfirm", self, "confirmInventoryMenu")
+	SignalBus.connect("check_for_item", self, "checkForItem")
+	
 	shiftInventorySlot(0)
 	
 func confirmInventoryMenu():
@@ -54,6 +56,26 @@ func addItem(itemID = 0,quantity = 0):
 	shiftInventorySlot(0)
 	pass
 	
+func checkForItem(itemID = 0,quantity = 0):
+	if runThroughList(EquipSection, itemID, quantity):
+		return true
+	if runThroughList(KeySection, itemID, quantity):
+		return true
+	if runThroughList(ConsumeableSection, itemID, quantity):
+		return true
+	return false
+
+func runThroughList(itemSection, itemID = 0, quantity = 0):
+	#get itemSection.
+	var currentItem 
+	KeySection.get_child_count()
+	for object in KeySection.get_children():
+		currentItem = object.get_child(currentSlot).get_child(1).getItem()
+		if currentItem.getID() == itemID:
+			if currentItem.getQuantity() >= quantity:
+				return true
+					
+	return false
 func setGroup(inventoryGroup = "", groupNode = null):
 	var tempItems = inventoryGroup
 	var groupCategory = inventoryGroup.get_slice("(",0)
@@ -82,7 +104,8 @@ func rightInventoryMenuShift()-> void:
 		currentPosition = 2
 	setSectionCursor(currentPosition)
 	pass
-	
+
+# menu Navigation
 func setSectionCursor(CurrentPosition):
 	ItemSection1.visible = false
 	ItemSection2.visible = false

@@ -2,7 +2,8 @@ extends Node2D
 
 var CurrentTexture = ""
 onready var hScene_Animation = $AnimationPlayer
-onready var hScene_sprite = $Sprite
+onready var hScene_Effect = $EffectPlayer
+onready var hScene_sprite = $Sprites/Sprite
 var Speed = 1.0
 var AnimNames
 var currentAnimName = ""
@@ -16,8 +17,13 @@ func _ready() -> void:
 	connect_signalBus()
 	
 func update():
-	hScene_Animation.play(currentAnimName)
-	hScene_Animation.playback_speed = Speed
+	if  hScene_Animation.get_animation(currentAnimName) != null:
+		hScene_Animation.play(currentAnimName)
+		hScene_Animation.playback_speed = Speed
+		
+	elif  hScene_Effect.get_animation(currentAnimName) != null:
+		hScene_Effect.play(currentAnimName)
+		hScene_Effect.playback_speed = Speed
 	
 func connect_signalBus():
 	SignalBus.connect("restart_anim", self, "anim_restart")

@@ -4,16 +4,22 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 33
+resource_version = 42
 syntax_version = 2
 raw_text = "~ encounter
 #波浪開頭就是標題
 do emit(\"portrait_none\")
-Eri: AHHH
-
 do emit(\"start_h_scene\",\"slime\")
+do emit(\"change_anim\",\"00_ScreenShake\")
+Eri: AHHH
+do emit(\"change_anim\",\"00_Main\")
+
 Slime: Jiggle*
+do emit(\"change_anim\",\"00_Main\")
+
 Eri: Mhmm
+do emit(\"change_anim\",\"01_End\")
+
 Slime: Jiggle*  Jiggle* Jiggle* 
 
 do emit(\"end_h_scene\")
@@ -29,7 +35,42 @@ lines = {
 "text": "encounter",
 "type": "title"
 },
-"10": {
+"11": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "12",
+"replacements": [  ],
+"text": "Mhmm",
+"translation_key": "Mhmm",
+"type": "dialogue"
+},
+"12": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "01_End"
+} ] ]
+} ]
+},
+"next_id": "14",
+"type": "mutation"
+},
+"14": {
+"character": "Slime",
+"character_replacements": [  ],
+"next_id": "16",
+"replacements": [  ],
+"text": "Jiggle*  Jiggle* Jiggle*",
+"translation_key": "Jiggle*  Jiggle* Jiggle*",
+"type": "dialogue"
+},
+"16": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -40,10 +81,10 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "11",
+"next_id": "17",
 "type": "mutation"
 },
-"11": {
+"17": {
 "next_id": "end",
 "type": "goto"
 },
@@ -62,15 +103,6 @@ lines = {
 "type": "mutation"
 },
 "3": {
-"character": "Eri",
-"character_replacements": [  ],
-"next_id": "5",
-"replacements": [  ],
-"text": "AHHH",
-"translation_key": "AHHH",
-"type": "dialogue"
-},
-"5": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -84,34 +116,76 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "6",
+"next_id": "4",
 "type": "mutation"
 },
+"4": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "00_ScreenShake"
+} ] ]
+} ]
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "6",
+"replacements": [  ],
+"text": "AHHH",
+"translation_key": "AHHH",
+"type": "dialogue"
+},
 "6": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "00_Main"
+} ] ]
+} ]
+},
+"next_id": "8",
+"type": "mutation"
+},
+"8": {
 "character": "Slime",
 "character_replacements": [  ],
-"next_id": "7",
+"next_id": "9",
 "replacements": [  ],
 "text": "Jiggle*",
 "translation_key": "Jiggle*",
 "type": "dialogue"
 },
-"7": {
-"character": "Eri",
-"character_replacements": [  ],
-"next_id": "8",
-"replacements": [  ],
-"text": "Mhmm",
-"translation_key": "Mhmm",
-"type": "dialogue"
+"9": {
+"mutation": {
+"expression": [ {
+"function": "emit",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "change_anim"
+} ], [ {
+"type": "string",
+"value": "00_Main"
+} ] ]
+} ]
 },
-"8": {
-"character": "Slime",
-"character_replacements": [  ],
-"next_id": "10",
-"replacements": [  ],
-"text": "Jiggle*  Jiggle* Jiggle*",
-"translation_key": "Jiggle*  Jiggle* Jiggle*",
-"type": "dialogue"
+"next_id": "11",
+"type": "mutation"
 }
 }

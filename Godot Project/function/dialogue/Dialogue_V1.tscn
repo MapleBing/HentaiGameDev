@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://function/dialogue/dialogue_balloon.gd" type="Script" id=1]
-[ext_resource path="res://asset/character/Pixel Character/no_name chara/未命名角色 (主角).png" type="Texture" id=2]
+[ext_resource path="res://Asset/character/Pixel Character/no_name chara/未命名角色 (主角).png" type="Texture" id=2]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/font_normal.tres" type="DynamicFont" id=3]
 [ext_resource path="res://function/dialogue/CharacterSprites.gd" type="Script" id=4]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/font_italics.tres" type="DynamicFont" id=5]
@@ -221,7 +221,7 @@ scroll_active = false
 [node name="Dialogue" parent="Balloon/Margin/VBox" instance=ExtResource( 7 )]
 margin_top = 13.0
 margin_right = 280.0
-margin_bottom = 22.0
+margin_bottom = 23.0
 rect_clip_content = false
 mouse_filter = 1
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -232,15 +232,15 @@ bbcode_text = "This is a bunch of dialogue!"
 text = "This is a bunch of dialogue!"
 
 [node name="Responses" type="VBoxContainer" parent="Balloon/Margin/VBox"]
-margin_top = 22.0
+margin_top = 23.0
 margin_right = 280.0
-margin_bottom = 32.0
+margin_bottom = 31.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 0
 
 [node name="ResponseTemplate" type="RichTextLabel" parent="Balloon/Margin/VBox"]
-margin_top = 32.0
+margin_top = 31.0
 margin_right = 280.0
 margin_bottom = 47.0
 size_flags_horizontal = 3

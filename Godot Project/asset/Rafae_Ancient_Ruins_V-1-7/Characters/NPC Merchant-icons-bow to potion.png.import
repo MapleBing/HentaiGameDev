@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-icons-bow to potion.png-6d68ef1d466be831a6cd16c799a4be0d.stex"
+path="res://.import/NPC Merchant-icons-bow to potion.png-e2fd93e45ca87ea69050c647280f1c6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-bow to potion.png"
-dest_files=[ "res://.import/NPC Merchant-icons-bow to potion.png-6d68ef1d466be831a6cd16c799a4be0d.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-bow to potion.png"
+dest_files=[ "res://.import/NPC Merchant-icons-bow to potion.png-e2fd93e45ca87ea69050c647280f1c6d.stex" ]
 
 [params]
 

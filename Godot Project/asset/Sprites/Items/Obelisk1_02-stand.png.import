@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Obelisk1_02-stand.png-8992c9c766e18833a15c0f908c62805d.stex"
+path="res://.import/Obelisk1_02-stand.png-4ebfc0f6a1a5f6420186e20e024e3243.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Sprites/Items/Obelisk1_02-stand.png"
-dest_files=[ "res://.import/Obelisk1_02-stand.png-8992c9c766e18833a15c0f908c62805d.stex" ]
+source_file="res://Asset/Sprites/Items/Obelisk1_02-stand.png"
+dest_files=[ "res://.import/Obelisk1_02-stand.png-4ebfc0f6a1a5f6420186e20e024e3243.stex" ]
 
 [params]
 

@@ -5,16 +5,16 @@ export(String, FILE) var dialogue_file
 var current_file
 
 
-func set_dialogue(Dialogue_key):
-	current_file = load(dialogue_file)
-	play(dialogue_file, Dialogue_key)
+func displayDialogue(DialogueFile,Dialogue_key):
+	current_file = load(DialogueFile)
+	play(DialogueFile, Dialogue_key)
 	
 func displayEnemyDialogue(HScene_file,Dialogue_key):
 	current_file = load(HScene_file)
 	play(HScene_file, Dialogue_key)
 
 func _ready():
-	SignalBus.connect("display_dialog", self, "set_dialogue")
+	SignalBus.connect("display_dialogue", self, "displayDialogue")
 	DialogueManager.connect("dialogue_finished", self, "dialogue_deactivate") #見上述func
 	SignalBus.connect("display_enemy_hscene", self, "displayEnemyDialogue")
 	if ScenePos.from_scene != null:
