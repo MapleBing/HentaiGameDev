@@ -1,25 +1,19 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://function/world.gd" type="Script" id=1]
 [ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
-[ext_resource path="res://Map_land/UI_Container.gd" type="Script" id=3]
+[ext_resource path="res://addons/CanvasLayer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Dirt2_pipo.png" type="Texture" id=4]
 [ext_resource path="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Stone Ground.png" type="Texture" id=5]
 [ext_resource path="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png" type="Texture" id=6]
 [ext_resource path="res://Asset/Pipoya RPG Tileset 32x32/[A]_type2/[A]Water1_pipo.png" type="Texture" id=7]
-[ext_resource path="res://Asset/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=8]
-[ext_resource path="res://addons/h_scene_controller.tscn" type="PackedScene" id=9]
-[ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=10]
+[ext_resource path="res://asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3" type="AudioStream" id=8]
 [ext_resource path="res://Asset/Pipoya RPG Tileset 32x32/[Base]BaseChip_pipo.png" type="Texture" id=11]
-[ext_resource path="res://Asset/HScenes/HSceneManager.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Asset/Items/InventoryController_V2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=14]
 [ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=15]
 [ext_resource path="res://NPCs/青行燈.tscn" type="PackedScene" id=16]
 [ext_resource path="res://trashcan/player/player.tscn" type="PackedScene" id=17]
 [ext_resource path="res://NPCs/巫女.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Map_land/AudioController.gd" type="Script" id=19]
-[ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=20]
 [ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=21]
 
 [sub_resource type="RectangleShape2D" id=70]
@@ -412,6 +406,31 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id=69]
+
+[sub_resource type="TileSet" id=71]
+0/name = "[Base]BaseChip_pipo.png 0"
+0/texture = ExtResource( 11 )
+0/tex_offset = Vector2( 0, -22 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 32, 256, 64 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 64, 64 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
 [sub_resource type="ConvexPolygonShape2D" id=15]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
@@ -741,31 +760,6 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 } ]
 0/z_index = 0
 
-[sub_resource type="TileSet" id=71]
-0/name = "[Base]BaseChip_pipo.png 0"
-0/texture = ExtResource( 11 )
-0/tex_offset = Vector2( 0, -22 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 32, 256, 64 )
-0/tile_mode = 2
-0/autotile/icon_coordinate = Vector2( 0, 0 )
-0/autotile/tile_size = Vector2( 64, 64 )
-0/autotile/spacing = 0
-0/autotile/occluder_map = [  ]
-0/autotile/navpoly_map = [  ]
-0/autotile/priority_map = [  ]
-0/autotile/z_index_map = [  ]
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 0
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=69]
-
 [node name="Start-0" type="Node2D"]
 pause_mode = 2
 position = Vector2( 0, 2 )
@@ -813,22 +807,6 @@ collision_layer = 16
 format = 1
 tile_data = PoolIntArray( -262126, 6, 0, -196591, 0, 0, -196590, 0, 131074, -196589, 0, 131073, -196588, 0, 131073, -196587, 0, 131074, -196586, 0, 131073, -196585, 0, 131074, -196584, 0, 131073, -196583, 0, 131074, -196582, 0, 131073, -196581, 0, 131074, -196580, 0, 131073, -196579, 0, 131073, -196578, 0, 131073, -196577, 0, 131073, -196576, 0, 131074, -196575, 0, 131073, -196574, 0, 131074, -196573, 0, 131073, -196572, 0, 1, -131055, 0, 262144, -131054, 0, 196609, -131053, 0, 196610, -131052, 0, 262146, -131051, 0, 262145, -131050, 0, 262146, -131049, 0, 262146, -131048, 0, 196609, -131047, 0, 262145, -131046, 0, 262145, -131045, 0, 262145, -131044, 0, 196610, -131043, 0, 262146, -131042, 0, 262146, -131041, 0, 196609, -131040, 0, 262145, -131039, 0, 196609, -131038, 0, 262145, -131037, 0, 262145, -131036, 0, 262147, -65519, 0, 196608, -65518, 0, 196610, -65517, 0, 196609, -65516, 0, 196610, -65515, 0, 262146, -65514, 0, 262146, -65513, 0, 196609, -65512, 0, 262146, -65511, 0, 196610, -65510, 0, 262146, -65509, 0, 262145, -65508, 0, 262145, -65507, 0, 196610, -65506, 0, 196609, -65505, 0, 262145, -65504, 0, 196610, -65503, 0, 262146, -65502, 0, 196610, -65501, 0, 196610, -65500, 0, 196611, 17, 0, 327680, 18, 0, 327681, 19, 1, 65536, 20, 0, 196609, 21, 0, 196609, 22, 0, 196610, 23, 0, 196610, 24, 0, 262145, 25, 0, 262146, 26, 0, 196610, 27, 0, 196609, 28, 0, 196610, 29, 0, 262145, 30, 0, 262145, 31, 0, 262146, 32, 0, 196609, 33, 0, 262145, 34, 0, 262146, 35, 0, 196610, 36, 0, 196611, 65555, 0, 327680, 65556, 0, 327682, 65557, 0, 327681, 65558, 0, 327682, 65559, 1, 65536, 65560, 0, 196609, 65561, 0, 262145, 65562, 0, 262145, 65563, 0, 196610, 65564, 0, 196610, 65565, 0, 196610, 65566, 0, 262145, 65567, 0, 262146, 65568, 0, 262146, 65569, 0, 262146, 65570, 0, 262146, 65571, 0, 262145, 65572, 0, 196611, 131095, 0, 327680, 131096, 0, 327681, 131097, 0, 327681, 131098, 1, 65536, 131099, 0, 196610, 131100, 0, 262145, 131101, 0, 262146, 131102, 0, 262146, 131103, 0, 196610, 131104, 0, 262146, 131105, 0, 196610, 131106, 0, 262145, 131107, 0, 196610, 131108, 0, 262147, 196634, 0, 327680, 196635, 1, 65536, 196636, 0, 262145, 196637, 0, 196610, 196638, 0, 196609, 196639, 0, 196609, 196640, 0, 262146, 196641, 0, 196610, 196642, 0, 262145, 196643, 0, 262145, 196644, 0, 262147, 196649, 0, 0, 196650, 0, 1, 262171, 0, 262144, 262172, 0, 196609, 262173, 0, 196610, 262174, 0, 196609, 262175, 0, 196610, 262176, 0, 262145, 262177, 0, 196610, 262178, 0, 196609, 262179, 0, 196610, 262180, 0, 262147, 262185, 0, 196608, 262186, 0, 196611, 327707, 0, 262144, 327708, 0, 196610, 327709, 0, 262146, 327710, 0, 196610, 327711, 0, 196609, 327712, 0, 262146, 327713, 0, 262146, 327714, 0, 262145, 327715, 0, 262145, 327716, 0, 262147, 327720, 0, 0, 327721, 0, 2, 327722, 0, 196611, 393243, 0, 262144, 393244, 0, 262145, 393245, 0, 196610, 393246, 0, 196609, 393247, 0, 262145, 393248, 0, 262145, 393249, 0, 196610, 393250, 0, 196610, 393251, 0, 196609, 393252, 0, 262147, 393256, 0, 65536, 393257, 0, 327681, 393258, 0, 327683, 458779, 0, 262144, 458780, 0, 196609, 458781, 0, 262146, 458782, 0, 196610, 458783, 0, 196610, 458784, 0, 196609, 458785, 0, 262146, 458786, 0, 196610, 458787, 0, 196610, 458788, 0, 2, 458789, 0, 131074, 458790, 0, 131075, 524315, 0, 327680, 524316, 0, 327682, 524317, 0, 327681, 524318, 0, 327681, 524319, 0, 327681, 524320, 0, 327681, 524321, 0, 327681, 524322, 0, 327682, 524323, 0, 327681, 524324, 0, 327682, 524325, 0, 327681, 524326, 0, 65537, 720926, 0, 131072, 720927, 0, 131073, 720928, 0, 131073, 720929, 0, 131073, 720930, 0, 131073, 720931, 0, 131074, 720932, 0, 1, 786461, 0, 0, 786462, 0, 2, 786463, 0, 196610, 786464, 0, 262145, 786465, 0, 262146, 786466, 0, 196610, 786467, 0, 196609, 786468, 0, 262147, 851997, 0, 327680, 851998, 0, 327682, 851999, 1, 65536, 852000, 0, 262146, 852001, 0, 196610, 852002, 0, 262145, 852003, 0, 262145, 852004, 0, 262147, 917535, 0, 262144, 917536, 0, 262145, 917537, 0, 262146, 917538, 0, 262145, 917539, 0, 262146, 917540, 0, 2, 917541, 0, 1, 983071, 0, 327680, 983072, 1, 65536, 983073, 0, 262146, 983074, 0, 196610, 983075, 0, 196609, 983076, 0, 262146, 983077, 0, 262147, 1048608, 0, 196608, 1048609, 0, 262146, 1048610, 0, 196609, 1048611, 0, 262146, 1048612, 0, 262146, 1048613, 0, 2, 1048614, 0, 1, 1114144, 0, 196608, 1114145, 0, 196609, 1114146, 0, 262146, 1114147, 0, 262145, 1114148, 0, 196609, 1114149, 0, 262146, 1114150, 0, 196611, 1179680, 0, 65536, 1179681, 0, 327681, 1179682, 0, 327681, 1179683, 0, 327681, 1179684, 0, 2, 1179685, 0, 196610, 1179686, 0, 196611, 1245216, 0, 2, 1245220, 0, 65536, 1245221, 0, 327681, 1245222, 0, 327683, 1310756, 0, 65539 )
 
-[node name="collission" type="TileMap" parent="Land"]
-light_mask = 4
-tile_set = SubResource( 3 )
-cell_size = Vector2( 32, 32 )
-collision_layer = 16
-format = 1
-tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 2, 65535, 0, 65536, 0, 0, 65537, 1, 0, 393216, 131071, 0, 65536, 65536, 0, 65537, 65537, 0, 393216, 196607, 0, 393218, 131072, 0, 65537, 131073, 0, 393216, 262143, 0, 65536, 196608, 0, 65537, 196609, 0, 458752, 196610, 0, 2, 327679, 0, 65536, 262144, 0, 65537, 262145, 0, 65537, 262146, 0, 393216, 393215, 0, 65536, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 65538, 458751, 0, 65536, 393216, 0, 65537, 393217, 0, 65537, 393218, 0, 458752, 393219, 0, 2, 524287, 0, 65536, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65538, 458769, 0, 0, 458770, 0, 2, 589823, 0, 393218, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 131077, 524292, 0, 2, 524304, 0, 0, 524305, 0, 458754, 524306, 0, 131077, 524307, 0, 2, 655359, 0, 65536, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 131077, 589829, 0, 1, 589830, 0, 2, 589837, 0, 0, 589838, 0, 1, 589839, 0, 1, 589840, 0, 458754, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 393216, 720895, 0, 393218, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 458752, 655367, 0, 458753, 655368, 0, 458753, 655369, 0, 458753, 655370, 0, 1, 655371, 0, 458753, 655372, 0, 458753, 655373, 0, 131079, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 393216, 786431, 0, 393218, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65537, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65538, 851967, 0, 131072, 786432, 0, 131073, 786433, 0, 131073, 786434, 0, 131073, 786435, 0, 327681, 786436, 0, 327681, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 327681, 786443, 0, 131073, 786444, 0, 131073, 786445, 0, 131073, 786446, 0, 327681, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 327681, 786451, 0, 131074 )
-
-[node name="TileMap" type="TileMap" parent="Land"]
-tile_set = SubResource( 71 )
-cell_size = Vector2( 16, 16 )
-centered_textures = true
-collision_layer = 16
-format = 1
-tile_data = PoolIntArray( -65521, 0, 0, 65549, 0, 0, 131089, 0, 0, 196629, 0, 0, 262158, 0, 0, 327698, 0, 0, 655368, 0, 1, 851978, 0, 1, 917517, 0, 1, 1048587, 0, 1, 1048592, 0, 1, 1179662, 0, 1, 1179666, 0, 1 )
-
 [node name="dialog_areas" type="Node2D" parent="."]
 pause_mode = 1
 
@@ -874,35 +852,35 @@ __meta__ = {
 light_mask = 16
 position = Vector2( 147, 104 )
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-script = ExtResource( 20 )
+[node name="StaticEntity" type="YSort" parent="YSort"]
 
-[node name="UI_Container" type="Control" parent="CanvasLayer"]
-margin_top = -1.0
-margin_right = 40.0
-margin_bottom = 39.0
-script = ExtResource( 3 )
-Pause_Menu = "res://asset/made asset/Menu_UI/PauseMenu.tscn"
-Inventory_Menu = "res://asset/Items/InventoryController_V2.tscn"
+[node name="TileMap" type="TileMap" parent="YSort/StaticEntity"]
+position = Vector2( 0, 2 )
+z_index = 1
+tile_set = SubResource( 71 )
+cell_size = Vector2( 16, 16 )
+cell_tile_origin = 1
+cell_y_sort = true
+centered_textures = true
+collision_layer = 16
+format = 1
+tile_data = PoolIntArray( -65521, 0, 0, 65549, 0, 0, 131089, 0, 0, 196629, 0, 0, 262158, 0, 0, 327698, 0, 0, 655368, 0, 1, 851978, 0, 1, 917517, 0, 1, 1048587, 0, 1, 1048592, 0, 1, 1179662, 0, 1, 1179666, 0, 1 )
 
-[node name="InventoryController_V2" parent="CanvasLayer/UI_Container" instance=ExtResource( 13 )]
-visible = false
-margin_top = 1.0
-margin_bottom = 1.0
+[node name="collission" type="TileMap" parent="YSort/StaticEntity"]
+light_mask = 4
+tile_set = SubResource( 3 )
+cell_size = Vector2( 32, 32 )
+cell_tile_origin = 2
+cell_y_sort = true
+collision_layer = 16
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 2, 65535, 0, 65536, 0, 0, 65537, 1, 0, 393216, 131071, 0, 65536, 65536, 0, 65537, 65537, 0, 393216, 196607, 0, 393218, 131072, 0, 65537, 131073, 0, 393216, 262143, 0, 65536, 196608, 0, 65537, 196609, 0, 458752, 196610, 0, 2, 327679, 0, 65536, 262144, 0, 65537, 262145, 0, 65537, 262146, 0, 393216, 393215, 0, 65536, 327680, 0, 65537, 327681, 0, 65537, 327682, 0, 65538, 458751, 0, 65536, 393216, 0, 65537, 393217, 0, 65537, 393218, 0, 458752, 393219, 0, 2, 524287, 0, 65536, 458752, 0, 65537, 458753, 0, 65537, 458754, 0, 65537, 458755, 0, 65538, 458769, 0, 0, 458770, 0, 2, 589823, 0, 393218, 524288, 0, 65537, 524289, 0, 65537, 524290, 0, 65537, 524291, 0, 131077, 524292, 0, 2, 524304, 0, 0, 524305, 0, 458754, 524306, 0, 131077, 524307, 0, 2, 655359, 0, 65536, 589824, 0, 65537, 589825, 0, 65537, 589826, 0, 65537, 589827, 0, 65537, 589828, 0, 131077, 589829, 0, 1, 589830, 0, 2, 589837, 0, 0, 589838, 0, 1, 589839, 0, 1, 589840, 0, 458754, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 393216, 720895, 0, 393218, 655360, 0, 65537, 655361, 0, 65537, 655362, 0, 65537, 655363, 0, 65537, 655364, 0, 65537, 655365, 0, 65537, 655366, 0, 458752, 655367, 0, 458753, 655368, 0, 458753, 655369, 0, 458753, 655370, 0, 1, 655371, 0, 458753, 655372, 0, 458753, 655373, 0, 131079, 655374, 0, 65537, 655375, 0, 65537, 655376, 0, 65537, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 393216, 786431, 0, 393218, 720896, 0, 65537, 720897, 0, 65537, 720898, 0, 65537, 720899, 0, 65537, 720900, 0, 65537, 720901, 0, 65537, 720902, 0, 65537, 720903, 0, 65537, 720904, 0, 65537, 720905, 0, 65537, 720906, 0, 65537, 720907, 0, 65537, 720908, 0, 65537, 720909, 0, 65537, 720910, 0, 65537, 720911, 0, 65537, 720912, 0, 65537, 720913, 0, 65537, 720914, 0, 65537, 720915, 0, 65538, 851967, 0, 131072, 786432, 0, 131073, 786433, 0, 131073, 786434, 0, 131073, 786435, 0, 327681, 786436, 0, 327681, 786437, 0, 131073, 786438, 0, 131073, 786439, 0, 131073, 786440, 0, 131073, 786441, 0, 131073, 786442, 0, 327681, 786443, 0, 131073, 786444, 0, 131073, 786445, 0, 131073, 786446, 0, 327681, 786447, 0, 131073, 786448, 0, 131073, 786449, 0, 131073, 786450, 0, 327681, 786451, 0, 131074 )
 
-[node name="h_scene_controller" parent="CanvasLayer" instance=ExtResource( 9 )]
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
 
-[node name="HScenes" parent="CanvasLayer" instance=ExtResource( 12 )]
-
-[node name="minigame_manager" parent="CanvasLayer" instance=ExtResource( 10 )]
-
-[node name="AudioController" type="Node2D" parent="CanvasLayer"]
-z_as_relative = false
-script = ExtResource( 19 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/AudioController"]
+[node name="BGMPlayer" parent="CanvasLayer/AudioController" index="0"]
 stream = ExtResource( 8 )
-volume_db = -40.0
+volume_db = -10.0
 
 [node name="SaveLoadDemo" type="Node2D" parent="."]
 position = Vector2( 0, 1 )
@@ -921,3 +899,4 @@ rect_scale = Vector2( 0.5, 0.5 )
 [editable path="YSort/MovingEntity/NPC"]
 [editable path="YSort/MovingEntity/NPC/DetectPress"]
 [editable path="YSort/MovingEntity/NPC/PlayerDetectionZone"]
+[editable path="CanvasLayer"]

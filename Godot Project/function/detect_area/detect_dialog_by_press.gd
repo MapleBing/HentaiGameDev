@@ -4,7 +4,7 @@ export var dialog_key = ""
 export(String, FILE) var dialogue_file
 var area_active = false
 onready var parent = get_parent()
-
+#sends
 func _input(event):
 	if area_active and event.is_action_pressed("interact") and !parent.talking:
 		parent.update_direction()

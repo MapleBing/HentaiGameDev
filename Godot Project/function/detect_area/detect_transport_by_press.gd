@@ -14,6 +14,7 @@ func _ready():
 	entered= false
 	
 func _process(delta):
+	#the scene wont change unless the first frame has passed (avoids scene change glitch)
 	if time <= 0:
 		entered = false
 		time += delta

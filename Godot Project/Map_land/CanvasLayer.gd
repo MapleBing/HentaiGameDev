@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 var buttonPress = false
+#Collection of menu inputs that send a signal to the signal bus
 func _process(delta: float) -> void:
 	var x = 0
 	if Input.is_action_just_pressed("in_game_menu"):

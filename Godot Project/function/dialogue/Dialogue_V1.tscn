@@ -258,4 +258,9 @@ text = "test"
 fit_content_height = true
 scroll_active = false
 
+[node name="Control" type="Control" parent="Balloon/Margin/VBox"]
+margin_top = 47.0
+margin_right = 280.0
+margin_bottom = 47.0
+
 [connection signal="gui_input" from="Balloon" to="." method="_on_Balloon_gui_input"]

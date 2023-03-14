@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-91e4c23834d9e2f8823cab447a3e6d02.mp3str"
+
+[deps]
+
+source_file="res://asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3"
+dest_files=[ "res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-91e4c23834d9e2f8823cab447a3e6d02.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
