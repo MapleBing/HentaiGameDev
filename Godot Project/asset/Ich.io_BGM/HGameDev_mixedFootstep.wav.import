@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/HGameDev_mixedFootstep.wav-5275995a3a95ed7cc57f7776c426b241.sample"
+path="res://.import/HGameDev_mixedFootstep.wav-329e51c3faf5e4efa0d100831974ba22.sample"
 
 [deps]
 
-source_file="res://Asset/Ich.io_BGM/HGameDev_mixedFootstep.wav"
-dest_files=[ "res://.import/HGameDev_mixedFootstep.wav-5275995a3a95ed7cc57f7776c426b241.sample" ]
+source_file="res://asset/Ich.io_BGM/HGameDev_mixedFootstep.wav"
+dest_files=[ "res://.import/HGameDev_mixedFootstep.wav-329e51c3faf5e4efa0d100831974ba22.sample" ]
 
 [params]
 

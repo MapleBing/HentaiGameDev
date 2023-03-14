@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform(grass) to water- full tile water.png-87f1d8a64505dafdeb231297a062b373.stex"
+path="res://.import/platform(grass) to water- full tile water.png-197ce7315f9fcc8d59110ea1c3e81ff0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform(grass) to water- full tile water.png"
-dest_files=[ "res://.import/platform(grass) to water- full tile water.png-87f1d8a64505dafdeb231297a062b373.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform(grass) to water- full tile water.png"
+dest_files=[ "res://.import/platform(grass) to water- full tile water.png-197ce7315f9fcc8d59110ea1c3e81ff0.stex" ]
 
 [params]
 

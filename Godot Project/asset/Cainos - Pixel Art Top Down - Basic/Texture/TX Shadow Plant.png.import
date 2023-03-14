@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Shadow Plant.png-29ba4b835f12db45485c115113dbf60f.stex"
+path="res://.import/TX Shadow Plant.png-912d545302e394393e5d91b325dbf922.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png"
-dest_files=[ "res://.import/TX Shadow Plant.png-29ba4b835f12db45485c115113dbf60f.stex" ]
+source_file="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Shadow Plant.png"
+dest_files=[ "res://.import/TX Shadow Plant.png-912d545302e394393e5d91b325dbf922.stex" ]
 
 [params]
 

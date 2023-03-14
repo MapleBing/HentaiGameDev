@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hint btn Z.png-152e96ae8065bc73cbde3d3f25f58e65.stex"
+path="res://.import/hint btn Z.png-5e10d335100ef1c4e6e52c1f9b73613e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/dialog_UI/hint btn Z.png"
-dest_files=[ "res://.import/hint btn Z.png-152e96ae8065bc73cbde3d3f25f58e65.stex" ]
+source_file="res://asset/made asset/dialog_UI/hint btn Z.png"
+dest_files=[ "res://.import/hint btn Z.png-5e10d335100ef1c4e6e52c1f9b73613e.stex" ]
 
 [params]
 

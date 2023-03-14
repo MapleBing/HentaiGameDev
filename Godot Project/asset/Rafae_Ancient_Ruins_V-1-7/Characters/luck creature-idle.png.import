@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/luck creature-idle.png-92ba6466a4df71ca4401c87b9c414caa.stex"
+path="res://.import/luck creature-idle.png-fc4994dadd78f0348947788562f39462.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/luck creature-idle.png"
-dest_files=[ "res://.import/luck creature-idle.png-92ba6466a4df71ca4401c87b9c414caa.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/luck creature-idle.png"
+dest_files=[ "res://.import/luck creature-idle.png-fc4994dadd78f0348947788562f39462.stex" ]
 
 [params]
 

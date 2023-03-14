@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/golem-shadow.png-a0e0033c2c3eea11e3b7047c13a70017.stex"
+path="res://.import/golem-shadow.png-1edd53f87398e41d62286cd5b0124c11.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/golem-shadow.png"
-dest_files=[ "res://.import/golem-shadow.png-a0e0033c2c3eea11e3b7047c13a70017.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/golem-shadow.png"
+dest_files=[ "res://.import/golem-shadow.png-1edd53f87398e41d62286cd5b0124c11.stex" ]
 
 [params]
 

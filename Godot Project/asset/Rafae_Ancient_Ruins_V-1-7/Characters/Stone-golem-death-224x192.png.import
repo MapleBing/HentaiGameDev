@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone-golem-death-224x192.png-08623d5555e60a2e3b6435451ef3230c.stex"
+path="res://.import/Stone-golem-death-224x192.png-4ab0dfb64d241310cae1071627c8371d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-death-224x192.png"
-dest_files=[ "res://.import/Stone-golem-death-224x192.png-08623d5555e60a2e3b6435451ef3230c.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-death-224x192.png"
+dest_files=[ "res://.import/Stone-golem-death-224x192.png-4ab0dfb64d241310cae1071627c8371d.stex" ]
 
 [params]
 

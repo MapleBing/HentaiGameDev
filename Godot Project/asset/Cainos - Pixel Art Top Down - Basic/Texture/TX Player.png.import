@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Player.png-3f0dfd73eabcac953fd0e830ed928474.stex"
+path="res://.import/TX Player.png-0ad843d56376e19387ba69fa5453874e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Player.png"
-dest_files=[ "res://.import/TX Player.png-3f0dfd73eabcac953fd0e830ed928474.stex" ]
+source_file="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Player.png"
+dest_files=[ "res://.import/TX Player.png-0ad843d56376e19387ba69fa5453874e.stex" ]
 
 [params]
 

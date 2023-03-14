@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hint describe interact.png-db71c93ae7bc730176077136040e3619.stex"
+path="res://.import/hint describe interact.png-4928b6ccbe09ea4ecd00bae910596887.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/dialog_UI/hint describe interact.png"
-dest_files=[ "res://.import/hint describe interact.png-db71c93ae7bc730176077136040e3619.stex" ]
+source_file="res://asset/made asset/dialog_UI/hint describe interact.png"
+dest_files=[ "res://.import/hint describe interact.png-4928b6ccbe09ea4ecd00bae910596887.stex" ]
 
 [params]
 

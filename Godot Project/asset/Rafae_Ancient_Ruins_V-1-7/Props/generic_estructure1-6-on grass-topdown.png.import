@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/generic_estructure1-6-on grass-topdown.png-82ed6a2d3b94f7ba001448640f532fc9.stex"
+path="res://.import/generic_estructure1-6-on grass-topdown.png-284d89405e0cf55c9293f856a3cb153d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/generic_estructure1-6-on grass-topdown.png"
-dest_files=[ "res://.import/generic_estructure1-6-on grass-topdown.png-82ed6a2d3b94f7ba001448640f532fc9.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/generic_estructure1-6-on grass-topdown.png"
+dest_files=[ "res://.import/generic_estructure1-6-on grass-topdown.png-284d89405e0cf55c9293f856a3cb153d.stex" ]
 
 [params]
 

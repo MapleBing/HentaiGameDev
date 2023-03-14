@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/light2b.png-8b44899ac94ef05bb59fba12fb498269.stex"
+path="res://.import/light2b.png-a65bcedb5fc62b2eb95f805504cdcd44.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Szadi art - RPG Buildings and Interriors CASTLE/Anim/light2b.png"
-dest_files=[ "res://.import/light2b.png-8b44899ac94ef05bb59fba12fb498269.stex" ]
+source_file="res://asset/Szadi art - RPG Buildings and Interriors CASTLE/Anim/light2b.png"
+dest_files=[ "res://.import/light2b.png-a65bcedb5fc62b2eb95f805504cdcd44.stex" ]
 
 [params]
 

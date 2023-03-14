@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HScene_Slime_eri V2-Sheet.png-7e8ff40b909d3bc2840c94ceef72bb6e.stex"
+path="res://.import/HScene_Slime_eri V2-Sheet.png-058f386a27a2ffe2d2eff02bc418aaf9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/HScenes/AniCgs/SpriteSheets/HScene_Slime_eri V2-Sheet.png"
-dest_files=[ "res://.import/HScene_Slime_eri V2-Sheet.png-7e8ff40b909d3bc2840c94ceef72bb6e.stex" ]
+source_file="res://asset/HScenes/AniCgs/SpriteSheets/HScene_Slime_eri V2-Sheet.png"
+dest_files=[ "res://.import/HScene_Slime_eri V2-Sheet.png-058f386a27a2ffe2d2eff02bc418aaf9.stex" ]
 
 [params]
 

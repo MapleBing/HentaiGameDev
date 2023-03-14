@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform-flooded ground - TRANSITION.png-aaa4710143f8b3b7e5253d520e59e736.stex"
+path="res://.import/platform-flooded ground - TRANSITION.png-39b94685f8590c5337013f65b9009a70.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground - TRANSITION.png"
-dest_files=[ "res://.import/platform-flooded ground - TRANSITION.png-aaa4710143f8b3b7e5253d520e59e736.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground - TRANSITION.png"
+dest_files=[ "res://.import/platform-flooded ground - TRANSITION.png-39b94685f8590c5337013f65b9009a70.stex" ]
 
 [params]
 

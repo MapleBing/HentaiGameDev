@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shrine or fountain-blood- 160x128-on flat surface.png-ecad4e469152921e1fb55d600d66f5ca.stex"
+path="res://.import/shrine or fountain-blood- 160x128-on flat surface.png-d74eef4b03a979f489945efe2555c8de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/shrine or fountain-blood- 160x128-on flat surface.png"
-dest_files=[ "res://.import/shrine or fountain-blood- 160x128-on flat surface.png-ecad4e469152921e1fb55d600d66f5ca.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/shrine or fountain-blood- 160x128-on flat surface.png"
+dest_files=[ "res://.import/shrine or fountain-blood- 160x128-on flat surface.png-d74eef4b03a979f489945efe2555c8de.stex" ]
 
 [params]
 

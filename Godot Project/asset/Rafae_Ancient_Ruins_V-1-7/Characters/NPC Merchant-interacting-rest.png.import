@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-interacting-rest.png-923b553324c7d2df4b85af5d9b89dbd9.stex"
+path="res://.import/NPC Merchant-interacting-rest.png-42dcc631f448010aa9d6073017cfec10.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-interacting-rest.png"
-dest_files=[ "res://.import/NPC Merchant-interacting-rest.png-923b553324c7d2df4b85af5d9b89dbd9.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-interacting-rest.png"
+dest_files=[ "res://.import/NPC Merchant-interacting-rest.png-42dcc631f448010aa9d6073017cfec10.stex" ]
 
 [params]
 

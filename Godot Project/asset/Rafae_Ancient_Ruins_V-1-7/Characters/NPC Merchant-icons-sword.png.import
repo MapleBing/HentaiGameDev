@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-icons-sword.png-91f34593566f692f66a50fa694f2a8da.stex"
+path="res://.import/NPC Merchant-icons-sword.png-f3ef52657af2df4ea0372b1aab735d2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-sword.png"
-dest_files=[ "res://.import/NPC Merchant-icons-sword.png-91f34593566f692f66a50fa694f2a8da.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-sword.png"
+dest_files=[ "res://.import/NPC Merchant-icons-sword.png-f3ef52657af2df4ea0372b1aab735d2e.stex" ]
 
 [params]
 

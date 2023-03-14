@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tileset-Animated Terrains2-8 frames.png-b302a93f82e10ad663c80d74086499fc.stex"
+path="res://.import/Tileset-Animated Terrains2-8 frames.png-5a65f5cfe18be55f0104814da3849c96.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/Tileset-Animated Terrains2-8 frames.png"
-dest_files=[ "res://.import/Tileset-Animated Terrains2-8 frames.png-b302a93f82e10ad663c80d74086499fc.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/Tileset-Animated Terrains2-8 frames.png"
+dest_files=[ "res://.import/Tileset-Animated Terrains2-8 frames.png-5a65f5cfe18be55f0104814da3849c96.stex" ]
 
 [params]
 

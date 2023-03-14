@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tileset-Animated Terrains2-16 frames-with transparency.png-f2d406f95cbb1c68dd05e9ae490f31ea.stex"
+path="res://.import/Tileset-Animated Terrains2-16 frames-with transparency.png-f11b914942e3946f3d0ac559df9389bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/Tileset-Animated Terrains2-16 frames-with transparency.png"
-dest_files=[ "res://.import/Tileset-Animated Terrains2-16 frames-with transparency.png-f2d406f95cbb1c68dd05e9ae490f31ea.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/Tileset-Animated Terrains2-16 frames-with transparency.png"
+dest_files=[ "res://.import/Tileset-Animated Terrains2-16 frames-with transparency.png-f11b914942e3946f3d0ac559df9389bd.stex" ]
 
 [params]
 

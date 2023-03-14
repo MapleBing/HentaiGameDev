@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Obelisk2-animation2-deactivating-70x150.png-e859723d4150e9c744ae59e16f505a99.stex"
+path="res://.import/Obelisk2-animation2-deactivating-70x150.png-cae0754ad10f260354ac997bc26f94d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk2-animation2-deactivating-70x150.png"
-dest_files=[ "res://.import/Obelisk2-animation2-deactivating-70x150.png-e859723d4150e9c744ae59e16f505a99.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk2-animation2-deactivating-70x150.png"
+dest_files=[ "res://.import/Obelisk2-animation2-deactivating-70x150.png-cae0754ad10f260354ac997bc26f94d7.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ritual site-style1-anim-1.png-6d87d2bcd6bd48a542a1c53d567df69a.stex"
+path="res://.import/Ritual site-style1-anim-1.png-d9d4b6880865855c9508a6871e4ebcb0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Ritual site-style1-anim-1.png"
-dest_files=[ "res://.import/Ritual site-style1-anim-1.png-6d87d2bcd6bd48a542a1c53d567df69a.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Ritual site-style1-anim-1.png"
+dest_files=[ "res://.import/Ritual site-style1-anim-1.png-d9d4b6880865855c9508a6871e4ebcb0.stex" ]
 
 [params]
 

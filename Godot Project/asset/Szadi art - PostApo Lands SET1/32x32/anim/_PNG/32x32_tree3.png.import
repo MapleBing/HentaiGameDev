@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/32x32_tree3.png-10a377e58cafe209f2b26f8886089fda.stex"
+path="res://.import/32x32_tree3.png-8b5598f65f1d7ccb4d2b29b270bf01a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Szadi art - PostApo Lands SET1/32x32/anim/_PNG/32x32_tree3.png"
-dest_files=[ "res://.import/32x32_tree3.png-10a377e58cafe209f2b26f8886089fda.stex" ]
+source_file="res://asset/Szadi art - PostApo Lands SET1/32x32/anim/_PNG/32x32_tree3.png"
+dest_files=[ "res://.import/32x32_tree3.png-8b5598f65f1d7ccb4d2b29b270bf01a7.stex" ]
 
 [params]
 

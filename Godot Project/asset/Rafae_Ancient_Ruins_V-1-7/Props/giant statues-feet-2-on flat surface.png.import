@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/giant statues-feet-2-on flat surface.png-3299ad65fda8b87babf4ea00f0f2df8c.stex"
+path="res://.import/giant statues-feet-2-on flat surface.png-1694ab4b68436de35dc15dd0f7bbb164.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/giant statues-feet-2-on flat surface.png"
-dest_files=[ "res://.import/giant statues-feet-2-on flat surface.png-3299ad65fda8b87babf4ea00f0f2df8c.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/giant statues-feet-2-on flat surface.png"
+dest_files=[ "res://.import/giant statues-feet-2-on flat surface.png-1694ab4b68436de35dc15dd0f7bbb164.stex" ]
 
 [params]
 

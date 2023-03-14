@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moose6-death-347x192.png-ab876ac5d8e8b8d6b7a57f151264751d.stex"
+path="res://.import/moose6-death-347x192.png-b3997f225e3c93cd3b7f3cb243bb3a90.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose6-death-347x192.png"
-dest_files=[ "res://.import/moose6-death-347x192.png-ab876ac5d8e8b8d6b7a57f151264751d.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose6-death-347x192.png"
+dest_files=[ "res://.import/moose6-death-347x192.png-b3997f225e3c93cd3b7f3cb243bb3a90.stex" ]
 
 [params]
 

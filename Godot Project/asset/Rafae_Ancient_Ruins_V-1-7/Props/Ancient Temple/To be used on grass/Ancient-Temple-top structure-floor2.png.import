@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ancient-Temple-top structure-floor2.png-a012ea94c9d728d33b343e68c6aacb70.stex"
+path="res://.import/Ancient-Temple-top structure-floor2.png-51fe57d016215d9683970a93d2052689.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Ancient Temple/To be used on grass/Ancient-Temple-top structure-floor2.png"
-dest_files=[ "res://.import/Ancient-Temple-top structure-floor2.png-a012ea94c9d728d33b343e68c6aacb70.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Ancient Temple/To be used on grass/Ancient-Temple-top structure-floor2.png"
+dest_files=[ "res://.import/Ancient-Temple-top structure-floor2.png-51fe57d016215d9683970a93d2052689.stex" ]
 
 [params]
 

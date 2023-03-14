@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flooded grass- grass variation1.png-0998545c7f314fd665e3c23f55cd7d5b.stex"
+path="res://.import/flooded grass- grass variation1.png-f413f0133181470f764764d2db6ab59b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/flooded grass- grass variation1.png"
-dest_files=[ "res://.import/flooded grass- grass variation1.png-0998545c7f314fd665e3c23f55cd7d5b.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/flooded grass- grass variation1.png"
+dest_files=[ "res://.import/flooded grass- grass variation1.png-f413f0133181470f764764d2db6ab59b.stex" ]
 
 [params]
 

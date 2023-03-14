@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Full sprite Eri v2.png-86de8c31c15a08cb3201830e064f8f6d.stex"
+path="res://.import/Full sprite Eri v2.png-1fb6771705b27e35b8afcb0c3d468106.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/character/Eri/Eri_Assets/Full sprite Eri v2.png"
-dest_files=[ "res://.import/Full sprite Eri v2.png-86de8c31c15a08cb3201830e064f8f6d.stex" ]
+source_file="res://asset/character/Eri/Eri_Assets/Full sprite Eri v2.png"
+dest_files=[ "res://.import/Full sprite Eri v2.png-1fb6771705b27e35b8afcb0c3d468106.stex" ]
 
 [params]
 

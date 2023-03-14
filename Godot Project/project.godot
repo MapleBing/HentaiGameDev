@@ -27,17 +27,17 @@ _global_script_classes=[ {
 "base": "ItemList",
 "class": "armor_item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/ItemArmor.gd"
+"path": "res://asset/Items/Scripts/ItemArmor.gd"
 }, {
 "base": "Resource",
 "class": "food_item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/ItemFood.gd"
+"path": "res://asset/Items/Scripts/ItemFood.gd"
 }, {
 "base": "Resource",
 "class": "item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/Item.gd"
+"path": "res://asset/Items/Scripts/Item.gd"
 } ]
 _global_script_class_icons={
 "Character": "",

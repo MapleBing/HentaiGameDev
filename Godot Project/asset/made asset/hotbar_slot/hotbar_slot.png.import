@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hotbar_slot.png-fbe33b74643ed346c7a8e4b5b8b10ba3.stex"
+path="res://.import/hotbar_slot.png-564fe955ccf5729fa5a892f7a986fd64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/hotbar_slot/hotbar_slot.png"
-dest_files=[ "res://.import/hotbar_slot.png-fbe33b74643ed346c7a8e4b5b8b10ba3.stex" ]
+source_file="res://asset/made asset/hotbar_slot/hotbar_slot.png"
+dest_files=[ "res://.import/hotbar_slot.png-564fe955ccf5729fa5a892f7a986fd64.stex" ]
 
 [params]
 

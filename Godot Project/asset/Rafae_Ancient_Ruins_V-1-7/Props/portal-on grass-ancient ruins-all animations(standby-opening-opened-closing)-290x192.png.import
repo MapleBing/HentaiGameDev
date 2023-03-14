@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png-a6fab27f26720df8d8b000f93988dfce.stex"
+path="res://.import/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png-1b2b738868e67cb788996acf416d2ea0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png"
-dest_files=[ "res://.import/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png-a6fab27f26720df8d8b000f93988dfce.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png"
+dest_files=[ "res://.import/portal-on grass-ancient ruins-all animations(standby-opening-opened-closing)-290x192.png-1b2b738868e67cb788996acf416d2ea0.stex" ]
 
 [params]
 

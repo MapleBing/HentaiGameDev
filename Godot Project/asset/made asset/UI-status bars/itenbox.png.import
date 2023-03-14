@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/itenbox.png-97ca814231cbae07fbd7f6d886056b8a.stex"
+path="res://.import/itenbox.png-a76af43aa4fa8c75f0bb3c589e1bea2d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/UI-status bars/itenbox.png"
-dest_files=[ "res://.import/itenbox.png-97ca814231cbae07fbd7f6d886056b8a.stex" ]
+source_file="res://asset/made asset/UI-status bars/itenbox.png"
+dest_files=[ "res://.import/itenbox.png-a76af43aa4fa8c75f0bb3c589e1bea2d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hornybar_v2_4.png-cc3a4d3b7bf96d89fb1188ec651d10d7.stex"
+path="res://.import/hornybar_v2_4.png-badfcc6e4e662b00f0980a0b932ae0f7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/UI-status bars/hornybar_v2_4.png"
-dest_files=[ "res://.import/hornybar_v2_4.png-cc3a4d3b7bf96d89fb1188ec651d10d7.stex" ]
+source_file="res://asset/made asset/UI-status bars/hornybar_v2_4.png"
+dest_files=[ "res://.import/hornybar_v2_4.png-badfcc6e4e662b00f0980a0b932ae0f7.stex" ]
 
 [params]
 

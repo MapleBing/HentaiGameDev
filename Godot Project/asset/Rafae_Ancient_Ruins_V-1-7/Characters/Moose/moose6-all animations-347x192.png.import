@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moose6-all animations-347x192.png-508a24180ceb8e1952ea3fca4501fc0d.stex"
+path="res://.import/moose6-all animations-347x192.png-710b9e5f1b8d80caee52f11f6cf3286c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose6-all animations-347x192.png"
-dest_files=[ "res://.import/moose6-all animations-347x192.png-508a24180ceb8e1952ea3fca4501fc0d.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose6-all animations-347x192.png"
+dest_files=[ "res://.import/moose6-all animations-347x192.png-710b9e5f1b8d80caee52f11f6cf3286c.stex" ]
 
 [params]
 

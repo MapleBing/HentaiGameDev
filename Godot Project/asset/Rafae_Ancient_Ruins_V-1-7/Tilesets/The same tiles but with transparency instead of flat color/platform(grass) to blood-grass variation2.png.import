@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform(grass) to blood-grass variation2.png-5fa1ee761626299a5a36fbda8127dfce.stex"
+path="res://.import/platform(grass) to blood-grass variation2.png-76ef7b823721649bf4d9875974254b4d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/platform(grass) to blood-grass variation2.png"
-dest_files=[ "res://.import/platform(grass) to blood-grass variation2.png-5fa1ee761626299a5a36fbda8127dfce.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/platform(grass) to blood-grass variation2.png"
+dest_files=[ "res://.import/platform(grass) to blood-grass variation2.png-76ef7b823721649bf4d9875974254b4d.stex" ]
 
 [params]
 

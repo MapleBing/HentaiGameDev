@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/option_box.png-96dfdc4027b5d57c64c4f55806d66bec.stex"
+path="res://.import/option_box.png-eb12cb2e98bc31674a7619d0ddc8fd9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/made asset/dialog_UI/option_box.png"
-dest_files=[ "res://.import/option_box.png-96dfdc4027b5d57c64c4f55806d66bec.stex" ]
+source_file="res://asset/made asset/dialog_UI/option_box.png"
+dest_files=[ "res://.import/option_box.png-eb12cb2e98bc31674a7619d0ddc8fd9e.stex" ]
 
 [params]
 

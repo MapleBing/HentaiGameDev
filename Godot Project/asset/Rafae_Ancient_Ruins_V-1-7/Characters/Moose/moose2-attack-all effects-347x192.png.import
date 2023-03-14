@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moose2-attack-all effects-347x192.png-49aa400b633ef4c6ddc31425092c40ef.stex"
+path="res://.import/moose2-attack-all effects-347x192.png-a63331dc7676f38836d471f345518615.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose2-attack-all effects-347x192.png"
-dest_files=[ "res://.import/moose2-attack-all effects-347x192.png-49aa400b633ef4c6ddc31425092c40ef.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose2-attack-all effects-347x192.png"
+dest_files=[ "res://.import/moose2-attack-all effects-347x192.png-a63331dc7676f38836d471f345518615.stex" ]
 
 [params]
 

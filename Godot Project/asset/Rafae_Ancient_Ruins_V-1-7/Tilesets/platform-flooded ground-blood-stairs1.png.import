@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform-flooded ground-blood-stairs1.png-26f8e8b763055b70e5d5a9ae6350d806.stex"
+path="res://.import/platform-flooded ground-blood-stairs1.png-41c8a65b236012511f2634b5b05d8299.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground-blood-stairs1.png"
-dest_files=[ "res://.import/platform-flooded ground-blood-stairs1.png-26f8e8b763055b70e5d5a9ae6350d806.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground-blood-stairs1.png"
+dest_files=[ "res://.import/platform-flooded ground-blood-stairs1.png-41c8a65b236012511f2634b5b05d8299.stex" ]
 
 [params]
 

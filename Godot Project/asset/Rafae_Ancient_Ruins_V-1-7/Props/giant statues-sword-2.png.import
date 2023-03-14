@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/giant statues-sword-2.png-c4f507a9f50e091ca07d4e71fcbd6765.stex"
+path="res://.import/giant statues-sword-2.png-2ce56156d2e8a7897e50fb5982d5bb85.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/giant statues-sword-2.png"
-dest_files=[ "res://.import/giant statues-sword-2.png-c4f507a9f50e091ca07d4e71fcbd6765.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/giant statues-sword-2.png"
+dest_files=[ "res://.import/giant statues-sword-2.png-2ce56156d2e8a7897e50fb5982d5bb85.stex" ]
 
 [params]
 

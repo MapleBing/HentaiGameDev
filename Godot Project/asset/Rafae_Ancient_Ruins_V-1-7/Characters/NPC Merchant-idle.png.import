@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-idle.png-1e3729f59173f219c438242adfde2142.stex"
+path="res://.import/NPC Merchant-idle.png-d180453ed4112d25cc59571fab3c60b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-idle.png"
-dest_files=[ "res://.import/NPC Merchant-idle.png-1e3729f59173f219c438242adfde2142.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-idle.png"
+dest_files=[ "res://.import/NPC Merchant-idle.png-d180453ed4112d25cc59571fab3c60b7.stex" ]
 
 [params]
 

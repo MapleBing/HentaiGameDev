@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/[A]Water3_pipo.png-c06f62ee8742e44a044f63fbc6906efb.stex"
+path="res://.import/[A]Water3_pipo.png-a6a5f2f4e2a41155990c371e5fb8b079.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Water3_pipo.png"
-dest_files=[ "res://.import/[A]Water3_pipo.png-c06f62ee8742e44a044f63fbc6906efb.stex" ]
+source_file="res://asset/Pipoya RPG Tileset 32x32/[A]_type3/[A]Water3_pipo.png"
+dest_files=[ "res://.import/[A]Water3_pipo.png-a6a5f2f4e2a41155990c371e5fb8b079.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim2-to Ancient Ruins.png-8947a011d8b1d578b714d0f52365c112.stex"
+path="res://.import/portal-anim2-to Ancient Ruins.png-237b471fb8372d387c50291e8c500cd5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Ancient Ruins.png"
-dest_files=[ "res://.import/portal-anim2-to Ancient Ruins.png-8947a011d8b1d578b714d0f52365c112.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Ancient Ruins.png"
+dest_files=[ "res://.import/portal-anim2-to Ancient Ruins.png-237b471fb8372d387c50291e8c500cd5.stex" ]
 
 [params]
 

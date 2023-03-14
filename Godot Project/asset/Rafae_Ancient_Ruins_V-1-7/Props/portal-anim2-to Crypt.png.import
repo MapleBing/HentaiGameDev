@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim2-to Crypt.png-f1630d24205760e4b0a5f9ede2de59bf.stex"
+path="res://.import/portal-anim2-to Crypt.png-32d67f383f6815a1e746034bea982428.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Crypt.png"
-dest_files=[ "res://.import/portal-anim2-to Crypt.png-f1630d24205760e4b0a5f9ede2de59bf.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Crypt.png"
+dest_files=[ "res://.import/portal-anim2-to Crypt.png-32d67f383f6815a1e746034bea982428.stex" ]
 
 [params]
 

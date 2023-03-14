@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ancient-Temple-left pillar.png-121786d72861e302aa32bc1df5d9a863.stex"
+path="res://.import/Ancient-Temple-left pillar.png-6054e008673d5a25efe9d75e3a4c3335.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Ancient Temple/To be used on flat surface/Ancient-Temple-left pillar.png"
-dest_files=[ "res://.import/Ancient-Temple-left pillar.png-121786d72861e302aa32bc1df5d9a863.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Ancient Temple/To be used on flat surface/Ancient-Temple-left pillar.png"
+dest_files=[ "res://.import/Ancient-Temple-left pillar.png-6054e008673d5a25efe9d75e3a4c3335.stex" ]
 
 [params]
 

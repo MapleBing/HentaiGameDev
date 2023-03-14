@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform-flooded ground-full tile water.png-0e34fc8b5bb425d6141e5f6c49061465.stex"
+path="res://.import/platform-flooded ground-full tile water.png-8393def76c7bb3693424a5b915ca6611.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground-full tile water.png"
-dest_files=[ "res://.import/platform-flooded ground-full tile water.png-0e34fc8b5bb425d6141e5f6c49061465.stex" ]
+source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/platform-flooded ground-full tile water.png"
+dest_files=[ "res://.import/platform-flooded ground-full tile water.png-8393def76c7bb3693424a5b915ca6611.stex" ]
 
 [params]
 
