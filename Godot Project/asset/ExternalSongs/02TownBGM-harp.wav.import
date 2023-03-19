@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/02TownBGM-harp.wav-c6562446ad3d574ab4f9d95eb4ec2cb5.sample"
+path="res://.import/02TownBGM-harp.wav-6b6420e89cf95d0da57c1721ae395b95.sample"
 
 [deps]
 
-source_file="res://asset/ExternalSongs/02TownBGM-harp.wav"
-dest_files=[ "res://.import/02TownBGM-harp.wav-c6562446ad3d574ab4f9d95eb4ec2cb5.sample" ]
+source_file="res://Asset/ExternalSongs/02TownBGM-harp.wav"
+dest_files=[ "res://.import/02TownBGM-harp.wav-6b6420e89cf95d0da57c1721ae395b95.sample" ]
 
 [params]
 

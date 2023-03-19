@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim4-MASK.png-22776128340841c507cb160ade697937.stex"
+path="res://.import/portal-anim4-MASK.png-189e3029528bc31250500733c4731c2e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim4-MASK.png"
-dest_files=[ "res://.import/portal-anim4-MASK.png-22776128340841c507cb160ade697937.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim4-MASK.png"
+dest_files=[ "res://.import/portal-anim4-MASK.png-189e3029528bc31250500733c4731c2e.stex" ]
 
 [params]
 

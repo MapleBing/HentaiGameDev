@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/golden chalice 64x64-spirits-less shiny.png-7a46c6961ff326858f5460ffe9843599.stex"
+path="res://.import/golden chalice 64x64-spirits-less shiny.png-87e3d48c91cda2ebaac0338bee37e878.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/golden chalice 64x64-spirits-less shiny.png"
-dest_files=[ "res://.import/golden chalice 64x64-spirits-less shiny.png-7a46c6961ff326858f5460ffe9843599.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/golden chalice 64x64-spirits-less shiny.png"
+dest_files=[ "res://.import/golden chalice 64x64-spirits-less shiny.png-87e3d48c91cda2ebaac0338bee37e878.stex" ]
 
 [params]
 

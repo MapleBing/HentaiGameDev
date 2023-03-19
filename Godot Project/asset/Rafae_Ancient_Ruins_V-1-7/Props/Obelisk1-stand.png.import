@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Obelisk1-stand.png-e48aab3c3474b02010a0ec77a923eabd.stex"
+path="res://.import/Obelisk1-stand.png-6abd73d6874fe135e8af1e9cad3d88ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk1-stand.png"
-dest_files=[ "res://.import/Obelisk1-stand.png-e48aab3c3474b02010a0ec77a923eabd.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk1-stand.png"
+dest_files=[ "res://.import/Obelisk1-stand.png-6abd73d6874fe135e8af1e9cad3d88ba.stex" ]
 
 [params]
 

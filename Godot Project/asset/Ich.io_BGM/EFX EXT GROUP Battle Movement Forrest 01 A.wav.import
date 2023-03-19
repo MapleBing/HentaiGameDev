@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/EFX EXT GROUP Battle Movement Forrest 01 A.wav-e833ae50e55681a7548f7f6fd741da66.sample"
+path="res://.import/EFX EXT GROUP Battle Movement Forrest 01 A.wav-2476d80dc8faeb715b52204af597d40b.sample"
 
 [deps]
 
-source_file="res://asset/Ich.io_BGM/EFX EXT GROUP Battle Movement Forrest 01 A.wav"
-dest_files=[ "res://.import/EFX EXT GROUP Battle Movement Forrest 01 A.wav-e833ae50e55681a7548f7f6fd741da66.sample" ]
+source_file="res://Asset/Ich.io_BGM/EFX EXT GROUP Battle Movement Forrest 01 A.wav"
+dest_files=[ "res://.import/EFX EXT GROUP Battle Movement Forrest 01 A.wav-2476d80dc8faeb715b52204af597d40b.sample" ]
 
 [params]
 

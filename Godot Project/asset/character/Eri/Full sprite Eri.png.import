@@ -2,14 +2,14 @@
 
 importer="texture_atlas"
 type="Texture"
-path="res://.import/Full sprite Eri.png-2128cc13542c869a27e7103f77d83588.res"
+path="res://.import/Full sprite Eri.png-09a383643eaaf1ef6750c88e9fbe1635.res"
 group_file="res://asset/character/Eri/EriPLayer.tres"
 valid=true
 [deps]
 
 
-source_file="res://asset/character/Eri/Full sprite Eri.png"
-dest_files=[ "res://.import/Full sprite Eri.png-2128cc13542c869a27e7103f77d83588.res" ]
+source_file="res://Asset/character/Eri/Full sprite Eri.png"
+dest_files=[ "res://.import/Full sprite Eri.png-09a383643eaaf1ef6750c88e9fbe1635.res" ]
 
 [params]
 

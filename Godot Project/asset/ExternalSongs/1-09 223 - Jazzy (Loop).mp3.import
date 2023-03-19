@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/1-09 223 - Jazzy (Loop).mp3-bb4d0dfe18ed1bacbfbc34ba5e52658a.mp3str"
+path="res://.import/1-09 223 - Jazzy (Loop).mp3-65b31f841e2b95c781807cbed983d44a.mp3str"
 
 [deps]
 
-source_file="res://asset/ExternalSongs/1-09 223 - Jazzy (Loop).mp3"
-dest_files=[ "res://.import/1-09 223 - Jazzy (Loop).mp3-bb4d0dfe18ed1bacbfbc34ba5e52658a.mp3str" ]
+source_file="res://Asset/ExternalSongs/1-09 223 - Jazzy (Loop).mp3"
+dest_files=[ "res://.import/1-09 223 - Jazzy (Loop).mp3-65b31f841e2b95c781807cbed983d44a.mp3str" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/青行燈_16frame.png-9d0c14a296ffe82986abe2685826dce0.stex"
+path="res://.import/青行燈_16frame.png-0efea343a95df76ff080a9611402b611.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Pixel Character/青行燈｜巫女/青行燈_16frame.png"
-dest_files=[ "res://.import/青行燈_16frame.png-9d0c14a296ffe82986abe2685826dce0.stex" ]
+source_file="res://Asset/character/Pixel Character/青行燈｜巫女/青行燈_16frame.png"
+dest_files=[ "res://.import/青行燈_16frame.png-0efea343a95df76ff080a9611402b611.stex" ]
 
 [params]
 

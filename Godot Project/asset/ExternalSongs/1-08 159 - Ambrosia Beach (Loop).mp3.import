@@ -2,12 +2,12 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-path="res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-91e4c23834d9e2f8823cab447a3e6d02.mp3str"
+path="res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-239ef4b50454294a5a36c65ed3744632.mp3str"
 
 [deps]
 
-source_file="res://asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3"
-dest_files=[ "res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-91e4c23834d9e2f8823cab447a3e6d02.mp3str" ]
+source_file="res://Asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3"
+dest_files=[ "res://.import/1-08 159 - Ambrosia Beach (Loop).mp3-239ef4b50454294a5a36c65ed3744632.mp3str" ]
 
 [params]
 

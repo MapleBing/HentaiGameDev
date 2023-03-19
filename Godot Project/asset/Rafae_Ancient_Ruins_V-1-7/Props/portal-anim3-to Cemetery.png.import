@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim3-to Cemetery.png-36509360aa82a21ffbd287078191eb86.stex"
+path="res://.import/portal-anim3-to Cemetery.png-0cbf09bd132c5d7d3fdf49fd9e5cd38c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-to Cemetery.png"
-dest_files=[ "res://.import/portal-anim3-to Cemetery.png-36509360aa82a21ffbd287078191eb86.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-to Cemetery.png"
+dest_files=[ "res://.import/portal-anim3-to Cemetery.png-0cbf09bd132c5d7d3fdf49fd9e5cd38c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim3-flat color- background.png-79b2a3a40ca0d6409742e6971d884b3e.stex"
+path="res://.import/portal-anim3-flat color- background.png-12cb74cc3ea4a7b6ed8891f78556c003.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-flat color- background.png"
-dest_files=[ "res://.import/portal-anim3-flat color- background.png-79b2a3a40ca0d6409742e6971d884b3e.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-flat color- background.png"
+dest_files=[ "res://.import/portal-anim3-flat color- background.png-12cb74cc3ea4a7b6ed8891f78556c003.stex" ]
 
 [params]
 

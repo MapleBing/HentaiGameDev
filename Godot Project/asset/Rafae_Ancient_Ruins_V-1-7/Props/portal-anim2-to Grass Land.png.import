@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim2-to Grass Land.png-ce6778df6ca16dd7a4fa3316b27ced59.stex"
+path="res://.import/portal-anim2-to Grass Land.png-fcf122154a8a14b8e38c8fbf61fab7cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Grass Land.png"
-dest_files=[ "res://.import/portal-anim2-to Grass Land.png-ce6778df6ca16dd7a4fa3316b27ced59.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim2-to Grass Land.png"
+dest_files=[ "res://.import/portal-anim2-to Grass Land.png-fcf122154a8a14b8e38c8fbf61fab7cb.stex" ]
 
 [params]
 

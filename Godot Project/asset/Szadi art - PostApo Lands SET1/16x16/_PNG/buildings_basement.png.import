@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/buildings_basement.png-ba40ecbdabf6cde345f66b048838f714.stex"
+path="res://.import/buildings_basement.png-5a8ac4bbc6b28e1d42d33e2f92fdf077.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - PostApo Lands SET1/16x16/_PNG/buildings_basement.png"
-dest_files=[ "res://.import/buildings_basement.png-ba40ecbdabf6cde345f66b048838f714.stex" ]
+source_file="res://Asset/Szadi art - PostApo Lands SET1/16x16/_PNG/buildings_basement.png"
+dest_files=[ "res://.import/buildings_basement.png-5a8ac4bbc6b28e1d42d33e2f92fdf077.stex" ]
 
 [params]
 

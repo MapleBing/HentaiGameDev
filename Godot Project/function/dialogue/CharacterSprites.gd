@@ -22,7 +22,8 @@ func left_portrait():
 	
 func none_portrait():
 	portrait_animator.play("none")
-		
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

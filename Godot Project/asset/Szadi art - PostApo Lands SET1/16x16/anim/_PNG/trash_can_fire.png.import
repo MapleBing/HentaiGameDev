@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/trash_can_fire.png-846fddd36a9e0ae9e889bab31666e40d.stex"
+path="res://.import/trash_can_fire.png-96206b43bf04057e62d4f565869dda51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - PostApo Lands SET1/16x16/anim/_PNG/trash_can_fire.png"
-dest_files=[ "res://.import/trash_can_fire.png-846fddd36a9e0ae9e889bab31666e40d.stex" ]
+source_file="res://Asset/Szadi art - PostApo Lands SET1/16x16/anim/_PNG/trash_can_fire.png"
+dest_files=[ "res://.import/trash_can_fire.png-96206b43bf04057e62d4f565869dda51.stex" ]
 
 [params]
 

@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 47
+resource_version = 56
 syntax_version = 2
 raw_text = "~ Interact
 do portraitNone()
@@ -23,72 +23,72 @@ if has_met_maya == false
 	Dark-skinned Elf: Eri-chan? Is that you?
 	do portraitLeft()
 	Eri: Huh?
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Dark-skinned Elf: Eri-chan? Is it really you?
 	do portraitLeft()
 	Eri: Maya??!!
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: Yes, it’s me maya
-	do emit(\"portrait_none\")
+	do portraitNone()
 	*she grins*
 	
 	do portraitLeft()
 	Eri: Maya!!!! It’s been so long! I missed you so much.
-	do emit(\"portrait_none\")
+	do portraitNone()
 	Eri jumps into Maya’s arms and hugs her tightly
 	
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: Why didn’t you tell me you came home?
 	do portraitLeft()
 	Eri: A-ahh.. About that…
 	Eri: I was going through a lot of stuff and it was really hard to think about anything else during the time
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: I see… What seems to be troubling you Eri-chan?
 	do portraitLeft()
 	Eri: I recently graduated from University and I wasn’t able to find any internships or work 
 	Eri: afterwards… 
 	Eri: It’s been stressing me a lot lately and before I knew it, I have to pay off my student loans already…
 	Eri: And just a while ago I ran away from home because my mom kept nagging about my future…
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: That must be tough. I hope you’re okay Eri. Life gets harder after becoming an adult. As friends, we should support each other. I’m always here for you if you ever need me.
 	do portraitLeft()
 	Eri: M-Maya.. Waaaaahhh~~ You’re too kind
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: “There there…”
-	do emit(\"portrait_none\")
+	do portraitNone()
 	*Maya starts patting Eri’s back*
 	
-	do emit(\"portrait_right\")
+	do portraitRight()
 	Maya: Wanna head to my place and talk about it? I just finished a quest and I was just headed home just now
 	do portraitLeft()
 	Eri: Okay…
-	do emit(\"portrait_none\")
+	do portraitNone()
 	*sob sob*
 	set has_met_maya = true
 => End_Interaction
 
 ~ Interection_Main
-do emit(\"portrait_right\")
+do portraitRight()
 Maya: Let me know when you're ready.
 do portraitLeft()
 - Erie: Could you check this out?
-	do emit(\"portrait_right\")
-	
+	do portraitRight()
 	if checkItem(1, 1)
 		maya: oh is that for me!
-	Maya: huh.
+	elif !checkItem(1,1)
+		maya: Sorry. What are you trying to show me?
+	else
+		Maya: huh.
 - Erie: I missed you
 	=> Hscene_ErixMaya
 => End_Interaction
 
 ~ Hscene_ErixMaya
-do emit(\"start_h_scene\",\"erix_maya\")
-
-do emit(\"change_anim\",\"00_ScreenShake\")
+do startHScene(\"erix_maya\")
+do changeAnim(\"00_ScreenShake\")
 Eri: AHHH
-do emit(\"change_anim\",\"00_Main\")
-
-do emit(\"end_h_scene\")
+do changeAnim(\"00_Main\")
+do endHScene()
 => End_Interaction
 
 ~ End_Interaction
@@ -97,7 +97,7 @@ do emit(\"portrait_none\")
 errors = [  ]
 titles = {
 "End_Interaction": "86",
-"Hscene_ErixMaya": "76",
+"Hscene_ErixMaya": "78",
 "Interact": "1",
 "Interaction_Initial": "12",
 "Interection_Main": "62"
@@ -189,12 +189,9 @@ lines = {
 "17": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "18",
@@ -245,12 +242,9 @@ lines = {
 "21": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "22",
@@ -270,12 +264,9 @@ lines = {
 "23": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitNone",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_none"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "24",
@@ -316,12 +307,9 @@ lines = {
 "28": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitNone",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_none"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "29",
@@ -348,12 +336,9 @@ lines = {
 "31": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "32",
@@ -405,12 +390,9 @@ lines = {
 "36": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "37",
@@ -499,12 +481,9 @@ lines = {
 "43": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "44",
@@ -546,12 +525,9 @@ lines = {
 "47": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "48",
@@ -571,12 +547,9 @@ lines = {
 "49": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitNone",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_none"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "50",
@@ -613,12 +586,9 @@ lines = {
 "52": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "53",
@@ -660,12 +630,9 @@ lines = {
 "56": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitNone",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_none"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "57",
@@ -715,12 +682,9 @@ lines = {
 "62": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "63",
@@ -749,9 +713,9 @@ lines = {
 "65": {
 "character": "Erie",
 "next_id": "65.2",
-"next_id_after": "73",
+"next_id_after": "75",
 "replacements": [  ],
-"responses": PoolStringArray( "65", "71" ),
+"responses": PoolStringArray( "65", "73" ),
 "text": "Could you check this out?",
 "translation_key": "Could you check this out?",
 "type": "response"
@@ -760,7 +724,7 @@ lines = {
 "character": "Erie",
 "character_replacements": [  ],
 "next_id": "66",
-"next_id_after": "73",
+"next_id_after": "75",
 "replacements": [  ],
 "text": "Could you check this out?",
 "translation_key": "Could you check this out?",
@@ -769,19 +733,16 @@ lines = {
 "66": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "portraitRight",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "portrait_right"
-} ] ]
+"value": [  ]
 } ]
 },
-"next_id": "68",
+"next_id": "67",
 "parent_id": "65",
 "type": "mutation"
 },
-"68": {
+"67": {
 "condition": {
 "expression": [ {
 "function": "checkItem",
@@ -795,21 +756,43 @@ lines = {
 } ] ]
 } ]
 },
-"next_conditional_id": "70",
-"next_id": "69",
-"next_id_after": "70",
+"next_conditional_id": "69",
+"next_id": "68",
+"next_id_after": "75",
 "parent_id": "65",
 "type": "condition"
 },
-"69": {
+"68": {
 "character": "maya",
 "character_replacements": [  ],
-"next_id": "70",
-"parent_id": "68",
+"next_id": "75",
+"parent_id": "67",
 "replacements": [  ],
 "text": "oh is that for me!",
 "translation_key": "oh is that for me!",
 "type": "dialogue"
+},
+"69": {
+"condition": {
+"expression": [ {
+"type": "not"
+}, {
+"function": "checkItem",
+"type": "function",
+"value": [ [ {
+"type": "number",
+"value": 1
+} ], [ {
+"type": "number",
+"value": 1
+} ] ]
+} ]
+},
+"next_conditional_id": "71",
+"next_id": "70",
+"next_id_after": "75",
+"parent_id": "65",
+"type": "condition"
 },
 "7": {
 "next_conditional_id": "9",
@@ -818,76 +801,73 @@ lines = {
 "type": "condition"
 },
 "70": {
+"character": "maya",
+"character_replacements": [  ],
+"next_id": "75",
+"parent_id": "69",
+"replacements": [  ],
+"text": "Sorry. What are you trying to show me?",
+"translation_key": "Sorry. What are you trying to show me?",
+"type": "dialogue"
+},
+"71": {
+"next_conditional_id": "75",
+"next_id": "72",
+"next_id_after": "75",
+"parent_id": "65",
+"type": "condition"
+},
+"72": {
 "character": "Maya",
 "character_replacements": [  ],
-"next_id": "73",
-"parent_id": "65",
+"next_id": "75",
+"parent_id": "71",
 "replacements": [  ],
 "text": "huh.",
 "translation_key": "huh.",
 "type": "dialogue"
 },
-"71": {
+"73": {
 "character": "Erie",
-"next_id": "71.2",
-"next_id_after": "73",
+"next_id": "73.2",
+"next_id_after": "75",
 "replacements": [  ],
 "text": "I missed you",
 "translation_key": "I missed you",
 "type": "response"
 },
-"71.2": {
+"73.2": {
 "character": "Erie",
 "character_replacements": [  ],
-"next_id": "72",
-"next_id_after": "73",
+"next_id": "74",
+"next_id_after": "75",
 "replacements": [  ],
 "text": "I missed you",
 "translation_key": "I missed you",
 "type": "dialogue"
 },
-"72": {
-"next_id": "76",
-"parent_id": "71",
-"type": "goto"
-},
-"73": {
-"next_id": "86",
+"74": {
+"next_id": "78",
+"parent_id": "73",
 "type": "goto"
 },
 "75": {
-"next_id": "76",
+"next_id": "86",
+"type": "goto"
+},
+"77": {
+"next_id": "78",
 "text": "Hscene_ErixMaya",
 "type": "title"
-},
-"76": {
-"mutation": {
-"expression": [ {
-"function": "emit",
-"type": "function",
-"value": [ [ {
-"type": "string",
-"value": "start_h_scene"
-} ], [ {
-"type": "string",
-"value": "erix_maya"
-} ] ]
-} ]
-},
-"next_id": "78",
-"type": "mutation"
 },
 "78": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "startHScene",
 "type": "function",
 "value": [ [ {
 "type": "string",
-"value": "change_anim"
-} ], [ {
-"type": "string",
-"value": "00_ScreenShake"
+"value": "erix_maya"
 } ] ]
 } ]
 },
@@ -895,13 +875,18 @@ lines = {
 "type": "mutation"
 },
 "79": {
-"character": "Eri",
-"character_replacements": [  ],
+"mutation": {
+"expression": [ {
+"function": "changeAnim",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "00_ScreenShake"
+} ] ]
+} ]
+},
 "next_id": "80",
-"replacements": [  ],
-"text": "AHHH",
-"translation_key": "AHHH",
-"type": "dialogue"
+"type": "mutation"
 },
 "8": {
 "next_id": "62",
@@ -909,14 +894,20 @@ lines = {
 "type": "goto"
 },
 "80": {
+"character": "Eri",
+"character_replacements": [  ],
+"next_id": "81",
+"replacements": [  ],
+"text": "AHHH",
+"translation_key": "AHHH",
+"type": "dialogue"
+},
+"81": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "changeAnim",
 "type": "function",
 "value": [ [ {
-"type": "string",
-"value": "change_anim"
-} ], [ {
 "type": "string",
 "value": "00_Main"
 } ] ]
@@ -928,12 +919,9 @@ lines = {
 "82": {
 "mutation": {
 "expression": [ {
-"function": "emit",
+"function": "endHScene",
 "type": "function",
-"value": [ [ {
-"type": "string",
-"value": "end_h_scene"
-} ] ]
+"value": [  ]
 } ]
 },
 "next_id": "83",

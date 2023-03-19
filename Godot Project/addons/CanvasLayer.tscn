@@ -34,6 +34,7 @@ margin_bottom = 1.0
 [node name="AudioController" type="Node2D" parent="."]
 z_as_relative = false
 script = ExtResource( 5 )
+mute = true
 
 [node name="BGMPlayer" type="AudioStreamPlayer" parent="AudioController"]
 stream = ExtResource( 4 )

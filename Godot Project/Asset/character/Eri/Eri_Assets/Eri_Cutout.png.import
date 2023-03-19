@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Eri_Cutout.png-cfc5ead9eae56af1906ad54dc5bdee56.stex"
+path="res://.import/Eri_Cutout.png-9d7959ac8a120454e935e30d4ca4a2ed.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Eri/Eri_Assets/Eri_Cutout.png"
-dest_files=[ "res://.import/Eri_Cutout.png-cfc5ead9eae56af1906ad54dc5bdee56.stex" ]
+source_file="res://Asset/character/Eri/Eri_Assets/Eri_Cutout.png"
+dest_files=[ "res://.import/Eri_Cutout.png-9d7959ac8a120454e935e30d4ca4a2ed.stex" ]
 
 [params]
 

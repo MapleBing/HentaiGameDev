@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-icons-potion to sword.png-380d205eacd4ac22face2b167c1dd7fb.stex"
+path="res://.import/NPC Merchant-icons-potion to sword.png-9a2c8ab87944e1295f115bf45f1ad7bb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-potion to sword.png"
-dest_files=[ "res://.import/NPC Merchant-icons-potion to sword.png-380d205eacd4ac22face2b167c1dd7fb.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-potion to sword.png"
+dest_files=[ "res://.import/NPC Merchant-icons-potion to sword.png-9a2c8ab87944e1295f115bf45f1ad7bb.stex" ]
 
 [params]
 

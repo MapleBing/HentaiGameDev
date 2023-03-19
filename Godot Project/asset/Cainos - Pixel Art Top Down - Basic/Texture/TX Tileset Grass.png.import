@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Tileset Grass.png-232473028af7abd72f832995df1c6f70.stex"
+path="res://.import/TX Tileset Grass.png-e0f08dde20dee292b330137fad94b3cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png"
-dest_files=[ "res://.import/TX Tileset Grass.png-232473028af7abd72f832995df1c6f70.stex" ]
+source_file="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Tileset Grass.png"
+dest_files=[ "res://.import/TX Tileset Grass.png-e0f08dde20dee292b330137fad94b3cf.stex" ]
 
 [params]
 

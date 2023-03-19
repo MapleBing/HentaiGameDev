@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/insta11.png-0f66d48043057bdbafd75ae7ac7a6541.stex"
+path="res://.import/insta11.png-a16a356e00f618a05621744bd7471ca6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Mockups/insta11.png"
-dest_files=[ "res://.import/insta11.png-0f66d48043057bdbafd75ae7ac7a6541.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Mockups/insta11.png"
+dest_files=[ "res://.import/insta11.png-a16a356e00f618a05621744bd7471ca6.stex" ]
 
 [params]
 

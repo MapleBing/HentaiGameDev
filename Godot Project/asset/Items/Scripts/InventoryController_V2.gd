@@ -56,7 +56,7 @@ func addItem(itemID = 0,quantity = 0):
 	shiftInventorySlot(0)
 	pass
 	
-func checkForItem(itemID = 0,quantity = 0):
+func checkForItem(itemID = 0,quantity = 0) -> bool:
 	if runThroughList(EquipSection, itemID, quantity):
 		return true
 	if runThroughList(KeySection, itemID, quantity):
@@ -67,20 +67,21 @@ func checkForItem(itemID = 0,quantity = 0):
 
 func runThroughList(itemSection, itemID = 0, quantity = 0):
 	#get itemSection.
-	var currentItem 
+	var currentItem = false
 	KeySection.get_child_count()
+	print("checking")
 	for object in KeySection.get_children():
-		currentItem = object.get_child(currentSlot).get_child(1).getItem()
+		currentItem = object.get_child(1).getItem()
+		print(itemID)
+		print(currentItem.getQuantity() )
 		if currentItem.getID() == itemID:
 			if currentItem.getQuantity() >= quantity:
 				return true
-					
 	return false
 func setGroup(inventoryGroup = "", groupNode = null):
 	var tempItems = inventoryGroup
 	var groupCategory = inventoryGroup.get_slice("(",0)
 	tempItems = "(" + tempItems
-	print_debug(tempItems)
 	tempItems.lstrip(groupCategory + "(")
 	tempItems.rstrip(")")
 	for itemPosition in range(0,tempItems.count(",")+1,+1):

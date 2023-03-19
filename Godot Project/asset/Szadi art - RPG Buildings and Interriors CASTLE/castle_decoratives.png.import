@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/castle_decoratives.png-276a38a1516f4444b2a5a25509cad113.stex"
+path="res://.import/castle_decoratives.png-005b942c549ffa20f0a70099bd58c72a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - RPG Buildings and Interriors CASTLE/castle_decoratives.png"
-dest_files=[ "res://.import/castle_decoratives.png-276a38a1516f4444b2a5a25509cad113.stex" ]
+source_file="res://Asset/Szadi art - RPG Buildings and Interriors CASTLE/castle_decoratives.png"
+dest_files=[ "res://.import/castle_decoratives.png-005b942c549ffa20f0a70099bd58c72a.stex" ]
 
 [params]
 
