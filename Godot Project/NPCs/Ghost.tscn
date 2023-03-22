@@ -2,8 +2,8 @@
 
 [ext_resource path="res://function/NPCs/Monster_Controller.gd" type="Script" id=1]
 [ext_resource path="res://Asset/character/Pixel Character/Slime/Enemy_Slime_Small_Sheet.png" type="Texture" id=2]
-[ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=3]
-[ext_resource path="res://NPCs/Components/EnemyHurtBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://NPCs/Components/EnemyHurtBox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=4]
 [ext_resource path="res://function/NPCs/WanderController.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Animation" id=29]
@@ -353,7 +353,7 @@ light_mask = 16
 position = Vector2( 0, -26 )
 texture = ExtResource( 2 )
 hframes = 18
-frame = 8
+frame = 11
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/IdleLeft = SubResource( 29 )
@@ -378,7 +378,7 @@ position = Vector2( 0, -1 )
 rotation = 1.5708
 shape = SubResource( 26 )
 
-[node name="PlayerDetectionZone" parent="." instance=ExtResource( 3 )]
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 4 )]
 modulate = Color( 0.921569, 0.866667, 0.866667, 0.537255 )
 position = Vector2( 0, -18 )
 
@@ -386,7 +386,7 @@ position = Vector2( 0, -18 )
 position = Vector2( 0, 12 )
 shape = SubResource( 27 )
 
-[node name="EnemyHitBox" parent="." instance=ExtResource( 4 )]
+[node name="EnemyHitBox" parent="." instance=ExtResource( 3 )]
 collision_layer = 0
 
 [node name="CollisionShape2D" parent="EnemyHitBox" index="0"]

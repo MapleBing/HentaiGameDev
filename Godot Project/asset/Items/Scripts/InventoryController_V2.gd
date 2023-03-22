@@ -56,14 +56,15 @@ func addItem(itemID = 0,quantity = 0):
 	shiftInventorySlot(0)
 	pass
 	
-func checkForItem(itemID = 0,quantity = 0) -> bool:
+func checkForItem(itemID = 0,quantity = 0):
+	var result  = false
 	if runThroughList(EquipSection, itemID, quantity):
-		return true
+		result = true
 	if runThroughList(KeySection, itemID, quantity):
-		return true
+		result = true
 	if runThroughList(ConsumeableSection, itemID, quantity):
-		return true
-	return false
+		result = true
+	SignalBus.emit_signal("get_item_result", result)
 
 func runThroughList(itemSection, itemID = 0, quantity = 0):
 	#get itemSection.

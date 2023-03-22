@@ -9,6 +9,7 @@ signal change_anim(animName)
 signal text_anim_set(hScene_0)
 signal inventorySlotShift(x)
 signal check_for_item(itemID, quantity)
+signal get_item_result(checkResult)
 
 signal start_h_scene(x)
 signal end_h_scene

@@ -3,13 +3,18 @@ var has_met_nathan = false
 var has_met_maya = false
 var has_item = false
 var some_value = 0
+var result = false
 
 func checkItem(itemID, quantity):
-	var result = false
-	result = SignalBus.emit_signal("check_for_item",itemID, quantity)
+	SignalBus.emit_signal("check_for_item",itemID, quantity)
+	SignalBus.connect("get_item_result", self, "getItemResult")
+	print("Result:")
 	print(result)
 	return result
-
+	
+func getItemResult(Result = false):
+	result = Result
+	
 func portraitNone():
 	SignalBus.emit_signal("portrait_none")
 

@@ -9,6 +9,8 @@ export(Texture) var item_texture
 export(int) var quantity
 export(String) var hover_text
 
+enum ItemTypes { KEY, CONSUMEABLE, EQUIPABLE}
+export(ItemTypes) var type
 func setUpItem(Item_id = 0, Quantity = 0):
 	item_id = Item_id
 	quantity = Quantity

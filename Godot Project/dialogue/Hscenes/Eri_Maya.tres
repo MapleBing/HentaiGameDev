@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 56
+resource_version = 64
 syntax_version = 2
 raw_text = "~ Interact
 do portraitNone()
@@ -73,9 +73,10 @@ Maya: Let me know when you're ready.
 do portraitLeft()
 - Erie: Could you check this out?
 	do portraitRight()
-	if checkItem(1, 1)
+	do checkItem(1, 1)
+	if result == true
 		maya: oh is that for me!
-	elif !checkItem(1,1)
+	elif result == false
 		maya: Sorry. What are you trying to show me?
 	else
 		Maya: huh.
@@ -96,8 +97,8 @@ do emit(\"portrait_none\")
 => END"
 errors = [  ]
 titles = {
-"End_Interaction": "86",
-"Hscene_ErixMaya": "78",
+"End_Interaction": "87",
+"Hscene_ErixMaya": "79",
 "Interact": "1",
 "Interaction_Initial": "12",
 "Interection_Main": "62"
@@ -666,7 +667,7 @@ lines = {
 "type": "mutation"
 },
 "59": {
-"next_id": "86",
+"next_id": "87",
 "type": "goto"
 },
 "6": {
@@ -713,9 +714,9 @@ lines = {
 "65": {
 "character": "Erie",
 "next_id": "65.2",
-"next_id_after": "75",
+"next_id_after": "76",
 "replacements": [  ],
-"responses": PoolStringArray( "65", "73" ),
+"responses": PoolStringArray( "65", "74" ),
 "text": "Could you check this out?",
 "translation_key": "Could you check this out?",
 "type": "response"
@@ -724,7 +725,7 @@ lines = {
 "character": "Erie",
 "character_replacements": [  ],
 "next_id": "66",
-"next_id_after": "75",
+"next_id_after": "76",
 "replacements": [  ],
 "text": "Could you check this out?",
 "translation_key": "Could you check this out?",
@@ -743,7 +744,7 @@ lines = {
 "type": "mutation"
 },
 "67": {
-"condition": {
+"mutation": {
 "expression": [ {
 "function": "checkItem",
 "type": "function",
@@ -756,43 +757,38 @@ lines = {
 } ] ]
 } ]
 },
-"next_conditional_id": "69",
 "next_id": "68",
-"next_id_after": "75",
+"parent_id": "65",
+"type": "mutation"
+},
+"68": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "result"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+} ]
+},
+"next_conditional_id": "70",
+"next_id": "69",
+"next_id_after": "76",
 "parent_id": "65",
 "type": "condition"
 },
-"68": {
+"69": {
 "character": "maya",
 "character_replacements": [  ],
-"next_id": "75",
-"parent_id": "67",
+"next_id": "76",
+"parent_id": "68",
 "replacements": [  ],
 "text": "oh is that for me!",
 "translation_key": "oh is that for me!",
 "type": "dialogue"
-},
-"69": {
-"condition": {
-"expression": [ {
-"type": "not"
-}, {
-"function": "checkItem",
-"type": "function",
-"value": [ [ {
-"type": "number",
-"value": 1
-} ], [ {
-"type": "number",
-"value": 1
-} ] ]
-} ]
-},
-"next_conditional_id": "71",
-"next_id": "70",
-"next_id_after": "75",
-"parent_id": "65",
-"type": "condition"
 },
 "7": {
 "next_conditional_id": "9",
@@ -801,66 +797,85 @@ lines = {
 "type": "condition"
 },
 "70": {
+"condition": {
+"expression": [ {
+"type": "variable",
+"value": "result"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+} ]
+},
+"next_conditional_id": "72",
+"next_id": "71",
+"next_id_after": "76",
+"parent_id": "65",
+"type": "condition"
+},
+"71": {
 "character": "maya",
 "character_replacements": [  ],
-"next_id": "75",
-"parent_id": "69",
+"next_id": "76",
+"parent_id": "70",
 "replacements": [  ],
 "text": "Sorry. What are you trying to show me?",
 "translation_key": "Sorry. What are you trying to show me?",
 "type": "dialogue"
 },
-"71": {
-"next_conditional_id": "75",
-"next_id": "72",
-"next_id_after": "75",
+"72": {
+"next_conditional_id": "76",
+"next_id": "73",
+"next_id_after": "76",
 "parent_id": "65",
 "type": "condition"
 },
-"72": {
+"73": {
 "character": "Maya",
 "character_replacements": [  ],
-"next_id": "75",
-"parent_id": "71",
+"next_id": "76",
+"parent_id": "72",
 "replacements": [  ],
 "text": "huh.",
 "translation_key": "huh.",
 "type": "dialogue"
 },
-"73": {
+"74": {
 "character": "Erie",
-"next_id": "73.2",
-"next_id_after": "75",
+"next_id": "74.2",
+"next_id_after": "76",
 "replacements": [  ],
 "text": "I missed you",
 "translation_key": "I missed you",
 "type": "response"
 },
-"73.2": {
+"74.2": {
 "character": "Erie",
 "character_replacements": [  ],
-"next_id": "74",
-"next_id_after": "75",
+"next_id": "75",
+"next_id_after": "76",
 "replacements": [  ],
 "text": "I missed you",
 "translation_key": "I missed you",
 "type": "dialogue"
 },
-"74": {
-"next_id": "78",
-"parent_id": "73",
-"type": "goto"
-},
 "75": {
-"next_id": "86",
+"next_id": "79",
+"parent_id": "74",
 "type": "goto"
 },
-"77": {
-"next_id": "78",
+"76": {
+"next_id": "87",
+"type": "goto"
+},
+"78": {
+"next_id": "79",
 "text": "Hscene_ErixMaya",
 "type": "title"
 },
-"78": {
+"79": {
 "mutation": {
 "expression": [ {
 "function": "startHScene",
@@ -868,20 +883,6 @@ lines = {
 "value": [ [ {
 "type": "string",
 "value": "erix_maya"
-} ] ]
-} ]
-},
-"next_id": "79",
-"type": "mutation"
-},
-"79": {
-"mutation": {
-"expression": [ {
-"function": "changeAnim",
-"type": "function",
-"value": [ [ {
-"type": "string",
-"value": "00_ScreenShake"
 } ] ]
 } ]
 },
@@ -894,15 +895,29 @@ lines = {
 "type": "goto"
 },
 "80": {
+"mutation": {
+"expression": [ {
+"function": "changeAnim",
+"type": "function",
+"value": [ [ {
+"type": "string",
+"value": "00_ScreenShake"
+} ] ]
+} ]
+},
+"next_id": "81",
+"type": "mutation"
+},
+"81": {
 "character": "Eri",
 "character_replacements": [  ],
-"next_id": "81",
+"next_id": "82",
 "replacements": [  ],
 "text": "AHHH",
 "translation_key": "AHHH",
 "type": "dialogue"
 },
-"81": {
+"82": {
 "mutation": {
 "expression": [ {
 "function": "changeAnim",
@@ -913,10 +928,10 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "82",
+"next_id": "83",
 "type": "mutation"
 },
-"82": {
+"83": {
 "mutation": {
 "expression": [ {
 "function": "endHScene",
@@ -924,19 +939,19 @@ lines = {
 "value": [  ]
 } ]
 },
-"next_id": "83",
+"next_id": "84",
 "type": "mutation"
 },
-"83": {
-"next_id": "86",
+"84": {
+"next_id": "87",
 "type": "goto"
 },
-"85": {
-"next_id": "86",
+"86": {
+"next_id": "87",
 "text": "End_Interaction",
 "type": "title"
 },
-"86": {
+"87": {
 "mutation": {
 "expression": [ {
 "function": "emit",
@@ -947,10 +962,10 @@ lines = {
 } ] ]
 } ]
 },
-"next_id": "87",
+"next_id": "88",
 "type": "mutation"
 },
-"87": {
+"88": {
 "next_id": "end",
 "type": "goto"
 },
