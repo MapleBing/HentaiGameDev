@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-icons-generic icon disappearing animation.png-818ac28a515645968a5c7fe957c9eaf0.stex"
+path="res://.import/NPC Merchant-icons-generic icon disappearing animation.png-3a570b70f56b95f5795c9be866d0e674.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-generic icon disappearing animation.png"
-dest_files=[ "res://.import/NPC Merchant-icons-generic icon disappearing animation.png-818ac28a515645968a5c7fe957c9eaf0.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-generic icon disappearing animation.png"
+dest_files=[ "res://.import/NPC Merchant-icons-generic icon disappearing animation.png-3a570b70f56b95f5795c9be866d0e674.stex" ]
 
 [params]
 

@@ -27,17 +27,17 @@ _global_script_classes=[ {
 "base": "ItemList",
 "class": "armor_item",
 "language": "GDScript",
-"path": "res://asset/Items/Scripts/ItemArmor.gd"
+"path": "res://Asset/Items/Scripts/ItemArmor.gd"
 }, {
 "base": "Resource",
 "class": "food_item",
 "language": "GDScript",
-"path": "res://asset/Items/Scripts/ItemFood.gd"
+"path": "res://Asset/Items/Scripts/ItemFood.gd"
 }, {
 "base": "Resource",
 "class": "item",
 "language": "GDScript",
-"path": "res://asset/Items/Scripts/Item.gd"
+"path": "res://Asset/Items/Scripts/Item.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Project"
-run/main_scene="res://Map_land/world.tscn"
+run/main_scene="res://Map_land/Start-0.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -60,8 +60,9 @@ SignalBus="*res://autoload_script/SignalBus.gd"
 ScenePos="*res://autoload_script/ScenePos.gd"
 DialogState="*res://autoload_script/dialog_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-HSceneManager="*res://asset/HScenes/HSceneManager.tscn"
-ItemBus="*res://asset/Items/Scripts/ItemBus.gd"
+HSceneManager="*res://Asset/HScenes/HSceneManager.tscn"
+ItemBus="*res://Asset/Items/Scripts/ItemBus.gd"
+HSceneBus="*res://autoload_script/HSceneBus.gd"
 
 [display]
 

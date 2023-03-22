@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NPC Merchant-icons-sword to bow.png-ebc00d869a9434456c7d1eccb46ce66b.stex"
+path="res://.import/NPC Merchant-icons-sword to bow.png-bd88f18a22998848dc6310499a7dfae8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-sword to bow.png"
-dest_files=[ "res://.import/NPC Merchant-icons-sword to bow.png-ebc00d869a9434456c7d1eccb46ce66b.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/NPC Merchant-icons-sword to bow.png"
+dest_files=[ "res://.import/NPC Merchant-icons-sword to bow.png-bd88f18a22998848dc6310499a7dfae8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-anim3-to be used on top of the masked image.png-a463b399b4528ad1cf8b6b9ce5b08c04.stex"
+path="res://.import/portal-anim3-to be used on top of the masked image.png-5b31f170ee601adf9ea442ac3f605e9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-to be used on top of the masked image.png"
-dest_files=[ "res://.import/portal-anim3-to be used on top of the masked image.png-a463b399b4528ad1cf8b6b9ce5b08c04.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-anim3-to be used on top of the masked image.png"
+dest_files=[ "res://.import/portal-anim3-to be used on top of the masked image.png-5b31f170ee601adf9ea442ac3f605e9c.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CharacterHSceneSample.png-e1a0c0eee5f9a5b7b7cea80ccf26b09a.stex"
+path="res://.import/CharacterHSceneSample.png-d4a73475f1e70d6ae6f4256fd1233efb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/character/Pixel Character/no_name chara/CharacterHSceneSample.png"
-dest_files=[ "res://.import/CharacterHSceneSample.png-e1a0c0eee5f9a5b7b7cea80ccf26b09a.stex" ]
+source_file="res://Asset/character/Pixel Character/no_name chara/CharacterHSceneSample.png"
+dest_files=[ "res://.import/CharacterHSceneSample.png-d4a73475f1e70d6ae6f4256fd1233efb.stex" ]
 
 [params]
 

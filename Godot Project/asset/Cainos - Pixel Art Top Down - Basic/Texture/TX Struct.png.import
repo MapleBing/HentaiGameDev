@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TX Struct.png-89169166fceee95d6b11df49e973e24a.stex"
+path="res://.import/TX Struct.png-7bb9edcbf023397fa2cdb002b19effe2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Struct.png"
-dest_files=[ "res://.import/TX Struct.png-89169166fceee95d6b11df49e973e24a.stex" ]
+source_file="res://Asset/Cainos - Pixel Art Top Down - Basic/Texture/TX Struct.png"
+dest_files=[ "res://.import/TX Struct.png-7bb9edcbf023397fa2cdb002b19effe2.stex" ]
 
 [params]
 

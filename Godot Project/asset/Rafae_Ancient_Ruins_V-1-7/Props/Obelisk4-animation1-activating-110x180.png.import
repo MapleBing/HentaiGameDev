@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Obelisk4-animation1-activating-110x180.png-a5bf3d44058ee84625214d6424936aff.stex"
+path="res://.import/Obelisk4-animation1-activating-110x180.png-84a36486ed554e9189acb5fd8ce0ba20.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk4-animation1-activating-110x180.png"
-dest_files=[ "res://.import/Obelisk4-animation1-activating-110x180.png-a5bf3d44058ee84625214d6424936aff.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/Obelisk4-animation1-activating-110x180.png"
+dest_files=[ "res://.import/Obelisk4-animation1-activating-110x180.png-84a36486ed554e9189acb5fd8ce0ba20.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bonfire.png-01260a2fc5317527dee7e1ec8d97ea7c.stex"
+path="res://.import/bonfire.png-52d3471c0154b378104639566f7d7ff7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Szadi art - PostApo Lands SET1/16x16/anim/_PNG/bonfire.png"
-dest_files=[ "res://.import/bonfire.png-01260a2fc5317527dee7e1ec8d97ea7c.stex" ]
+source_file="res://Asset/Szadi art - PostApo Lands SET1/16x16/anim/_PNG/bonfire.png"
+dest_files=[ "res://.import/bonfire.png-52d3471c0154b378104639566f7d7ff7.stex" ]
 
 [params]
 

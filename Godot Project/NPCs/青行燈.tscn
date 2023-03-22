@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=1]
-[ext_resource path="res://asset/character/Pixel Character/青行燈｜巫女/青行燈_16frame.png" type="Texture" id=2]
+[ext_resource path="res://Asset/character/Pixel Character/青行燈｜巫女/青行燈_16frame.png" type="Texture" id=2]
 [ext_resource path="res://function/NPCs/enemies.gd" type="Script" id=3]
 [ext_resource path="res://function/NPCs/WanderController.tscn" type="PackedScene" id=4]
 
@@ -154,7 +154,7 @@ WANDER_RANGE_BOUNDS = 20
 light_mask = 16
 texture = ExtResource( 2 )
 hframes = 16
-frame = 11
+frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/down = SubResource( 2 )

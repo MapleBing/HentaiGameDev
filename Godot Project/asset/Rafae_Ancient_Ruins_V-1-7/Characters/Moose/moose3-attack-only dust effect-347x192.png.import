@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moose3-attack-only dust effect-347x192.png-be7007c8df24565ba01ecbd86d0bcc25.stex"
+path="res://.import/moose3-attack-only dust effect-347x192.png-a7cef6351721628c1dcc9dcde60e5b1e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose3-attack-only dust effect-347x192.png"
-dest_files=[ "res://.import/moose3-attack-only dust effect-347x192.png-be7007c8df24565ba01ecbd86d0bcc25.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose3-attack-only dust effect-347x192.png"
+dest_files=[ "res://.import/moose3-attack-only dust effect-347x192.png-a7cef6351721628c1dcc9dcde60e5b1e.stex" ]
 
 [params]
 

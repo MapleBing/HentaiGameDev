@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lampu.png-229685afca5fd03595c029c1457dc129.stex"
+path="res://.import/lampu.png-253aa1972b7ba96694b1422f1f19c028.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/made asset/Lights/lampu.png"
-dest_files=[ "res://.import/lampu.png-229685afca5fd03595c029c1457dc129.stex" ]
+source_file="res://Asset/made asset/Lights/lampu.png"
+dest_files=[ "res://.import/lampu.png-253aa1972b7ba96694b1422f1f19c028.stex" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/01TownBGM-guitar.wav-5b3fc173909b3779c2e921f32ef62160.sample"
+path="res://.import/01TownBGM-guitar.wav-d59831cdf2a37a9e4075fcaa97c19564.sample"
 
 [deps]
 
-source_file="res://asset/Ich.io_BGM/01TownBGM-guitar.wav"
-dest_files=[ "res://.import/01TownBGM-guitar.wav-5b3fc173909b3779c2e921f32ef62160.sample" ]
+source_file="res://Asset/Ich.io_BGM/01TownBGM-guitar.wav"
+dest_files=[ "res://.import/01TownBGM-guitar.wav-d59831cdf2a37a9e4075fcaa97c19564.sample" ]
 
 [params]
 

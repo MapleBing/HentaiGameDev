@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png-d1dce15c5467a10623fa2dbe342c47ce.stex"
+path="res://.import/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png-2984105892210f8fc0e5f3ca931f37ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png"
-dest_files=[ "res://.import/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png-d1dce15c5467a10623fa2dbe342c47ce.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Props/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png"
+dest_files=[ "res://.import/portal-on grass-crypt-all animations(standby-opening-opened-closing)-290x192.png-2984105892210f8fc0e5f3ca931f37ea.stex" ]
 
 [params]
 

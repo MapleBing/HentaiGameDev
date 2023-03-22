@@ -1,8 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://asset/character/Pixel Character/no_name chara/hSCENE_ERI.png" type="Texture" id=1]
-[ext_resource path="res://asset/HScenes/HentaiScene1.gd" type="Script" id=2]
-
+[ext_resource path="res://Asset/character/Pixel Character/no_name chara/hSCENE_ERI.png" type="Texture" id=1]
+[ext_resource path="res://Asset/HScenes/HsceneController.gd" type="Script" id=2]
 
 [sub_resource type="Animation" id=10]
 resource_name = "Reset"

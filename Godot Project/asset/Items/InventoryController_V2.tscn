@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://asset/Items/Scripts/InventoryController_V2.gd" type="Script" id=1]
-[ext_resource path="res://asset/Items/InventorySection.tscn" type="PackedScene" id=2]
-[ext_resource path="res://asset/Items/MenuIcon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Asset/Items/Scripts/InventoryController_V2.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Items/InventorySection.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/Items/MenuIcon.tscn" type="PackedScene" id=3]
 [ext_resource path="res://SelectionCursor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/font_normal.tres" type="DynamicFont" id=6]

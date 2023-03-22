@@ -12,6 +12,7 @@ func _ready():
 	SignalBus.connect("portrait_left", self,"left_portrait")
 	SignalBus.connect("portrait_none", self,"none_portrait")
 	SignalBus.connect("restart_anim", self,"anim_restart")
+	portrait_animator.play("none")
 	
 func right_portrait():
 	portrait_animator.play("right")
@@ -21,7 +22,8 @@ func left_portrait():
 	
 func none_portrait():
 	portrait_animator.play("none")
-		
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

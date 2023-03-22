@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/example_balloon/font_normal.tres" type="DynamicFont" id=2]
+
+[node name="ResponsesTemplate" type="Control"]
+margin_right = 280.0
+margin_bottom = 10.81
+rect_min_size = Vector2( 39.002, 10.81 )
+
+[node name="Text" type="RichTextLabel" parent="."]
+margin_top = 1.0
+margin_right = 320.0
+margin_bottom = 10.0
+rect_min_size = Vector2( 320, 9 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/mono_font = ExtResource( 2 )
+custom_fonts/normal_font = ExtResource( 2 )
+text = "Test
+"
+scroll_active = false

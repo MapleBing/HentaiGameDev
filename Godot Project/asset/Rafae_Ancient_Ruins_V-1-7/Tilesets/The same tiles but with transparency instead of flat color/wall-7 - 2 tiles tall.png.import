@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wall-7 - 2 tiles tall.png-6e8a2eab41e914a4a9f3e661cfc6a455.stex"
+path="res://.import/wall-7 - 2 tiles tall.png-9c4483fe37a2644ff29bf6271cc34db0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/wall-7 - 2 tiles tall.png"
-dest_files=[ "res://.import/wall-7 - 2 tiles tall.png-6e8a2eab41e914a4a9f3e661cfc6a455.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/wall-7 - 2 tiles tall.png"
+dest_files=[ "res://.import/wall-7 - 2 tiles tall.png-9c4483fe37a2644ff29bf6271cc34db0.stex" ]
 
 [params]
 

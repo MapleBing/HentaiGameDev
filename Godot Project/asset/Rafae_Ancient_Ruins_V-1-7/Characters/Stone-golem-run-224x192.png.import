@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stone-golem-run-224x192.png-048cd5f067f73336644f2ba0f21919c2.stex"
+path="res://.import/Stone-golem-run-224x192.png-dec2a35c2cb00f08794db7f115239886.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-run-224x192.png"
-dest_files=[ "res://.import/Stone-golem-run-224x192.png-048cd5f067f73336644f2ba0f21919c2.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Stone-golem-run-224x192.png"
+dest_files=[ "res://.import/Stone-golem-run-224x192.png-dec2a35c2cb00f08794db7f115239886.stex" ]
 
 [params]
 

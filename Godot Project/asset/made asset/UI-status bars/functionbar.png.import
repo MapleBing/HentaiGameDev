@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/functionbar.png-419f9d835aca9a5b5f3a78e71a4288ae.stex"
+path="res://.import/functionbar.png-675b89f9489bb272ae6dd3901f1200c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/made asset/UI-status bars/functionbar.png"
-dest_files=[ "res://.import/functionbar.png-419f9d835aca9a5b5f3a78e71a4288ae.stex" ]
+source_file="res://Asset/made asset/UI-status bars/functionbar.png"
+dest_files=[ "res://.import/functionbar.png-675b89f9489bb272ae6dd3901f1200c7.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform-flooded ground - TRANSITION.png-a2488ae5f532d85346c79120bec120d5.stex"
+path="res://.import/platform-flooded ground - TRANSITION.png-a0260f989c3a6a910f0846a398c3b051.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/platform-flooded ground - TRANSITION.png"
-dest_files=[ "res://.import/platform-flooded ground - TRANSITION.png-a2488ae5f532d85346c79120bec120d5.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Tilesets/The same tiles but with transparency instead of flat color/platform-flooded ground - TRANSITION.png"
+dest_files=[ "res://.import/platform-flooded ground - TRANSITION.png-a0260f989c3a6a910f0846a398c3b051.stex" ]
 
 [params]
 

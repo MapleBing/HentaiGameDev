@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/moose4-hurt-347x192.png-56668d1309880b2fad91ad681e9b6942.stex"
+path="res://.import/moose4-hurt-347x192.png-23b3c31b004c5e25dfc0fa99aa368a3a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose4-hurt-347x192.png"
-dest_files=[ "res://.import/moose4-hurt-347x192.png-56668d1309880b2fad91ad681e9b6942.stex" ]
+source_file="res://Asset/Rafae_Ancient_Ruins_V-1-7/Characters/Moose/moose4-hurt-347x192.png"
+dest_files=[ "res://.import/moose4-hurt-347x192.png-23b3c31b004c5e25dfc0fa99aa368a3a.stex" ]
 
 [params]
 
