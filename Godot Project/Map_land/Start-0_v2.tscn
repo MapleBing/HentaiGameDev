@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Asset/TileMaps/Start_0.png" type="Texture" id=1]
+[ext_resource path="res://Asset/TileMaps/Start_0v2.png" type="Texture" id=1]
 [ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
 [ext_resource path="res://function/world.gd" type="Script" id=3]
 [ext_resource path="res://asset/Items/Pipoya RPG Tileset 32x32/[A]_type3/not_animation/[A]Water1_pipo.png" type="Texture" id=4]
@@ -77,16 +77,16 @@ pause_mode = 1
 
 [node name="player" parent="YSort/MovingEntity" instance=ExtResource( 9 )]
 light_mask = 0
-position = Vector2( -344, -450 )
+position = Vector2( -2208, 206 )
 scale = Vector2( 1.2, 1.2 )
 
 [node name="Camera2D" type="Camera2D" parent="YSort/MovingEntity/player"]
 current = true
-zoom = Vector2( 1.8, 1.8 )
-limit_left = -1322
-limit_top = -1335
-limit_right = 1653
-limit_bottom = 392
+zoom = Vector2( 3, 3 )
+limit_left = -5288
+limit_top = -2207
+limit_right = 3010
+limit_bottom = 1010
 limit_smoothed = true
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
@@ -135,54 +135,15 @@ tile_data = PoolIntArray( -1900597, 0, 0, -1835060, 0, 1, -1835059, 0, 65537, -1
 [node name="BaseCollision" type="StaticBody2D" parent="YSort/StaticEntity"]
 collision_layer = 16
 
-[node name="BoundingBox" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
-position = Vector2( 0, -2 )
+[node name="RiverBox" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 8, 14 )
 build_mode = 1
-polygon = PoolVector2Array( -64, -296, -112, -296, -128, -264, -464, -264, -1320, -696, -1320, -1048, -1288, -1048, -1288, -1080, -1240, -1080, -1240, -1048, -1176, -1048, -1168, -1024, -1144, -1016, -1136, -992, -1080, -984, -1072, -960, -1016, -952, -1008, -896, -984, -888, -976, -864, -920, -856, -912, -832, -888, -824, -880, -800, -824, -792, -816, -768, -792, -760, -784, -736, -760, -728, -752, -704, -696, -696, -688, -672, -616, -632, -496, -632, -496, -712, -584, -712, -584, -736, -528, -736, -528, -784, -592, -840, -608, -864, -616, -928, -592, -952, -488, -1056, -384, -1056, -276.927, -956.575, -248, -928, -272, -912, -284.643, -946.321, -312, -960, -328, -960, -360, -944, -368, -920, -368, -896, -352, -872, -328, -864, -312, -864, -288, -872, -272, -896, -256, -864, -272, -840, -336, -784, -336, -736, -280, -736, -280, -712, -336, -712, -368, -712, -368, -632, -312, -632, -312, -512, -72, -512, -72, -664, -56, -664, -56, -464, 184, -464, 184, -568, 344, -664, 784, -680, 1248, -840, 1320, -176, 1304, -168, 1200, -168, 1192, -136, 440, -136, 432, -168, 288, -168, 272, -192, 208, -224, 176, -320, 152, -384, -56, -384, -56, -312 )
-
-[node name="FountainCollision_01" type="StaticBody2D" parent="YSort/StaticEntity"]
-
-[node name="BoundingBox_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/FountainCollision_01"]
-position = Vector2( -96, 6 )
-build_mode = 1
-polygon = PoolVector2Array( -592, -914, -584, -946, -552, -962, -536, -962, -512, -944, -496, -912, -496, -898, -512, -872, -536, -866, -552, -866, -576, -874, -592, -898 )
-
-[node name="BoundingBox_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/FountainCollision_01"]
-build_mode = 1
-polygon = PoolVector2Array( -592, -914, -584, -946, -552, -962, -536, -962, -504, -946, -496, -914, -496, -898, -512, -874, -536, -866, -552, -866, -576, -874, -592, -898 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="BridgeCollision_1" type="StaticBody2D" parent="YSort/StaticEntity"]
-
-[node name="BoundingBox_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BridgeCollision_1"]
-build_mode = 1
-polygon = PoolVector2Array( -80, -458, -56, -450, 152, -450, 176, -458, 176, -474, 152, -466, -56, -466, -80, -474 )
-
-[node name="BoundingBox_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BridgeCollision_1"]
-position = Vector2( 0, 62 )
-build_mode = 1
-polygon = PoolVector2Array( -80, -458, -56, -450, 152, -450, 176, -458, 176, -464, 152, -456, -56, -456, -80, -464 )
-
-[node name="BoundingBox_03" type="CollisionPolygon2D" parent="YSort/StaticEntity/BridgeCollision_1"]
-position = Vector2( 0, 62 )
-build_mode = 1
-polygon = PoolVector2Array( -80, -458, -56, -450, 152, -450, 176, -458, 176, -464, 152, -456, -56, -456, -80, -464 )
-
-[node name="BridgeCollision_2" type="StaticBody2D" parent="YSort/StaticEntity"]
-
-[node name="BoundingBox_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BridgeCollision_2"]
-position = Vector2( -459.2, -216.8 )
-build_mode = 1
-polygon = PoolVector2Array( -20.8, -393.2, -20.8, -545.2, -36.8, -545.2, -36.8, -393.2 )
-
-[node name="BoundingBox_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BridgeCollision_2"]
-position = Vector2( -344, -216.8 )
-build_mode = 1
-polygon = PoolVector2Array( -24, -393.2, -24, -545.2, -40, -545.2, -40, -393.2 )
+polygon = PoolVector2Array( -1976, 912, -1912, 912, -1912, 880, -1752, 880, -1752, 848, -1720, 848, -1720, 816, -1592, 816, -1592, 784, -1400, 784, -1400, 752, -1272, 752, -1272, 720, -1176, 720, -1176, 688, -1400, 688, -1496, 688, -1496, 656, -1400, 656, -1112, 592, -1080, 592, -1080, 656, -1048, 656, -1048, 688, -1016, 688, -1016, 720, -952, 720, -888, 720, -888, 752, -760, 752, -760, 720, -696, 720, -696.432, 688.432, -664, 688, -664, 656, -520, 568, -352, 472, -248, 416, -152, 400, -320, 496, -416, 552, -472, 648, -584, 832, -600, 912, -256, 904, 544, 768, 248, 440, 104, 296, 104, 104, 160, 8, 272, -48, 320, -48, 408, -8, 480, 64, 480, 136, 728, 304, 928, 528, 1032, 744, 1080, 696, 1128, 648, 1176, 624, 1408, 624, 1664, 584, 1856, 536, 2096, 520, 2192, 416, 2192, 176, 2048, 72, 1768, 64, 1592, 168, 1368, 320, 1168, 264, 1040, 96, 760, 96, 448, -168, 112, -168, -136, 120, -480, 264, -1008, 264, -1024, -184, -984, -184, -960, 160, -624, 168, -280, 72, -248, -168, 0, -488, 200, -656, 200, -688, 232, -688, 232, -720, 264, -720, 264, -752, 296, -752, 456, -976, 456, -1072, 488, -1072, 488, -1232, 456, -1232, 456, -1264, 424, -1264, 424, -1296, 392, -1296, 392, -1040, -248, -1040, -248, -1424, 232, -1424, 232, -1584, 264, -1584, 264, -1712, 296, -1712, 296, -1744, 328, -1744, 328, -1808, 392, -1808, 392, -1840, 488, -1840, 488, -1872, 552, -1872, 552, -1904, 616, -1904, 616, -1936, 744, -1936, 744, -1968, 1224, -1968, 1224, -2672, -3384, -2704, -3384, 464, -3512, 464, -3512, 432, -3544, 432, -3544, 336, -3576, 336, -3576, 144, -3608, 144, -3608, 16, -3640, 16, -3640, -48, -3672, -48, -3672, -80, -3768, -80, -3768, -112, -4184, -112, -4184, -80, -4248, -80, -4248, -16, -4280, -16, -4280, 144, -4312, 144, -4312, 272, -4312, 432, -4344, 432, -4344, 464, -4664, 464, -4664, 528, -4696, 528, -4696, 560, -4728, 560, -4728, 592, -4664, 592, -4664, 624, -4632, 624, -4632, 784, -4664, 784, -4664, 912 )
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 12 )]
+
+[node name="InventoryController_V2" parent="CanvasLayer/UI_Container" index="0"]
+visible = true
 
 [node name="BGMPlayer" parent="CanvasLayer/AudioController" index="0"]
 stream = ExtResource( 5 )
@@ -206,3 +167,6 @@ rect_scale = Vector2( 0.5, 0.5 )
 [editable path="YSort/MovingEntity/NPC/DetectPress"]
 [editable path="YSort/MovingEntity/NPC/PlayerDetectionZone"]
 [editable path="CanvasLayer"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2/ItemDetails/EquipItems"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2/ItemInfo/ItemPortrait"]
