@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
 }, {
 "base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://SaveLoadDemo/Inventory.gd"
+}, {
+"base": "Resource",
 "class": "SaveGame",
 "language": "GDScript",
 "path": "res://SaveLoadDemo/SaveGame.gd"
@@ -42,6 +47,7 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Character": "",
 "DialogueResource": "",
+"Inventory": "",
 "SaveGame": "",
 "armor_item": "",
 "food_item": "",
@@ -51,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Project"
-run/main_scene="res://Map_land/Start-0.tscn"
+run/main_scene="res://Map_land/Start-0_v2.tscn"
 config/icon="res://icon.png"
 
 [autoload]

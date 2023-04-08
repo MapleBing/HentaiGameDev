@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-onready var sta = 300
+onready var maxSta = 5000
+onready var sta = 0
 export(float) var ACCELERATION = 700
 export(float) var MAX_SPEED = 80
 export(float) var FRICTION = 430
@@ -18,7 +19,10 @@ var stats: Character setget set_stats
 func set_stats(new_stats: Character) -> void:
 	stats = new_stats
 	set_physics_process(stats != null)
-
+	
+func _start():
+	sta = maxSta
+	
 func _process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -43,7 +47,7 @@ func _process(delta):
 			MAX_SPEED = 160 #移動速度 * 2 
 				
 
-	if not Input.is_action_pressed("run") and sta < 300: #若 按下shift = false 且 體力未滿
+	elif sta < maxSta: #若 按下shift = false 且 體力未滿
 		animation_tree.set("parameters/animation_speed/scale",1) 
 		sta += 1
 		MAX_SPEED = 80 
@@ -54,7 +58,7 @@ func _process(delta):
 	if punish == true: #力竭=true，玩家移動速度*0.5
 		animation_tree.set("parameters/animation_speed/scale",0.5) 
 		MAX_SPEED = 40 
-		if sta > 299: #體力恢復後，力竭=false
+		if sta > sta - 1: #體力恢復後，力竭=false
 			punish = false 
 			animation_tree.set("parameters/animation_speed/scale",1) 
 			MAX_SPEED = 80 
