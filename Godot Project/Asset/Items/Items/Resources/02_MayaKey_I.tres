@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Items/Items/Icons/maya_key_I.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+item_id = 2
+item_name = "Maya Key"
+item_texture = ExtResource( 2 )
+quantity = 0
+hover_text = ""
+type = 0

@@ -1,0 +1,134 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://function/world.gd" type="Script" id=1]
+[ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
+[ext_resource path="res://Asset/TileMaps/Start_0v2.png" type="Texture" id=3]
+[ext_resource path="res://asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3" type="AudioStream" id=4]
+[ext_resource path="res://NPCs/NPC.tscn" type="PackedScene" id=5]
+[ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=6]
+[ext_resource path="res://trashcan/player/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NPCs/巫女.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/CanvasLayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://NPCs/青行燈.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=70]
+extents = Vector2( 10, 8 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=69]
+
+[node name="Start-0" type="Node2D"]
+pause_mode = 2
+position = Vector2( 0, 2 )
+script = ExtResource( 1 )
+dialogue_file = "res://dialogue/dialog_text(Dialog_manager)/dialog_manager.tres"
+
+[node name="maps" type="Node" parent="."]
+
+[node name="Wild-0" parent="maps" instance=ExtResource( 6 )]
+pause_mode = 1
+position = Vector2( 582, 161 )
+scale = Vector2( 1, 2.68 )
+autoEnter = true
+
+[node name="CollisionShape2D" parent="maps/Wild-0" index="0"]
+shape = SubResource( 70 )
+
+[node name="Wild-0Pos" type="Position2D" parent="maps"]
+pause_mode = 1
+position = Vector2( 555, 160 )
+
+[node name="Land" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="dialog_areas" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="YSort" type="YSort" parent="."]
+pause_mode = 1
+
+[node name="MovingEntity" type="YSort" parent="YSort"]
+
+[node name="player" parent="YSort/MovingEntity" instance=ExtResource( 7 )]
+light_mask = 0
+position = Vector2( -2208, 206 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Camera2D" type="Camera2D" parent="YSort/MovingEntity/player"]
+current = true
+zoom = Vector2( 3, 3 )
+limit_left = -5288
+limit_top = -2207
+limit_right = 3010
+limit_bottom = 1010
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="NPC" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
+position = Vector2( -104, -490 )
+
+[node name="AnimationTree" parent="YSort/MovingEntity/NPC" index="2"]
+parameters/playback = SubResource( 69 )
+
+[node name="CollisionShape2D" parent="YSort/MovingEntity/NPC" index="3"]
+visible = false
+
+[node name="DetectPress" parent="YSort/MovingEntity/NPC" index="4"]
+dialog_key = "Interact"
+dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
+
+[node name="巫女" parent="YSort/MovingEntity" instance=ExtResource( 8 )]
+position = Vector2( -182, -358 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="青行燈" parent="YSort/MovingEntity" instance=ExtResource( 11 )]
+light_mask = 16
+position = Vector2( 568, -522 )
+
+[node name="StaticEntity" type="YSort" parent="YSort"]
+
+[node name="Start0" type="Sprite" parent="YSort/StaticEntity"]
+position = Vector2( -240, -258 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="BaseCollision" type="StaticBody2D" parent="YSort/StaticEntity"]
+collision_layer = 16
+
+[node name="RiverBox" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 8, 14 )
+build_mode = 1
+polygon = PoolVector2Array( -1976, 912, -1912, 912, -1912, 880, -1752, 880, -1752, 848, -1720, 848, -1720, 816, -1592, 816, -1592, 784, -1400, 784, -1400, 752, -1272, 752, -1272, 720, -1176, 720, -1176, 688, -1400, 688, -1496, 688, -1496, 656, -1400, 656, -1112, 592, -1080, 592, -1080, 656, -1048, 656, -1048, 688, -1016, 688, -1016, 720, -952, 720, -888, 720, -888, 752, -760, 752, -760, 720, -696, 720, -696.432, 688.432, -664, 688, -664, 656, -520, 568, -352, 472, -248, 416, -152, 400, -320, 496, -416, 552, -472, 648, -584, 832, -600, 912, -256, 904, 544, 768, 248, 440, 104, 296, 104, 104, 160, 8, 272, -48, 320, -48, 408, -8, 480, 64, 480, 136, 728, 304, 928, 528, 1032, 744, 1080, 696, 1128, 648, 1176, 624, 1408, 624, 1664, 584, 1856, 536, 2096, 520, 2192, 416, 2192, 176, 2048, 72, 1768, 64, 1592, 168, 1368, 320, 1168, 264, 1040, 96, 760, 96, 448, -168, 112, -168, -136, 120, -480, 264, -1008, 264, -1024, -184, -984, -184, -960, 160, -624, 168, -280, 72, -248, -168, 0, -488, 200, -656, 200, -688, 232, -688, 232, -720, 264, -720, 264, -752, 296, -752, 456, -976, 456, -1072, 488, -1072, 488, -1232, 456, -1232, 456, -1264, 424, -1264, 424, -1296, 392, -1296, 392, -1040, -248, -1040, -248, -1424, 232, -1424, 232, -1584, 264, -1584, 264, -1712, 296, -1712, 296, -1744, 328, -1744, 328, -1808, 392, -1808, 392, -1840, 488, -1840, 488, -1872, 552, -1872, 552, -1904, 616, -1904, 616, -1936, 744, -1936, 744, -1968, 1224, -1968, 1224, -2672, -3384, -2704, -3384, 464, -3512, 464, -3512, 432, -3544, 432, -3544, 336, -3576, 336, -3576, 144, -3608, 144, -3608, 16, -3640, 16, -3640, -48, -3672, -48, -3672, -80, -3768, -80, -3768, -112, -4184, -112, -4184, -80, -4248, -80, -4248, -16, -4280, -16, -4280, 144, -4312, 144, -4312, 272, -4312, 432, -4344, 432, -4344, 464, -4664, 464, -4664, 528, -4696, 528, -4696, 560, -4728, 560, -4728, 592, -4664, 592, -4664, 624, -4632, 624, -4632, 784, -4664, 784, -4664, 912 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 9 )]
+
+[node name="BGMPlayer" parent="CanvasLayer/AudioController" index="0"]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="SaveLoadDemo" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
+script = ExtResource( 2 )
+player = NodePath("../YSort/MovingEntity/player")
+ui_save_panel = NodePath("UI for SL and Inventory demo/UISavePanel")
+
+[node name="UI for SL and Inventory demo" type="CanvasLayer" parent="SaveLoadDemo"]
+
+[node name="UISavePanel" parent="SaveLoadDemo/UI for SL and Inventory demo" instance=ExtResource( 10 )]
+margin_right = 0.0
+margin_bottom = 0.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[editable path="maps/Wild-0"]
+[editable path="YSort/MovingEntity/NPC"]
+[editable path="YSort/MovingEntity/NPC/DetectPress"]
+[editable path="YSort/MovingEntity/NPC/PlayerDetectionZone"]
+[editable path="CanvasLayer"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2/ItemDetails/EquipItems"]
+[editable path="CanvasLayer/UI_Container/InventoryController_V2/ItemInfo/ItemPortrait"]

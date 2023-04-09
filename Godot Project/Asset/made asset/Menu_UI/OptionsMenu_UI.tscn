@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/made asset/Menu_UI/SettingGroup_UI.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Asset/made asset/Menu_UI/MenuHeader_UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Asset/made asset/Menu_UI/SettingHandler_UI.tscn" type="PackedScene" id=3]
+
+[node name="Pause Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VScrollBar" type="VScrollBar" parent="."]
+margin_left = 304.0
+margin_top = 5.0
+margin_right = 316.0
+margin_bottom = 175.0
+size_flags_horizontal = 4
+step = 1.0
+page = 0.246
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 5.0
+margin_bottom = 5.0
+
+[node name="VBoxContainer" parent="HBoxContainer" instance=ExtResource( 2 )]
+margin_right = 0.0
+margin_bottom = 182.0
+
+[node name="Setting" parent="HBoxContainer/VBoxContainer/HBoxContainer/Setting" index="0"]
+text = "Options"
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 4.0
+margin_right = 82.103
+margin_bottom = 182.0
+rect_min_size = Vector2( 78.103, 0 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 86.0
+margin_right = 286.0
+margin_bottom = 182.0
+
+[node name="OptionHolder" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 200.0
+margin_bottom = 89.0
+
+[node name="Setting2" parent="HBoxContainer/VBoxContainer2/OptionHolder" instance=ExtResource( 1 )]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="General2" parent="HBoxContainer/VBoxContainer2/OptionHolder" instance=ExtResource( 3 )]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 32.0
+
+[node name="DisplayMode2" parent="HBoxContainer/VBoxContainer2/OptionHolder" instance=ExtResource( 3 )]
+margin_top = 36.0
+margin_right = 200.0
+margin_bottom = 51.0
+
+[node name="Resolution3" parent="HBoxContainer/VBoxContainer2/OptionHolder" instance=ExtResource( 3 )]
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 70.0
+
+[node name="Resolution4" parent="HBoxContainer/VBoxContainer2/OptionHolder" instance=ExtResource( 3 )]
+margin_top = 74.0
+margin_right = 200.0
+margin_bottom = 89.0
+
+[node name="OptionHolder2" type="VBoxContainer" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 93.0
+margin_right = 200.0
+margin_bottom = 182.0
+
+[node name="Setting2" parent="HBoxContainer/VBoxContainer2/OptionHolder2" instance=ExtResource( 1 )]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="General2" parent="HBoxContainer/VBoxContainer2/OptionHolder2" instance=ExtResource( 3 )]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 32.0
+
+[node name="DisplayMode2" parent="HBoxContainer/VBoxContainer2/OptionHolder2" instance=ExtResource( 3 )]
+margin_top = 36.0
+margin_right = 200.0
+margin_bottom = 51.0
+
+[node name="Resolution3" parent="HBoxContainer/VBoxContainer2/OptionHolder2" instance=ExtResource( 3 )]
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 70.0
+
+[node name="Resolution4" parent="HBoxContainer/VBoxContainer2/OptionHolder2" instance=ExtResource( 3 )]
+margin_top = 74.0
+margin_right = 200.0
+margin_bottom = 89.0
+
+[editable path="HBoxContainer/VBoxContainer"]

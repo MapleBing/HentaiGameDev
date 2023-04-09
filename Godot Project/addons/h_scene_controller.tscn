@@ -2,7 +2,8 @@
 
 [ext_resource path="res://Asset/character/Pixel Character/青行燈｜巫女/巫女_12frame.png" type="Texture" id=1]
 [ext_resource path="res://function/dialogue/CharacterSprites.gd" type="Script" id=2]
-[ext_resource path="res://Asset/character/Eri/Eri_Assets/EriDialogueCutout.tres" type="Texture" id=3]
+[ext_resource path="res://Asset/character/Eri/Eri_Assets/EriDialogueCutout_UI.tres" type="Texture" id=3]
+
 
 [sub_resource type="Animation" id=1]
 length = 0.001

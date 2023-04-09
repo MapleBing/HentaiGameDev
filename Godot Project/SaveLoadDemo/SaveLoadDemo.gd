@@ -6,7 +6,7 @@ extends Node2D
 var _save: SaveGame
 
 export var player : NodePath
-export var ui_inventory : NodePath
+#export var ui_inventory : NodePath
 export var ui_save_panel : NodePath
 export var ui_info_display : NodePath
 
