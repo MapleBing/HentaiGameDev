@@ -6,7 +6,7 @@ extends Node2D
 var _save: SaveGame
 
 export var player : NodePath
-export var ui_inventory : NodePath
+#export var ui_inventory : NodePath
 export var ui_save_panel : NodePath
 export var ui_info_display : NodePath
 
@@ -24,7 +24,7 @@ func _ready() -> void:
 	# And the start of the game or when pressing the load button, we call this
 	# function. It loads the save data if it exists, otherwise, it creates a 
 	# new save file.
-	_create_or_load_save()
+		#_create_or_load_save()
 	# This function offsets the camera when the inventory menu is open to not 
 	# hide the player.
 	#_player.toggle_camera_offset(_ui_inventory.visible)

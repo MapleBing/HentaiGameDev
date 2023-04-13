@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 64
+resource_version = 71
 syntax_version = 2
 raw_text = "~ Interact
 do portraitNone()
@@ -74,7 +74,7 @@ do portraitLeft()
 - Erie: Could you check this out?
 	do portraitRight()
 	do checkItem(1, 1)
-	if result == true
+	if result
 		maya: oh is that for me!
 	elif result == false
 		maya: Sorry. What are you trying to show me?
@@ -766,12 +766,6 @@ lines = {
 "expression": [ {
 "type": "variable",
 "value": "result"
-}, {
-"type": "comparison",
-"value": "=="
-}, {
-"type": "bool",
-"value": true
 } ]
 },
 "next_conditional_id": "70",

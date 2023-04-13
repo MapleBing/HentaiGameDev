@@ -20,6 +20,11 @@ _global_script_classes=[ {
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
 }, {
 "base": "Resource",
+"class": "Inventory",
+"language": "GDScript",
+"path": "res://SaveLoadDemo/Inventory_I.gd"
+}, {
+"base": "Resource",
 "class": "SaveGame",
 "language": "GDScript",
 "path": "res://SaveLoadDemo/SaveGame.gd"
@@ -27,21 +32,22 @@ _global_script_classes=[ {
 "base": "ItemList",
 "class": "armor_item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/ItemArmor.gd"
+"path": "res://Asset/Items/Scripts/ItemArmor_I.gd"
 }, {
-"base": "Resource",
+"base": "",
 "class": "food_item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/ItemFood.gd"
+"path": "res://Asset/Items/Scripts/ItemFood_I.gd"
 }, {
 "base": "Resource",
 "class": "item",
 "language": "GDScript",
-"path": "res://Asset/Items/Scripts/Item.gd"
+"path": "res://Asset/Items/Scripts/Item_I.gd"
 } ]
 _global_script_class_icons={
 "Character": "",
 "DialogueResource": "",
+"Inventory": "",
 "SaveGame": "",
 "armor_item": "",
 "food_item": "",
@@ -51,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Project"
-run/main_scene="res://Map_land/Start-0.tscn"
+run/main_scene="res://Map_land/Start-0_v2_M.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -61,7 +67,7 @@ ScenePos="*res://autoload_script/ScenePos.gd"
 DialogState="*res://autoload_script/dialog_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 HSceneManager="*res://Asset/HScenes/HSceneManager.tscn"
-ItemBus="*res://Asset/Items/Scripts/ItemBus.gd"
+ItemBus="*res://Asset/Items/Scripts/ItemBus_I.gd"
 HSceneBus="*res://autoload_script/HSceneBus.gd"
 
 [display]
@@ -75,7 +81,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/FileSystemView/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg" )
 
 [global]
 
