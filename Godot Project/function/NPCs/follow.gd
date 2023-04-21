@@ -40,7 +40,7 @@ func _physics_process(delta):
 		FOLLOW:
 			#var player = PlayerDetectionZone.player
 			#player = PlayerDetectionZone.player
-			if player != null:
+			if player != null and NPC_IS_STATIC:
 				var direction = global_position.direction_to(player.global_position)
 				velocity = velocity.move_toward(direction * MAX_SPEED, ACCELERATION * delta)
 				if global_position.distance_to(player.global_position) <= 20:

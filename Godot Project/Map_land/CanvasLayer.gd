@@ -2,33 +2,33 @@ extends CanvasLayer
 
 var buttonPress = false
 #Collection of menu inputs that send a signal to the signal bus
-func _process(delta: float) -> void:
+func _input(event) -> void:
 	var x = 0
-	if Input.is_action_just_pressed("in_game_menu"):
+	if Input.is_action_just_pressed("Toggle_Menu"):
 		SignalBus.emit_signal("setUpPause")
 		pass
-	elif Input.is_action_just_pressed("inventory_menu"):
+	elif Input.is_action_just_pressed("Toggle_Inventory"):
 		SignalBus.emit_signal("setUpInventory")
 		pass
-	elif Input.is_action_just_pressed("inventory_section_shiftRight"):
+	elif Input.is_action_just_pressed("Tab_Right"):
 		SignalBus.emit_signal("inventoryMenuShiftRight")
 		pass
-	elif Input.is_action_just_pressed("inventory_section_shiftLeft"):
+	elif Input.is_action_just_pressed("Tab_Left"):
 		SignalBus.emit_signal("inventoryMenuShiftLeft")
 		pass	
-	elif Input.is_action_just_pressed("inventory_menu_shiftUp"):
+	elif Input.is_action_just_pressed("Move_Up"):
 		x = -5
 		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("inventory_menu_shiftDown"):
+	elif Input.is_action_just_pressed("Move_Down"):
 		x = 5
 		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("inventory_menu_shiftRight"):
+	elif Input.is_action_just_pressed("Move_Right"):
 		x = 1
 		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("inventory_menu_shiftLeft"):
+	elif Input.is_action_just_pressed("Move_Left"):
 		x = -1
 		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("inventory_menu_confirm"):
+	elif Input.is_action_just_pressed("Interact"):
 		SignalBus.emit_signal("inventoryMenuConfirm")
 	 # Replace with function body.
 

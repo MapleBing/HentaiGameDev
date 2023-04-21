@@ -4,39 +4,50 @@ var Items = ""
 var currentPosition = 0;
 var currentSlot = 0;
 
+onready var SectionMenu = $SectionBar/SectionMenu
+
 onready var equipObject = $ItemDetails/EquipItems
 onready var keyObject = $ItemDetails/KeyItems
 onready var consumeableObject = $ItemDetails/ConsumeableItems
-
-onready var ItemSection1 = $SectionBar/HBoxContainer/Control1/Panel
-onready var ItemSection2 = $SectionBar/HBoxContainer/Control2/Panel
-onready var ItemSection3 = $SectionBar/HBoxContainer/Control3/Panel
 onready var EquipSection = $ItemDetails/EquipItems
 onready var ConsumeableSection = $ItemDetails/ConsumeableItems
 onready var KeySection = $ItemDetails/KeyItems
 onready var ItemDetails = $ItemDetails
 onready var ItemInfo = $ItemInfo
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	setGroup("Equip(1)",equipObject)
+	#Initiallize objects in stored Inventory
+	setGroup("Equip(1,1,1)",equipObject)
 	setGroup("Key(1,1)",keyObject)
 	setGroup("Consumeable(1)",consumeableObject)
+	#Change current menu
 	SignalBus.connect("inventoryMenuShiftRight", self, "leftInventoryMenuShift")
 	SignalBus.connect("inventoryMenuShiftLeft", self, "rightInventoryMenuShift")
+	#Move Cursor
 	SignalBus.connect("inventorySlotShift", self, "shiftInventorySlot")
+	#interact with item
 	SignalBus.connect("inventoryMenuConfirm", self, "confirmInventoryMenu")
+	#check for item
 	SignalBus.connect("check_for_item", self, "checkForItem")
 	
 	shiftInventorySlot(0)
 	
+func _input(event):
+	if Input.is_action_just_pressed("Tab_Right"):
+		for node in SectionMenu.get_children():
+			if node.active == true:
+				node.ShiftSelection(1)
+	if Input.is_action_just_pressed("Tab_Left"):
+		for node in SectionMenu.get_children():
+			if node.active == true:
+				node.ShiftSelection(-1)
+				
+
+		
 func confirmInventoryMenu():
 	print_debug("________")
 	print_debug(String(currentPosition)+ " " + String(currentSlot))
-	addItem(getCurrentItemID(),1)
+	addItem(getCurrentItemID(),-1)
 	pass
 	
 func addItem(itemID = 0,quantity = 0):
@@ -93,38 +104,20 @@ func fillInventory(ItemPosition, TempItems):
 	var currentItemSprite: Node = itemSprite.instance()
 	currentItemSprite.find_node("ItemSprite").setUpItemSprite(itemId,1)
 	return currentItemSprite
-	
-func leftInventoryMenuShift()-> void:
-	currentPosition += 1
-	currentPosition = currentPosition % 3
-	setSectionCursor(currentPosition)
-	pass
-	
-func rightInventoryMenuShift()-> void:
-	currentPosition -= 1
-	if(currentPosition == -1):
-		currentPosition = 2
-	setSectionCursor(currentPosition)
-	pass
 
-# menu Navigation
+#Item  menu Navigation
 func setSectionCursor(CurrentPosition):
-	ItemSection1.visible = false
-	ItemSection2.visible = false
-	ItemSection3.visible = false
+	
 	EquipSection.visible = false
 	ConsumeableSection.visible = false
 	KeySection.visible = false
 	
 	match CurrentPosition:
 		0:
-			ItemSection1.visible = true			
 			EquipSection.visible = true
 		1:
-			ItemSection2.visible = true
 			ConsumeableSection.visible = true
 		2:
-			ItemSection3.visible = true
 			KeySection.visible = true
 	shiftInventorySlot(0)
 	pass
