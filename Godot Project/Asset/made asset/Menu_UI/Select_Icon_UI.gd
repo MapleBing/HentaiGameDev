@@ -26,7 +26,6 @@ func ShiftSelection(amount = 0):
 	parent.get_child(currentPosition).TriggerMenuEffect()
 	
 func TriggerMenuEffect():
-	active = true
 	for effect in MenuEffects:
 		print("Method:")
 		print(effect.has_method("TriggerEffect"))
