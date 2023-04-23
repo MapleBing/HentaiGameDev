@@ -20,7 +20,7 @@ export var version := 1
 # We directly reference the characters stats and inventory in the save game resource.
 # When saving this resource, they'll get saved alongside it.
 export var character: Resource = Character.new()
-export var inventory: Resource = Inventory.new()
+export var inventory: Resource = .new()
 export var map_name := ""
 export var global_position := Vector2.ZERO
 
