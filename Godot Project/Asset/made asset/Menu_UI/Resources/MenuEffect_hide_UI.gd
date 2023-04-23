@@ -1,5 +1,10 @@
 extends Resource
-class_name MenuEffect
-
+class_name HideUI
+var active = true
 func TriggerEffect(node):
-	node.visable = !node.visable
+	print("test")
+	if node.active == true:
+		node.modulate = Color(1,1,1, 1)
+		node.get_tree()
+	else:
+		node.modulate = Color(1,1,1, 0)
