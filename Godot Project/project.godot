@@ -20,14 +20,14 @@ _global_script_classes=[ {
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
 }, {
 "base": "Resource",
-"class": "HideUI",
-"language": "GDScript",
-"path": "res://Asset/made asset/Menu_UI/Resources/MenuEffect_hide_UI.gd"
-}, {
-"base": "Resource",
 "class": "Inventory",
 "language": "GDScript",
 "path": "res://SaveLoadDemo/Inventory_I.gd"
+}, {
+"base": "Resource",
+"class": "MenuEffect",
+"language": "GDScript",
+"path": "res://Asset/made asset/Menu_UI/Resources/MenuEffect_hide_UI.gd"
 }, {
 "base": "Resource",
 "class": "SaveGame",
@@ -47,8 +47,8 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Character": "",
 "DialogueResource": "",
-"HideUI": "",
 "Inventory": "",
+"MenuEffect": "",
 "SaveGame": "",
 "armor_item": "",
 "item": ""

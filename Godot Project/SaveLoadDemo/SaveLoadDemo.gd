@@ -48,7 +48,7 @@ func _create_or_load_save() -> void:
 
 	# After creating or loading a save resource, we need to dispatch its data
 	# to the various nodes that need it.
-	_player.global_position = _player.global_position
+	_player.global_position = 
 	#_ui_inventory.inventory = _save.inventory
 	_player.stats = _save.character
 	#_ui_info_display.character = _save.character

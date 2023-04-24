@@ -104,6 +104,23 @@ func fillInventory(ItemPosition, TempItems):
 	var currentItemSprite: Node = itemSprite.instance()
 	currentItemSprite.find_node("ItemSprite").setUpItemSprite(itemId,1)
 	return currentItemSprite
+
+#Item  menu Navigation
+func setSectionCursor(CurrentPosition):
+	
+	EquipSection.visible = false
+	ConsumeableSection.visible = false
+	KeySection.visible = false
+	
+	match CurrentPosition:
+		0:
+			EquipSection.visible = true
+		1:
+			ConsumeableSection.visible = true
+		2:
+			KeySection.visible = true
+	shiftInventorySlot(0)
+	pass
 	
 func shiftInventorySlot(x = 0):
 	var ItemLists = ItemDetails.get_child(currentPosition)
