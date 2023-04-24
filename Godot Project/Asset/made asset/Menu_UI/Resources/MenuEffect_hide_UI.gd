@@ -1,10 +1,22 @@
 extends Resource
+<<<<<<< HEAD
 class_name HideUI
-var active = true
-func TriggerEffect(node):
+
+static func TriggerEffect(node):
 	print("test")
+	
 	if node.active == true:
-		node.modulate = Color(1,1,1, 1)
+		node.get_child(0).modulate= Color(1,1,1, 1)
+		node.active = false
+		#node.modulate = Color(1,1,1, 1)
 		node.get_tree()
 	else:
-		node.modulate = Color(1,1,1, 0)
+		node.get_child(0).modulate= Color(1,1,1, 0)
+		node.active = true
+		#node.modulate = Color(1,1,1, 0)
+=======
+class_name MenuEffect
+
+func TriggerEffect(node):
+	node.visable = !node.visable
+>>>>>>> parent of f0f8673 (Godot Update)
