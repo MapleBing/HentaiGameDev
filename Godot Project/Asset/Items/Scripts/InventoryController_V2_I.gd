@@ -37,11 +37,12 @@ func _input(event):
 		for node in SectionMenu.get_children():
 			if node.active == true:
 				node.ShiftSelection(1)
+				break
 	if Input.is_action_just_pressed("Tab_Left"):
 		for node in SectionMenu.get_children():
 			if node.active == true:
 				node.ShiftSelection(-1)
-				
+				break
 
 		
 func confirmInventoryMenu():

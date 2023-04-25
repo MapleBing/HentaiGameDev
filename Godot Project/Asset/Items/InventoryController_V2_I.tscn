@@ -49,19 +49,19 @@ alignment = 1
 margin_left = 27.0
 margin_right = 27.0
 margin_bottom = 13.0
-MenuEffect = [ ExtResource( 7 ) ]
+MenuEffects = [ ExtResource( 7 ) ]
 
 [node name="SelectIcon2" parent="SectionBar/SectionMenu" instance=ExtResource( 5 )]
 margin_left = 50.0
 margin_right = 50.0
 margin_bottom = 13.0
-MenuEffect = [ ExtResource( 7 ) ]
+MenuEffects = [ ExtResource( 7 ) ]
 
 [node name="SelectIcon3" parent="SectionBar/SectionMenu" instance=ExtResource( 5 )]
 margin_left = 73.0
 margin_right = 73.0
 margin_bottom = 13.0
-MenuEffect = [ ExtResource( 7 ) ]
+MenuEffects = [ ExtResource( 7 ) ]
 
 [node name="ItemDetails" type="Panel" parent="."]
 margin_top = 28.0

@@ -10,12 +10,6 @@ func _input(event) -> void:
 	elif Input.is_action_just_pressed("Toggle_Inventory"):
 		SignalBus.emit_signal("setUpInventory")
 		pass
-	elif Input.is_action_just_pressed("Tab_Right"):
-		SignalBus.emit_signal("inventoryMenuShiftRight")
-		pass
-	elif Input.is_action_just_pressed("Tab_Left"):
-		SignalBus.emit_signal("inventoryMenuShiftLeft")
-		pass	
 	elif Input.is_action_just_pressed("Move_Up"):
 		x = -5
 		SignalBus.emit_signal("inventorySlotShift", x)

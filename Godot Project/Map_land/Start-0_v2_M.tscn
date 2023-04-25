@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://function/world.gd" type="Script" id=1]
 [ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://NPCs/NPC_Ch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=6]
 [ext_resource path="res://trashcan/player/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://NPCs/Slime.tscn" type="PackedScene" id=8]
 [ext_resource path="res://addons/CanvasLayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=10]
 [ext_resource path="res://NPCs/青行燈.tscn" type="PackedScene" id=11]
@@ -308,152 +309,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=88]
 
-[sub_resource type="Animation" id=89]
-resource_name = "Idle_down"
-length = 0.3
-loop = true
-step = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 1 ]
-}
-
-[sub_resource type="Animation" id=90]
-resource_name = "Idle_left"
-length = 0.3
-loop = true
-step = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 4 ]
-}
-
-[sub_resource type="Animation" id=91]
-resource_name = "Idle_right"
-length = 0.3
-loop = true
-step = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 10 ]
-}
-
-[sub_resource type="Animation" id=92]
-resource_name = "Idle_up"
-length = 0.3
-loop = true
-step = 0.3
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ 7 ]
-}
-
-[sub_resource type="Animation" id=93]
-resource_name = "down"
-length = 0.8
-loop = true
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 1 ]
-}
-
-[sub_resource type="Animation" id=94]
-resource_name = "left"
-length = 0.8
-loop = true
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 3, 4, 5, 4 ]
-}
-
-[sub_resource type="Animation" id=95]
-resource_name = "right"
-length = 0.8
-loop = true
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 9, 10, 11, 10 ]
-}
-
-[sub_resource type="Animation" id=96]
-resource_name = "up"
-length = 0.8
-loop = true
-step = 0.2
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 6, 7, 8, 7 ]
-}
-
-[sub_resource type="AnimationNodeStateMachinePlayback" id=97]
-
 [node name="Start-0" type="Node2D"]
 pause_mode = 2
 position = Vector2( 0, 2 )
@@ -569,33 +424,12 @@ visible = false
 dialog_key = "Interact"
 dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
 
-[node name="NPC4" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
-position = Vector2( -2648, 262 )
-NPC_IS_STATIC = true
-
-[node name="AnimationPlayer" parent="YSort/MovingEntity/NPC4" index="1"]
-anims/Idle_down = SubResource( 89 )
-anims/Idle_left = SubResource( 90 )
-anims/Idle_right = SubResource( 91 )
-anims/Idle_up = SubResource( 92 )
-anims/down = SubResource( 93 )
-anims/left = SubResource( 94 )
-anims/right = SubResource( 95 )
-anims/up = SubResource( 96 )
-
-[node name="AnimationTree" parent="YSort/MovingEntity/NPC4" index="2"]
-parameters/playback = SubResource( 97 )
-
-[node name="CollisionShape2D" parent="YSort/MovingEntity/NPC4" index="3"]
-visible = false
-
-[node name="DetectPress" parent="YSort/MovingEntity/NPC4" index="4"]
-dialog_key = "Interact"
-dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
-
 [node name="青行燈" parent="YSort/MovingEntity" instance=ExtResource( 11 )]
 light_mask = 16
 position = Vector2( 2936, 454 )
+
+[node name="Slime" parent="YSort/MovingEntity" instance=ExtResource( 8 )]
+position = Vector2( -1424, 622 )
 
 [node name="StaticEntity" type="YSort" parent="YSort"]
 
@@ -684,9 +518,6 @@ polygon = PoolVector2Array( -2128, 208, -2128, -16, -1840, -16, -1712, -16, -171
 Pause_Menu = "res://Asset/made asset/Menu_UI/PauseMenu_UI.tscn"
 Inventory_Menu = "res://Asset/Items/InventoryController_V2_I.tscn"
 
-[node name="InventoryController_V2" parent="CanvasLayer/UI_Container" index="0"]
-visible = true
-
 [node name="BGMPlayer" parent="CanvasLayer/AudioController" index="0"]
 stream = ExtResource( 4 )
 volume_db = -10.0
@@ -714,7 +545,4 @@ rect_scale = Vector2( 0.5, 0.5 )
 [editable path="YSort/MovingEntity/NPC3"]
 [editable path="YSort/MovingEntity/NPC3/DetectPress"]
 [editable path="YSort/MovingEntity/NPC3/PlayerDetectionZone"]
-[editable path="YSort/MovingEntity/NPC4"]
-[editable path="YSort/MovingEntity/NPC4/DetectPress"]
-[editable path="YSort/MovingEntity/NPC4/PlayerDetectionZone"]
 [editable path="CanvasLayer"]

@@ -134,7 +134,7 @@ func _on_response_gui_input(event, response) -> void:
 	if "disallowed" in response.name.to_lower(): return
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
 		next(dialogue_line.responses[response.get_parent().get_index()].next_id)
-	elif event.is_action_pressed("interact") and response in get_responses():
+	elif event.is_action_pressed("Interact") and response in get_responses():
 		next(dialogue_line.responses[response.get_parent().get_index()].next_id)
 
 
@@ -146,5 +146,5 @@ func _on_Balloon_gui_input(event) -> void:
 	
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == 1:
 		next(dialogue_line.next_id)
-	elif event.is_action_pressed("interact") and balloon.get_focus_owner() == balloon:
+	elif event.is_action_pressed("Interact") and balloon.get_focus_owner() == balloon:
 		next(dialogue_line.next_id)

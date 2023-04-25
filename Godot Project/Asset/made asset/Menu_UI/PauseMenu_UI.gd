@@ -8,14 +8,24 @@ export(String, FILE) var saveScene
 export(String, FILE) var loadScene
 export(String, FILE) var optionScene
 export(String, FILE) var mainMenuScene
+onready var MenuList = $BaseMenu/MenuList
 
 # Called when the node enters the scene tree for the first time.
-func _process(delta):
+func _input(event):
 	if Input.is_action_just_pressed("ui_cancel") and !get_child(0).is_visible():
 		resetMenu()
 	elif Input.is_action_just_pressed("ui_cancel"):
 		_on_resume_pressed()
-	
+	if Input.is_action_just_pressed("Tab_Right"):
+		for node in MenuList.get_children():
+			if node.active == true:
+				node.ShiftSelection(1)
+				break
+	if Input.is_action_just_pressed("Tab_Left"):
+		for node in MenuList.get_children():
+			if node.active == true:
+				node.ShiftSelection(-1)
+				break
 func _on_resume_pressed() -> void:
 	queue_free()
 	pass # Replace with function body.
@@ -32,7 +42,6 @@ func _on_options_pressed() -> void:
 	menu = load(optionScene)
 	changeMenu()
 	pass # Replace with function body.
-
 func _on_quitToMenu_pressed() -> void:
 	get_tree().quit()
 	

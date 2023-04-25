@@ -9,7 +9,7 @@
 [ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=12]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="CanvasLayer_Ctrl" type="CanvasLayer"]
 script = ExtResource( 12 )
 
 [node name="UI_Container" type="Control" parent="."]

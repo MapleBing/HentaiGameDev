@@ -4,32 +4,33 @@ var active = false
 func _ready() -> void:
 	TriggerMenuEffect()
 	if get_position_in_parent() == 0:
-		TriggerMenuEffect()
-		print("Current:")
-		print(self.name)
-	
+		ShiftSelection(0)
+
+
 func ShiftSelection(amount = 0):
-	active = false
 	var parent = get_parent()
-	var size = parent.get_parent().get_child_count()
-	
-	print("Current:")
+	var size = parent.get_child_count()-1
+
+	print("")
+	print("Current: ")
 	print(self.name)
-	print(parent.name)
-	print(get_position_in_parent())
-	
-	var currentPosition = (get_position_in_parent() + amount) % 3
-	if currentPosition == -1:
-		currentPosition += size
 		
-	
-	parent.get_child(currentPosition).TriggerMenuEffect()
-	
+	var currentPosition = (get_position_in_parent() + amount) #cycles 0,1,2 for size of 3
+	print(currentPosition)
+	if currentPosition == -1:
+		currentPosition = size
+	elif currentPosition == (size + 1):
+		currentPosition = 0
+	print(currentPosition)
+	if active == true:
+		active = false
+		parent.get_child(currentPosition).ShiftSelection(amount)
+	else:
+		active = true
+	TriggerMenuEffect()
+
 func TriggerMenuEffect():
-	active = true
 	for effect in MenuEffects:
-		print("Method:")
-		print(effect.has_method("TriggerEffect"))
 		if effect != null:
 			effect.TriggerEffect(self)
 			

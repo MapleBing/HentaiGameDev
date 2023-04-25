@@ -6,7 +6,7 @@ var area_active = false
 onready var parent = get_parent()
 #sends
 func _input(event):
-	if area_active and event.is_action_pressed("interact") and !parent.talking:
+	if area_active and event.is_action_pressed("Interact") and !parent.talking:
 		parent.update_direction()
 		parent.talking = true
 		SignalBus.emit_signal("display_dialogue", dialogue_file, dialog_key)

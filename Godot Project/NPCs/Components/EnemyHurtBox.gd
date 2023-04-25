@@ -10,5 +10,5 @@ func _on_EnemyHitBox_body_entered(body: Node) -> void:
 	pass # Replace with function body.
 	
 func _input(event):
-	if event.is_action_pressed("interact"):
+	if event.is_action_pressed("Interact"):
 		checking = true
