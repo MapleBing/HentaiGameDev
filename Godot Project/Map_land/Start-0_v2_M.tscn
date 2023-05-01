@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://function/world.gd" type="Script" id=1]
 [ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
@@ -6,7 +6,7 @@
 [ext_resource path="res://Asset/ExternalSongs/1-08 159 - Ambrosia Beach (Loop).mp3" type="AudioStream" id=4]
 [ext_resource path="res://NPCs/NPC_Ch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=6]
-[ext_resource path="res://trashcan/player/player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://trashcan/player/player_v2_Ch.tscn" type="PackedScene" id=7]
 [ext_resource path="res://NPCs/Slime.tscn" type="PackedScene" id=8]
 [ext_resource path="res://addons/CanvasLayer.tscn" type="PackedScene" id=9]
 [ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=10]
@@ -14,6 +14,78 @@
 
 [sub_resource type="RectangleShape2D" id=70]
 extents = Vector2( 10, 8 )
+
+[sub_resource type="AnimationNodeTransition" id=24]
+input_count = 2
+input_0/name = "idle"
+input_0/auto_advance = false
+input_1/name = "walk"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeTimeScale" id=11]
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "idle_up"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Idle_right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+blend_point_0/node = SubResource( 13 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 14 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 15 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 16 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "down"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "up"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "left"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=22]
+blend_point_0/node = SubResource( 18 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 19 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 32 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 33 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeBlendTree" id=89]
+resource_local_to_scene = true
+graph_offset = Vector2( -595.954, -89.8955 )
+nodes/Transition/node = SubResource( 24 )
+nodes/Transition/position = Vector2( -140, 180 )
+nodes/animation_speed/node = SubResource( 11 )
+nodes/animation_speed/position = Vector2( 60, 100 )
+nodes/idle/node = SubResource( 17 )
+nodes/idle/position = Vector2( -380, 120 )
+nodes/walk/node = SubResource( 22 )
+nodes/walk/position = Vector2( -380, 300 )
+node_connections = [ "output", 0, "animation_speed", "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk" ]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=69]
 
@@ -342,24 +414,18 @@ pause_mode = 1
 [node name="MovingEntity" type="YSort" parent="YSort"]
 
 [node name="player" parent="YSort/MovingEntity" instance=ExtResource( 7 )]
-light_mask = 0
-position = Vector2( -1176, 510 )
-scale = Vector2( 1.2, 1.2 )
-MAX_SPEED = 400.0
-FRICTION = 10000.0
 
-[node name="Camera2D" type="Camera2D" parent="YSort/MovingEntity/player"]
-current = true
-zoom = Vector2( 3, 3 )
-limit_left = -3786
-limit_top = -2273
-limit_right = 3421
-limit_bottom = 1505
-limit_smoothed = true
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-editor_draw_limits = true
-editor_draw_drag_margin = true
+[node name="Sprite" parent="YSort/MovingEntity/player" index="0"]
+frame = 1
+
+[node name="AnimationTree" parent="YSort/MovingEntity/player" index="3"]
+tree_root = SubResource( 89 )
+
+[node name="Camera2D" parent="YSort/MovingEntity/player" index="6"]
+limit_left = -3783
+limit_top = -2267
+limit_right = 3702
+limit_bottom = 1497
 
 [node name="NPC" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
 position = Vector2( -2648, 262 )
@@ -525,7 +591,6 @@ volume_db = -10.0
 [node name="SaveLoadDemo" type="Node2D" parent="."]
 position = Vector2( 0, -8 )
 script = ExtResource( 2 )
-player = NodePath("../YSort/MovingEntity/player")
 ui_save_panel = NodePath("UI for SL and Inventory demo/UISavePanel")
 
 [node name="UI for SL and Inventory demo" type="CanvasLayer" parent="SaveLoadDemo"]
@@ -536,6 +601,7 @@ margin_bottom = 0.0
 rect_scale = Vector2( 0.5, 0.5 )
 
 [editable path="maps/Wild-0"]
+[editable path="YSort/MovingEntity/player"]
 [editable path="YSort/MovingEntity/NPC"]
 [editable path="YSort/MovingEntity/NPC/DetectPress"]
 [editable path="YSort/MovingEntity/NPC/PlayerDetectionZone"]

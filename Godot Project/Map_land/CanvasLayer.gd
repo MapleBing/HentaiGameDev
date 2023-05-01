@@ -12,17 +12,6 @@ func _input(event) -> void:
 		pass
 	elif Input.is_action_just_pressed("Move_Up"):
 		x = -5
-		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("Move_Down"):
-		x = 5
-		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("Move_Right"):
-		x = 1
-		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("Move_Left"):
-		x = -1
-		SignalBus.emit_signal("inventorySlotShift", x)
-	elif Input.is_action_just_pressed("Interact"):
 		SignalBus.emit_signal("inventoryMenuConfirm")
 	 # Replace with function body.
 

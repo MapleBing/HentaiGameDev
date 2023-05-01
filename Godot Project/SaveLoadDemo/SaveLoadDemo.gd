@@ -21,18 +21,6 @@ func _ready() -> void:
 	_ui_save_panel.connect("reload_requested", self, "_create_or_load_save")
 	_ui_save_panel.connect("save_requested", self, "_save_game")
 	
-	# And the start of the game or when pressing the load button, we call this
-	# function. It loads the save data if it exists, otherwise, it creates a 
-	# new save file.
-		#_create_or_load_save()
-	# This function offsets the camera when the inventory menu is open to not 
-	# hide the player.
-	#_player.toggle_camera_offset(_ui_inventory.visible)
-
-#func _physics_process(delta: float) -> void:
-	#_ui_info_display.update_player_position(_player.global_position)
-
-
 func _create_or_load_save() -> void:
 	if SaveGame.save_exists():
 		_save = SaveGame.load_savegame()
@@ -46,12 +34,10 @@ func _create_or_load_save() -> void:
 
 		_save.write_savegame()
 
-	# After creating or loading a save resource, we need to dispatch its data
-	# to the various nodes that need it.
 	_player.global_position = _player.global_position
-	#_ui_inventory.inventory = _save.inventory
+
 	_player.stats = _save.character
-	#_ui_info_display.character = _save.character
+
 
 
 func _save_game() -> void:

@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource( 1 )
-item_id = 1
+item_id = 4
 item_name = "Eri Key"
 item_texture = ExtResource( 2 )
 quantity = 0

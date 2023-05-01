@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "HideUI",
 "language": "GDScript",
-"path": "res://Asset/made asset/Menu_UI/Resources/MenuEffect_hide_UI.gd"
+"path": "res://Asset/made asset/Menu_UI/Resources/MenuEffect_Tint_UI.gd"
 }, {
 "base": "Resource",
 "class": "Inventory",

@@ -12,9 +12,9 @@ onready var MenuList = $BaseMenu/MenuList
 
 # Called when the node enters the scene tree for the first time.
 func _input(event):
-	if Input.is_action_just_pressed("ui_cancel") and !get_child(0).is_visible():
+	if Input.is_action_just_pressed("Toggle_Inventory") and !get_child(0).is_visible():
 		resetMenu()
-	elif Input.is_action_just_pressed("ui_cancel"):
+	elif Input.is_action_just_pressed("Toggle_Inventory"):
 		_on_resume_pressed()
 	if Input.is_action_just_pressed("Tab_Right"):
 		for node in MenuList.get_children():
@@ -26,6 +26,8 @@ func _input(event):
 			if node.active == true:
 				node.ShiftSelection(-1)
 				break
+func CheckCurrentMenu():
+	queue_free()
 func _on_resume_pressed() -> void:
 	queue_free()
 	pass # Replace with function body.

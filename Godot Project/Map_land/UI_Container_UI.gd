@@ -25,8 +25,10 @@ func changeMenu(currentMenu):
 		scene = load(currentMenu)
 		menu = scene.instance()
 		add_child(menu)
+		get_tree().paused = true
 	else:
 		get_child(0).queue_free()
+		get_tree().paused = false
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
