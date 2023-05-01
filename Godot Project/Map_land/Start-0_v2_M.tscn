@@ -85,7 +85,7 @@ nodes/idle/node = SubResource( 17 )
 nodes/idle/position = Vector2( -380, 120 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -380, 300 )
-node_connections = [ "output", 0, "animation_speed", "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk" ]
+node_connections = [ "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition", "output", 0, "animation_speed" ]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=69]
 
