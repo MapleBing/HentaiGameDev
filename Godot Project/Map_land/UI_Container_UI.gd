@@ -9,11 +9,14 @@ export(String, FILE) var Inventory_Menu
 var scene
 var menu
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	SignalBus.connect("setUpPause", self, "pauseSetUp")
-	SignalBus.connect("setUpInventory", self, "inventorySetUp")
-	pass # Replace with function body.
-	
+
+func _input(event) -> void:
+	if Input.is_action_just_pressed("Toggle_Menu"):
+		changeMenu(Pause_Menu)
+		pass
+	elif Input.is_action_just_pressed("Toggle_Inventory"):
+		changeMenu(Inventory_Menu)
+		pass
 func pauseSetUp():
 	changeMenu(Pause_Menu)
 	

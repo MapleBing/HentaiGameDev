@@ -10,10 +10,6 @@ func _input(event) -> void:
 	elif Input.is_action_just_pressed("Toggle_Inventory"):
 		SignalBus.emit_signal("setUpInventory")
 		pass
-	elif Input.is_action_just_pressed("Move_Up"):
-		x = -5
-		SignalBus.emit_signal("inventoryMenuConfirm")
-	 # Replace with function body.
 
 # Hoping to replace the code above with the code below
 #var buttonPress = false

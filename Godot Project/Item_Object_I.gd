@@ -1,5 +1,4 @@
 extends Control
-export
 
 # Declare member variables here. Examples:
 # var a: int = 2

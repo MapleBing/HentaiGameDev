@@ -3,36 +3,32 @@ extends Node2D
 var itemID = 0
 var itemData: String  = ""
 var currentItem : String = ""
+var itemPaths = []
+var itemResources = []
 
-func getItemDetails(ItemID)-> String:
-	match ItemID: #Name, SpriteFilePath, +/Description"
-		0:
-			itemData = "Golden Pyramid 1,"
-			itemData += "res://asset/Sprites/Items/Obelisk1_01-stand.png,"
-			itemData += "1st Test item with no particular use"
-		1: 
-			itemData = "Golden Pyramid 2,"
-			itemData += "res://asset/Sprites/Items/Obelisk1_02-stand.png,"
-			itemData += "2nd Test item with no particular use"
-		2: 
-			itemData = "Golden Pyramid 3,"
-			itemData += "res://asset/Sprites/Items/Obelisk1_03-stand.png,"
-			itemData += "3rd Test item with no particular use"
-	return itemData
+func _ready():
+	var file_list = ("res://Asset/Items/Items/Resources")
+	var dir = Directory.new()
+	dir.open(file_list)
+	dir.list_dir_begin(true,true)
+	var fileName = dir.get_next()
+	
+	while fileName != "":
+		var filePath = file_list+ "/" + fileName
+		print(filePath)
+		itemPaths.append(filePath)
+		fileName = dir.get_next()
+	dir.list_dir_end()
+	for file in itemPaths:
+			itemResources.append(ResourceLoader.load(file))
 
-func getName(ItemID) -> String:
-	itemData = getItemDetails(ItemID)
-	return itemData.get_slice(",",0)
-
-func getTexture(ItemID):
-	itemData = getItemDetails(ItemID)
-	var expTexture = load(itemData.get_slice(",",1))
-	return expTexture
-
-func getHoverText(ItemID):
-	itemData = getItemDetails(ItemID)
-	return itemData.get_slice(",",2)
-
+func getItemDetails(ItemID)-> Resource:
+	for resource in itemResources:
+		if resource.getID() == ItemID:
+			return resource
+	return null
+func getAllItems()-> Array:
+	return itemResources
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

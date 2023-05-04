@@ -321,7 +321,7 @@ nodes/idle/node = SubResource( 17 )
 nodes/idle/position = Vector2( -380, 120 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -380, 300 )
-node_connections = [ "output", 0, "animation_speed", "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition" ]
+node_connections = [ "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition", "output", 0, "animation_speed" ]
 
 [node name="player" type="KinematicBody2D"]
 scale = Vector2( 1.6, 1.6 )
@@ -331,7 +331,7 @@ script = ExtResource( 1 )
 position = Vector2( 0, -23 )
 texture = ExtResource( 3 )
 hframes = 16
-frame = 14
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -1 )

@@ -1,13 +1,11 @@
-[gd_resource type="Resource" load_steps=3 format=2]
+[gd_resource type="Resource" load_steps=2 format=2]
 
 [ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Items/Items/Icons/casino_pass_I.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-item_id = 4
-item_name = "Casino Pass"
-item_texture = ExtResource( 2 )
+id = 0
+name = ""
 quantity = 0
 hover_text = ""
 type = 0

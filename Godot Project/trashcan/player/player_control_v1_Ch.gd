@@ -34,7 +34,6 @@ func _process(delta):
 	inputDif += abs(velocity.y - input_vector.y)
 	input_vector = input_vector.normalized()
 	if input_vector != Vector2.ZERO and inputDif > .8:
-		print(inputDif)
 		animation_tree.set("parameters/idle/blend_position", input_vector)
 		animation_tree.set("parameters/walk/blend_position", input_vector)
 		animation_tree.set("parameters/Transition/current", state.walk) #於enum，給int

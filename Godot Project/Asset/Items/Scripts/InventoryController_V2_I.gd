@@ -1,5 +1,5 @@
 extends Control
-onready var itemSprite = load("res://asset/Items/ItemSlot_I.tscn")
+onready var itemSlot = load("res://asset/Items/ItemSlot_I.tscn")
 var Items = ""
 var currentPosition = 0;
 var currentSlot = 0;
@@ -13,11 +13,11 @@ onready var keyObject = $ItemDetails/KeyList.get_child(0)
 onready var ItemDetails = $ItemDetails
 onready var ItemInfo = $ItemInfo
 onready var active = false
+var testAsset = preload("res://Asset/Items/Items/Resources/00_Test_I.tres")
 func _ready():
 	#Initiallize objects in stored Inventory
-	setGroup("Equip(1,1,1)",equipObject)
-	setGroup("Key(1,1)",keyObject)
-	setGroup("Consumeable(1)",consumeableObject)
+	getAllItems()
+	DisplayItemData(getActiveItem())
 	#Change current menu
 	SignalBus.connect("inventoryMenuShiftRight", self, "leftInventoryMenuShift")
 	SignalBus.connect("inventoryMenuShiftLeft", self, "rightInventoryMenuShift")
@@ -58,8 +58,6 @@ func _input(event):
 			
 		if Input.is_action_just_pressed("Move_Right"):
 			amount = 1
-			print("")
-			print("right")
 			controlInventoryList(amount, keyObject)
 			controlInventoryList(amount, consumeableObject)
 			controlInventoryList(amount, equipObject)
@@ -67,37 +65,48 @@ func _input(event):
 			
 		if Input.is_action_just_pressed("Move_Left"):
 			amount = -1
-			print("")
-			print("Left")
 			controlInventoryList(amount, keyObject)
 			controlInventoryList(amount, consumeableObject)
 			controlInventoryList(amount, equipObject)
 			return
-
-func controlInventoryList(x = 0, section = null):
+			
+func getAllItems():
+	for itemObj in ItemBus.getAllItems():
+		addItem(itemObj)
+		
+func getActiveItem():
+	var activeItem = null
+	activeItem = getCurrentItem(getCurrentSection())
+	#if activeItem != null:
+		#return activeItem
+	return testAsset
+func getCurrentItem (section = null):
 	if section.visible == true:
 		for node in section.get_children():
-			if node.active == true:
-				node.ShiftSelection(x)
-				return
+			if node.get_child(0).active == true:
+				return node 
+func getCurrentSection():
+	for node in ItemDetails.get_children():
+		if node.get_child(0).get_child(0).active == true:
+			return node 
+			
+func controlInventoryList(x = 0, section = null):
+	getCurrentItem(section).ShiftSelection(x)
 
 func controlInventoryListRow(x = 0, section = null):
-	if section.visible == true:
-		for node in section.get_children():
-			if node.active == true:
-				node.ShiftRow(x)
-				return
-
-func confirmInventoryMenu():
-	print_debug("________")
-	print_debug(String(currentPosition)+ " " + String(currentSlot))
-	addItem(getCurrentItemID(),-1)
-	pass
+	getCurrentItem(section).ShiftSelectionRow(x)
 	
-func addItem(itemID = 0,quantity = 0):
-	var currentItemSprite: Node = itemSprite.instance()
-	currentItemSprite.find_node("ItemSprite").setUpItemSprite(itemID,quantity)
-	var currentObject
+func addItem(itemObj):
+	var currentSlot: Node = itemSlot.instance()
+	currentSlot.find_node("ItemSprite").currentItem = itemObj
+	print(currentSlot.name)
+	match itemObj.type:
+			item.ItemTypes.EQUIPABLE:
+				equipObject.add_child(currentSlot)
+			item.ItemTypes.CONSUMEABLE:
+				consumeableObject.add_child(currentSlot)
+			item.ItemTypes.KEY:
+				consumeableObject.add_child(currentSlot)
 	
 func checkForItem(itemID = 0,quantity = 0):
 	var result  = false
@@ -114,8 +123,8 @@ func runThroughList(itemSection, itemID = 0, quantity = 0):
 	var currentItem = false
 	itemSection.get_child_count()
 	
-	for object in keyObject.get_children():
-		currentItem = object.get_child(1).getItem()
+	for object in itemSection.get_children():
+		currentItem = object.find_node("ItemSprite").currentItem
 		print(itemID)
 		print(currentItem.getQuantity())
 		if currentItem.getID() == itemID:
@@ -123,33 +132,9 @@ func runThroughList(itemSection, itemID = 0, quantity = 0):
 				return true
 	return false
 	
-func setGroup(inventoryGroup = "", groupNode = null):
-	var tempItems = inventoryGroup
-	var groupCategory = inventoryGroup.get_slice("(",0)
-	tempItems = "(" + tempItems
-	tempItems.lstrip(groupCategory + "(")
-	tempItems.rstrip(")")
-	for itemPosition in range(0,tempItems.count(",")+1,+1):
-		print(groupNode.name)
-		groupNode.add_child(fillInventory(itemPosition, tempItems))
-	
-func fillInventory(ItemPosition, TempItems):
-	var itemId = TempItems.get_slice(",", ItemPosition).to_int()
-	var currentItemSprite: Node = itemSprite.instance()
-	currentItemSprite.find_node("ItemSprite").setUpItemSprite(itemId,1)
-	return currentItemSprite
-	
-func getCurrentItemID():
-	var ItemLists = ItemDetails.get_child(currentPosition)
-	return ItemLists.get_child(currentSlot).get_child(1).getItem().getID()
-	
-func DisplayItemData(var currentItem :item):
-	var ItemSprite = currentItem.getTexture()
-	var ItemName = currentItem.getName()
-	var ItemDescription = currentItem.getHoverText()
-	ItemInfo.get_child(0).set_texture(ItemSprite)
-	ItemInfo.get_child(1).set_text(ItemName)
-	ItemInfo.get_child(2).set_text(ItemDescription)
+func DisplayItemData(node = null):
+	ItemInfo.ItemResorce = testAsset
+	ItemInfo.DisplayItemData()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta: float) -> void:

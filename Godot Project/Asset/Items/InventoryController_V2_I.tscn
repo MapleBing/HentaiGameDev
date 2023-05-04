@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Asset/Items/Scripts/InventoryController_V2_I.gd" type="Script" id=1]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/font_normal.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Asset/Items/ItemInfo.gd" type="Script" id=4]
 [ext_resource path="res://Asset/made asset/Menu_UI/Select_Icon_UI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Asset/Items/MenuIcon_UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Asset/Items/Items/Resources/00_Test_I.tres" type="Resource" id=6]
 [ext_resource path="res://Asset/Items/ItemList_I.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -75,14 +76,12 @@ rect_pivot_offset = Vector2( 186, 63 )
 margin_left = -5.0
 margin_right = 35.0
 margin_bottom = 40.0
+script = ExtResource( 4 )
+ItemResorce = ExtResource( 6 )
 
-[node name="ItemPortrait" parent="ItemInfo" instance=ExtResource( 6 )]
-margin_left = 250.0
-margin_top = 37.0
-margin_right = 282.0
-margin_bottom = 69.0
-rect_scale = Vector2( 1.463, 1.482 )
-rect_pivot_offset = Vector2( 0, 0 )
+[node name="ItemPortrait" type="TextureRect" parent="ItemInfo"]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [node name="ItemName" type="Label" parent="ItemInfo"]
 margin_left = 241.0
@@ -136,4 +135,3 @@ margin_bottom = 22.0
 rect_pivot_offset = Vector2( 186, 63 )
 
 [editable path="ItemDetails/EquipList"]
-[editable path="ItemInfo/ItemPortrait"]
