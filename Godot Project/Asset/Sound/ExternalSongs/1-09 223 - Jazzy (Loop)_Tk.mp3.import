@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/1-09 223 - Jazzy (Loop)_Tk.mp3-d9f2d8faeb8ca04ebf2a6240de6000db.mp3str"
+
+[deps]
+
+source_file="res://Asset/Sound/ExternalSongs/1-09 223 - Jazzy (Loop)_Tk.mp3"
+dest_files=[ "res://.import/1-09 223 - Jazzy (Loop)_Tk.mp3-d9f2d8faeb8ca04ebf2a6240de6000db.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

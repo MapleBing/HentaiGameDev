@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mastrubating_2_Tk.ogg-b5ce945ffa3f68e412373dd970518472.oggstr"
+
+[deps]
+
+source_file="res://Asset/Sound/Sfx/Mastrubating_2_Tk.ogg"
+dest_files=[ "res://.import/Mastrubating_2_Tk.ogg-b5ce945ffa3f68e412373dd970518472.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

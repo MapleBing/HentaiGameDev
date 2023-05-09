@@ -1,5 +1,5 @@
 extends Control
-onready var itemSlot = load("res://asset/Items/ItemSlot_I.tscn")
+onready var itemSlot = load("res://Asset/made asset/Menu_UI/Layouts/Prefabs/ItemSlot_I.tscn")
 var Items = ""
 var currentPosition = 0;
 var currentSlot = 0;

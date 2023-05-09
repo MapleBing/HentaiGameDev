@@ -1,15 +1,5 @@
 extends CanvasLayer
 
-var buttonPress = false
-#Collection of menu inputs that send a signal to the signal bus
-func _input(event) -> void:
-	var x = 0
-	if Input.is_action_just_pressed("Toggle_Menu"):
-		SignalBus.emit_signal("setUpPause")
-		pass
-	elif Input.is_action_just_pressed("Toggle_Inventory"):
-		SignalBus.emit_signal("setUpInventory")
-		pass
 
 # Hoping to replace the code above with the code below
 #var buttonPress = false

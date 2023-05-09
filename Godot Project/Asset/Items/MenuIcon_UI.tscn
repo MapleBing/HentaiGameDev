@@ -1,7 +1,29 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Asset/Items/InventoryIcon_I.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Sprites/Items/Obelisk1_01-stand.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Art/Sprites/Items/Obelisk1_01-stand.png" type="Texture" id=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends TextureRect
+
+# Declare member variables here. Examples:
+# var a: int = 2
+# var b: String = \"text\"
+export (Resource) var currentItem = item.new()
+
+# Called when the node enters the scene tree for the first time.
+func setUpItemSprite(itemId = 0, quantity = 1) -> void:
+	currentItem.setUpItem(itemId,quantity)
+	set_texture(currentItem.getTexture())
+	pass
+	
+func getItem() -> item:
+	return currentItem
+	
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta: float) -> void:
+#	pass
+"
 
 [node name="ItemSprite" type="TextureRect"]
 margin_right = 32.0
@@ -10,4 +32,4 @@ rect_scale = Vector2( 0.42, 0.42 )
 rect_pivot_offset = Vector2( -11.5, 0 )
 texture = ExtResource( 2 )
 stretch_mode = 4
-script = ExtResource( 1 )
+script = SubResource( 1 )

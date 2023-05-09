@@ -1,0 +1,186 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://function/NPCs/enemies.gd" type="Script" id=1]
+[ext_resource path="res://function/NPCs/PlayerDetectionZone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://function/NPCs/WanderController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Asset/Art/character/Npc/Monsters/0_Sprites/Ghost_Ch.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=2]
+resource_name = "down"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "left"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "right"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 12, 13, 14, 15 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "up"
+loop = true
+step = 0.25
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.5, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 8, 9, 10, 11 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=6]
+animation = "down"
+
+[sub_resource type="AnimationNodeAnimation" id=7]
+animation = "up"
+
+[sub_resource type="AnimationNodeAnimation" id=8]
+animation = "right"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=10]
+blend_point_0/node = SubResource( 6 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 7 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 8 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 9 )
+blend_point_3/pos = Vector2( -1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=11]
+animation = "down"
+
+[sub_resource type="AnimationNodeAnimation" id=12]
+animation = "up"
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "right"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=15]
+blend_point_0/node = SubResource( 11 )
+blend_point_0/pos = Vector2( 0, 1 )
+blend_point_1/node = SubResource( 12 )
+blend_point_1/pos = Vector2( 0, -1 )
+blend_point_2/node = SubResource( 13 )
+blend_point_2/pos = Vector2( 1, 0 )
+blend_point_3/node = SubResource( 14 )
+blend_point_3/pos = Vector2( -1, 0 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=17]
+
+[sub_resource type="AnimationNodeStateMachine" id=18]
+states/idle/node = SubResource( 10 )
+states/idle/position = Vector2( 280, 117 )
+states/walk/node = SubResource( 15 )
+states/walk/position = Vector2( 468, 117 )
+transitions = [ "idle", "walk", SubResource( 16 ), "walk", "idle", SubResource( 17 ) ]
+start_node = "idle"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=19]
+
+[sub_resource type="CapsuleShape2D" id=20]
+radius = 6.0
+height = 3.0
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 59.0085
+
+[node name="青行燈" type="KinematicBody2D"]
+position = Vector2( 0, -16 )
+collision_layer = 8
+collision_mask = 19
+script = ExtResource( 1 )
+MAX_SPEED = 50
+WANDER_RANGE_BOUNDS = 20
+
+[node name="Sprite" type="Sprite" parent="."]
+light_mask = 16
+texture = ExtResource( 4 )
+hframes = 16
+frame = 11
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/down = SubResource( 2 )
+anims/left = SubResource( 3 )
+anims/right = SubResource( 4 )
+anims/up = SubResource( 5 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 18 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 19 )
+parameters/idle/blend_position = Vector2( -0.0528302, -0.308581 )
+parameters/walk/blend_position = Vector2( 0.0301887, 0.656766 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 8 )
+shape = SubResource( 20 )
+
+[node name="PlayerDetectionZone" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 8 )
+
+[node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
+modulate = Color( 0.709804, 0.356863, 0.34902, 0.92549 )
+shape = SubResource( 21 )
+
+[node name="WanderController" parent="." instance=ExtResource( 3 )]
+
+[editable path="PlayerDetectionZone"]

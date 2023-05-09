@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://function/dialogue/dialogue_balloon.gd" type="Script" id=1]
-[ext_resource path="res://Asset/character/Pixel Character/no_name chara/未命名角色 (主角).png" type="Texture" id=2]
+[ext_resource path="res://Asset/Art/character/Eri/Eri_Assets/Sprite_FarmGirl_Ch.png" type="Texture" id=2]
 [ext_resource path="res://function/dialogue/ResponsesTemplate.tscn" type="PackedScene" id=3]
 [ext_resource path="res://function/dialogue/CharacterSprites.gd" type="Script" id=4]
 [ext_resource path="res://Asset/made asset/dialog_UI/Chat_Box.tres" type="Texture" id=5]

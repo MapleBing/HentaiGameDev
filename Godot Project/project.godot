@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Resource",
 "class": "HideUI",
 "language": "GDScript",
-"path": "res://Asset/made asset/Menu_UI/Resources/MenuEffect_Tint_UI.gd"
+"path": "res://Asset/made asset/Menu_UI/List_Resources/MenuEffect_Tint_UI.gd"
 }, {
 "base": "Resource",
 "class": "Inventory",
@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="AllSheNeedsIsMoney"
-run/main_scene="res://Map_land/Start-0_v2_M.tscn"
+run/main_scene="res://Asset/Art/Enviornment/Start-0_v2_M.tscn"
 config/icon="res://Build/Game_Icon_Bld.png"
 
 [autoload]
@@ -66,7 +66,7 @@ SignalBus="*res://autoload_script/SignalBus.gd"
 ScenePos="*res://autoload_script/ScenePos.gd"
 DialogState="*res://autoload_script/dialog_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-HSceneManager="*res://Asset/HScenes/HSceneManager.tscn"
+HSceneManager="*res://Asset/Art/HScenes/HScene_Manager_Sc.tscn"
 ItemBus="*res://Asset/Items/Scripts/ItemBus_I.gd"
 HSceneBus="*res://autoload_script/HSceneBus.gd"
 

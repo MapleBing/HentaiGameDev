@@ -1,9 +1,9 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://trashcan/player/player_control_v1_Ch.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Ich.io_BGM/HGameDev_mixedFootstep.wav" type="AudioStream" id=2]
-[ext_resource path="res://Asset/character/Eri/Eri_Assets/Sprite_Eri_v2_Ch.png" type="Texture" id=3]
-[ext_resource path="res://Asset/Effects/Confetti_Ef.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Asset/Sound/Ich.io_BGM/HGameDev_mixedFootstep.wav" type="AudioStream" id=2]
+[ext_resource path="res://Asset/Art/character/Eri/Eri_Assets/Sprite_Eri_v2_Ch.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Art/Effects/Confetti_Ef.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 6.0
@@ -321,7 +321,7 @@ nodes/idle/node = SubResource( 17 )
 nodes/idle/position = Vector2( -380, 120 )
 nodes/walk/node = SubResource( 22 )
 nodes/walk/position = Vector2( -380, 300 )
-node_connections = [ "Transition", 0, "idle", "Transition", 1, "walk", "animation_speed", 0, "Transition", "output", 0, "animation_speed" ]
+node_connections = [ "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk", "output", 0, "animation_speed" ]
 
 [node name="player" type="KinematicBody2D"]
 scale = Vector2( 1.6, 1.6 )

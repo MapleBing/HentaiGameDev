@@ -1,0 +1,611 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://function/world.gd" type="Script" id=1]
+[ext_resource path="res://SaveLoadDemo/SaveLoadDemo.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Art/Enviornment/TileMaps/Start_0_v2_M.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Sound/ExternalSongs/1-08 159 - Ambrosia Beach (Loop)_Tk.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Asset/Art/character/Npc/TownNpc/NPC_Ch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://function/detect_area/detect_transport_by_press.tscn" type="PackedScene" id=6]
+[ext_resource path="res://trashcan/player/player_v2_Ch.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Asset/Art/character/Npc/Monsters/Slime_Ch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://addons/CanvasLayer.tscn" type="PackedScene" id=9]
+[ext_resource path="res://SaveLoadDemo/UI/UISavePanel.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Asset/Art/character/Npc/Monsters/0_Sprites/Ghost_Ch.tscn" type="PackedScene" id=11]
+
+[sub_resource type="RectangleShape2D" id=70]
+extents = Vector2( 10, 8 )
+
+[sub_resource type="AnimationNodeTransition" id=24]
+input_count = 2
+input_0/name = "idle"
+input_0/auto_advance = false
+input_1/name = "walk"
+input_1/auto_advance = false
+
+[sub_resource type="AnimationNodeTimeScale" id=11]
+
+[sub_resource type="AnimationNodeAnimation" id=13]
+animation = "idle_down"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "idle_up"
+
+[sub_resource type="AnimationNodeAnimation" id=15]
+animation = "idle_left"
+
+[sub_resource type="AnimationNodeAnimation" id=16]
+animation = "Idle_right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=17]
+blend_point_0/node = SubResource( 13 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 14 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 15 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 16 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "down"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "up"
+
+[sub_resource type="AnimationNodeAnimation" id=32]
+animation = "left"
+
+[sub_resource type="AnimationNodeAnimation" id=33]
+animation = "right"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id=22]
+blend_point_0/node = SubResource( 18 )
+blend_point_0/pos = Vector2( 0, 1.1 )
+blend_point_1/node = SubResource( 19 )
+blend_point_1/pos = Vector2( 0, -1.1 )
+blend_point_2/node = SubResource( 32 )
+blend_point_2/pos = Vector2( -1, 0 )
+blend_point_3/node = SubResource( 33 )
+blend_point_3/pos = Vector2( 1, 0 )
+min_space = Vector2( -1, -1.1 )
+max_space = Vector2( 1, 1.1 )
+blend_mode = 1
+
+[sub_resource type="AnimationNodeBlendTree" id=89]
+resource_local_to_scene = true
+graph_offset = Vector2( -595.954, -89.8955 )
+nodes/Transition/node = SubResource( 24 )
+nodes/Transition/position = Vector2( -140, 180 )
+nodes/animation_speed/node = SubResource( 11 )
+nodes/animation_speed/position = Vector2( 60, 100 )
+nodes/idle/node = SubResource( 17 )
+nodes/idle/position = Vector2( -380, 120 )
+nodes/walk/node = SubResource( 22 )
+nodes/walk/position = Vector2( -380, 300 )
+node_connections = [ "animation_speed", 0, "Transition", "Transition", 0, "idle", "Transition", 1, "walk", "output", 0, "animation_speed" ]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=69]
+
+[sub_resource type="Animation" id=71]
+resource_name = "Idle_down"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "Idle_left"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "Idle_right"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "Idle_up"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=75]
+resource_name = "down"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "left"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=77]
+resource_name = "right"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "up"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=79]
+
+[sub_resource type="Animation" id=80]
+resource_name = "Idle_down"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "Idle_left"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "Idle_right"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+
+[sub_resource type="Animation" id=83]
+resource_name = "Idle_up"
+length = 0.3
+loop = true
+step = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "down"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 1 ]
+}
+
+[sub_resource type="Animation" id=85]
+resource_name = "left"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=86]
+resource_name = "right"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 9, 10, 11, 10 ]
+}
+
+[sub_resource type="Animation" id=87]
+resource_name = "up"
+length = 0.8
+loop = true
+step = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 7, 8, 7 ]
+}
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=88]
+
+[node name="Start-0" type="Node2D"]
+pause_mode = 2
+position = Vector2( 0, 2 )
+script = ExtResource( 1 )
+dialogue_file = "res://dialogue/dialog_text(Dialog_manager)/dialog_manager.tres"
+
+[node name="maps" type="Node" parent="."]
+
+[node name="Wild-0" parent="maps" instance=ExtResource( 6 )]
+pause_mode = 1
+position = Vector2( 582, 161 )
+scale = Vector2( 1, 2.68 )
+autoEnter = true
+
+[node name="CollisionShape2D" parent="maps/Wild-0" index="0"]
+shape = SubResource( 70 )
+
+[node name="Wild-0Pos" type="Position2D" parent="maps"]
+pause_mode = 1
+position = Vector2( 555, 160 )
+
+[node name="Land" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="dialog_areas" type="Node2D" parent="."]
+pause_mode = 1
+
+[node name="YSort" type="YSort" parent="."]
+pause_mode = 1
+
+[node name="MovingEntity" type="YSort" parent="YSort"]
+
+[node name="player" parent="YSort/MovingEntity" instance=ExtResource( 7 )]
+
+[node name="AnimationTree" parent="YSort/MovingEntity/player" index="3"]
+tree_root = SubResource( 89 )
+
+[node name="Camera2D" parent="YSort/MovingEntity/player" index="6"]
+limit_left = -3783
+limit_top = -2267
+limit_right = 3702
+limit_bottom = 1497
+
+[node name="NPC" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
+position = Vector2( -2648, 262 )
+MAX_SPEED = 0
+NPC_IS_STATIC = true
+
+[node name="AnimationTree" parent="YSort/MovingEntity/NPC" index="2"]
+parameters/playback = SubResource( 69 )
+
+[node name="CollisionShape2D" parent="YSort/MovingEntity/NPC" index="3"]
+visible = false
+
+[node name="DetectPress" parent="YSort/MovingEntity/NPC" index="4"]
+dialog_key = "Interact"
+dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
+
+[node name="NPC2" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
+position = Vector2( -888, 502 )
+NPC_IS_STATIC = true
+
+[node name="AnimationPlayer" parent="YSort/MovingEntity/NPC2" index="1"]
+anims/Idle_down = SubResource( 71 )
+anims/Idle_left = SubResource( 72 )
+anims/Idle_right = SubResource( 73 )
+anims/Idle_up = SubResource( 74 )
+anims/down = SubResource( 75 )
+anims/left = SubResource( 76 )
+anims/right = SubResource( 77 )
+anims/up = SubResource( 78 )
+
+[node name="AnimationTree" parent="YSort/MovingEntity/NPC2" index="2"]
+parameters/playback = SubResource( 79 )
+
+[node name="CollisionShape2D" parent="YSort/MovingEntity/NPC2" index="3"]
+visible = false
+
+[node name="DetectPress" parent="YSort/MovingEntity/NPC2" index="4"]
+dialog_key = "Interact"
+dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
+
+[node name="NPC3" parent="YSort/MovingEntity" instance=ExtResource( 5 )]
+position = Vector2( -616, 262 )
+NPC_IS_STATIC = true
+
+[node name="AnimationPlayer" parent="YSort/MovingEntity/NPC3" index="1"]
+anims/Idle_down = SubResource( 80 )
+anims/Idle_left = SubResource( 81 )
+anims/Idle_right = SubResource( 82 )
+anims/Idle_up = SubResource( 83 )
+anims/down = SubResource( 84 )
+anims/left = SubResource( 85 )
+anims/right = SubResource( 86 )
+anims/up = SubResource( 87 )
+
+[node name="AnimationTree" parent="YSort/MovingEntity/NPC3" index="2"]
+parameters/playback = SubResource( 88 )
+
+[node name="CollisionShape2D" parent="YSort/MovingEntity/NPC3" index="3"]
+visible = false
+
+[node name="DetectPress" parent="YSort/MovingEntity/NPC3" index="4"]
+dialog_key = "Interact"
+dialogue_file = "res://dialogue/Hscenes/Eri_Maya.tres"
+
+[node name="青行燈" parent="YSort/MovingEntity" instance=ExtResource( 11 )]
+light_mask = 16
+position = Vector2( 2936, 454 )
+
+[node name="Slime" parent="YSort/MovingEntity" instance=ExtResource( 8 )]
+position = Vector2( -1424, 622 )
+
+[node name="StaticEntity" type="YSort" parent="YSort"]
+
+[node name="Start0" type="Sprite" parent="YSort/StaticEntity"]
+position = Vector2( -232, -226 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="BaseCollision" type="StaticBody2D" parent="YSort/StaticEntity"]
+visible = false
+collision_layer = 16
+
+[node name="RiverSide_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 294 )
+build_mode = 1
+polygon = PoolVector2Array( -4792, 968, -3056, 968, -3040, 952, -3040, 936, -2960, 936, -2848, 824, -2848, 776, -2832, 776, -2816, 760, -2808, 728, -2808, 856, -2816, 864, -2840, 880, -2840, 920, -2872, 944, -2872, 952, -1912, 936, -1752, 856, -1592, 824, -1400, 792, -1240, 792, -1240, 720, -1336, 720, -1368, 696, -1368, 664, -1208, 600, -1192, 600, -1192, 608, -1160, 616, -1136, 616, -1136, 632, -1072, 680, -1008, 680, -1008, 720, -976, 744, -880, 744, -880, 752, -856, 776, -784, 776, -768, 760, -768, 744, -696, 744, -576, 624, -576, 584, -560, 584, -544, 568, -544, 552, -496, 552, -472, 536, -472, 696, -504, 720, -504, 760, -536, 784, -536, 792, -568, 816, -600, 816, -600, 824, -632, 848, -632, 856, -664, 880, -664, 920, -248, 888, -56, 856, 104, 824, 200, 792, 392, 744, 552, 792, 552, 752, 520, 728, 520, 720, 488, 720, 424, 656, 424, 624, 392, 600, 392, 592, 360, 568, 360, 560, 328, 536, 328, 528, 264, 528, 232, 504, 232, 464, 232, 440, 240, 464, 264, 488, 336, 488, 336, 504, 352, 520, 392, 520, 424, 552, 456, 552, 488, 584, 520, 584, 624, 680, 656, 680, 656, 696, 712, 744, 944, 744, 960, 728, 960, 712, 1040, 712, 1056, 696, 1056, 680, 1104, 680, 1120, 664, 1120, 648, 1136, 648, 1152, 632, 1152, 616, 1200, 616, 1216, 600, 1336, 600, 1352, 616, 1488, 616, 1504, 600, 1504, 584, 1616, 584, 1632, 568, 1632, 552, 1808, 552, 1824, 536, 1824, 520, 2216, 520, 2216, 432, 2240, 456, 2352, 456, 2384, 488, 2512, 488, 2512, 496, 2544, 520, 2664, 520, 2664, 1216, -4792, 1208 )
+
+[node name="RiverSide_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 294 )
+build_mode = 1
+polygon = PoolVector2Array( 1216, 424, 1232, 424, 1248, 408, 1248, 376, 1216, 352, 1216, 320, 1184, 320, 1184, 280, 1184, 176, 1160, 120, 1160, -120, 1184, -144, 1184, -248, 1200, -248, 1216, -264, 1216, -408, 1232, -408, 1248, -424, 1248, -456, 1256, -456, 1256, -584, 1320, -584, 1320, -456, 1328, -456, 1328, -376, 1312, -376, 1296, -360, 1296, -216, 1280, -216, 1264, -200, 1264, -128, 1232, -104, 1232, 176, 1248, 200, 1264, 200, 1264, 240, 1280, 264, 1296, 264, 1296, 312, 1296, 344, 1328, 360, 1328, 536, 1216, 536 )
+
+[node name="Town_CliffSide_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 294 )
+build_mode = 1
+polygon = PoolVector2Array( -2840, -296, -2808, -312, -2768, -312, -2752, -328, -2744, -344, -2672, -344, -2656, -360, -2648, -376, -2544, -376, -2528, -392, -2520, -408, -2456, -408, -2136, -408, -2128, -392, -2104, -376, -2072, -376, -2072, -240, -2104, -240, -2136, -272, -2456, -272, -2456, -264, -2488, -240, -2520, -240, -2520, -232, -2552, -208, -2616, -208 )
+
+[node name="Town_CliffSide_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( -1176, 520, -1304, 520, -1328, 496, -1328, 488, -1400, 488, -1424, 464, -1424, 424, -1432, 424, -1456, 400, -1456, 392, -1464, 392, -1552, 304, -1552, 241, -1568, 233, -1584, 208, -1584, 145, -1600, 137, -1616, 112, -1616, 48, -1632, 41, -1648, 16, -1648, -16, -1768, -128, -1768, -136, -1744, -159, -1736, -159, -1736, -167, -1736, -207, -1712, -231, -1712, -279, -1752, -279, -1776, -295, -1784, -311, -1816, -311, -1840, -327, -1848, -343, -2040, -343, -2040, -239, -1848, -239, -1816, -207, -1784, -207, -1744, -167, -1752, -167, -1776, -144, -1776, -128, -1776, -40, -1720, 48, -1688, 48, -1688, 80, -1656, 80, -1656, 144, -1624, 145, -1624, 241, -1592, 240, -1592, 368, -1560, 464, -1496, 528, -1432, 560, -1400, 600, -1352, 600, -1176, 536 )
+
+[node name="Town_CliffSide_03" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( -1000, -175, -1008, -151, -1008, 225, -928, 305, -688, 305, -664, 281, -664, 273, -472, 273, -472, 241, -408, 241, -408, 209, -312, 209, -280, 185, -280, 145, -248, 121, -248, 81, -216, 57, -216, -47, -240, -23, -256, -23, -256, 25, -272, 41, -288, 41, -288, 89, -304, 105, -416, 105, -416, 121, -432, 137, -480, 137, -480, 153, -496, 169, -672, 169, -672, 185, -688, 201, -912, 201, -1000, 129 )
+
+[node name="Forrest_Trees_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( -216, 121, -184, 121, -184, 153, -152, 153, -152, 121, -120, 121, -120, 89, -88, 89, -80, 41, -56, 25, -48, 1, -24, -7, -16, -31, 8, -39, 16, -63, 72, -71, 80, -95, 104, -103, 112, -159, 232, -167, 240, -191, 320, -191, 328, -167, 416, -159, 424, -135, 480, -127, 488, -103, 520, -95, 544, -79, 560, -79, 576, -71, 584, -39, 608, -15, 640, -7, 648, 25, 672, 49, 704, 57, 712, 89, 736, 113, 768, 113, 776, 121, 1008, 121, 1056, 129, 1064, 153, 1088, 161, 1096, 185, 1120, 193, 1128, 249, 1160, 281, 1184, 281, 1272, -455, 1200, -559, 768, -407, 456, -471, 168, -455, -88, -359, -96, -335, -120, -327, -128, -303, -152, -295, -160, -271, -184, -263, -192, -239, -216, -231, -224, -175, -248, -167, -248, -71, -224, -63, -216, -39 )
+
+[node name="Forrest_Trees_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( 104, 313, 104, 89, 128, 81, 136, 25, 160, 17, 168, -7, 224, -15, 232, -39, 360, -39, 368, -15, 424, -7, 432, 17, 456, 25, 464, 49, 488, 57, 496, 145, 520, 153, 528, 177, 552, 185, 560, 209, 616, 217, 624, 241, 680, 249, 688, 273, 712, 281, 720, 305, 744, 313, 752, 337, 776, 345, 784, 369, 808, 377, 816, 433, 840, 441, 848, 465, 872, 473, 880, 497, 936, 505, 944, 529, 968, 537, 968, 601, 944, 609, 936, 697, 912, 705, 904, 729, 888, 745, 712, 745, 264, 489, 240, 465, 232, 441, 224, 417, 200, 409, 192, 385, 168, 377, 160, 353, 136, 345, 128, 321 )
+
+[node name="Forrest_Trees_03" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( 1232, 81, 1480, -39, 1640, 121, 1640, 153, 1584, 161, 1576, 185, 1552, 193, 1544, 249, 1488, 257, 1480, 281, 1448, 281, 1416, 281, 1392, 289, 1384, 345, 1352, 345, 1344, 321, 1296, 321, 1232, 177 )
+
+[node name="Forrest_Trees_04" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( 1768, 89, 1760, 65, 1704, 57, 1696, 33, 1640, 25, 1520, -95, 1464, -103, 1448, -135, 1448, -455, 2024, -455, 2664, -455, 2664, 521, 2544, 521, 2384, 489, 2248, 457, 2248, 273, 2216, 241, 2216, 137, 2096, 49, 2024, -23, 2024, 81, 2008, 81, 1984, 81, 1968, 65, 1936, 65, 1928, 89 )
+
+[node name="Mountain_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( -64, -391, 40, -551, 232, -711, 424, -967, 480, -1103, 424, -1255, 232, -1415, 232, -1575, 264, -1703, 328, -1799, 808, -1975, 1600, -1927, 2448, -415, 1416, -455, 1416, -519, 1352, -519, 1352, -455 )
+
+[node name="Outskirts_CliffSide_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 294 )
+build_mode = 1
+polygon = PoolVector2Array( -4664, 392, -4408, 392, -4352, 336, -4352, 272, -4320, 240, -4320, 144, -4320, -120, -4288, -144, -4288, -192, -4240, -192, -4192, -240, -4192, -248, -3760, -248, -3760, -240, -3736, -216, -3664, -216, -3600, -144, -3600, -48, -3600, 16, -3584, 40, -3568, 40, -3568, 144, -3568, 208, -3544, 232, -3536, 232, -3536, 272, -3512, 296, -3504, 296, -3504, 336, -3472, 360, -3440, 360, -3440, 368, -3416, 392, -2896, 392, -2848, 344, -2848.44, 311.768, -2824, 280, -2824, -7.25226, -2824, -80, -2824, -208, -2512, -112, -2744, -112, -2744, -104, -2776, -80, -2776, -40, -2816, -8, -2816, 280, -2816, 384, -2840, 408, -2840, 440, -2896, 496, -3416, 496, -3448, 472, -3448, 464, -3480, 464, -3512, 440, -3512, 400, -3544, 376, -3544, 336, -3576, 312, -3576, 144, -3608, 120, -3608, 16, -3640, -8, -3640, -48, -3672, -80, -3736, -80, -3768, -104, -3768, -112, -4184, -112, -4184, -104, -4240, -48, -4280, -48, -4280, 120, -4312, 144, -4312, 240, -4312, 408, -4344, 432, -4344, 472, -4400, 528, -4664, 528 )
+
+[node name="Outskirts_CliffSide_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1040, 293 )
+build_mode = 1
+polygon = PoolVector2Array( 2024, -71, 2024, 81, 2088, 145, 2120, 145, 2120, 153, 2152, 177, 2152, 185, 2184, 209, 2184, 217, 2216, 241, 2216, 137, 2128, 49, 2096, 49, 2032, -15, 2032, -71 )
+
+[node name="Building_01" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1033.6, 270 )
+build_mode = 1
+polygon = PoolVector2Array( -2288, -48, -2640, -48, -2640, 272, -2480, 272, -2480, 144, -2288, 144 )
+
+[node name="Building_02" type="CollisionPolygon2D" parent="YSort/StaticEntity/BaseCollision"]
+position = Vector2( 1033.6, 270 )
+build_mode = 1
+polygon = PoolVector2Array( -2128, 208, -2128, -16, -1840, -16, -1712, -16, -1712, 208 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 9 )]
+
+[node name="UI_Container" parent="CanvasLayer" index="0"]
+Pause_Menu = "res://Asset/made asset/Menu_UI/Layouts/PauseMenu_UI.tscn"
+Inventory_Menu = "res://Asset/Items/InventoryController_V2_I.tscn"
+
+[node name="BGMPlayer" parent="CanvasLayer/AudioController" index="0"]
+stream = ExtResource( 4 )
+volume_db = -10.0
+
+[node name="SaveLoadDemo" type="Node2D" parent="."]
+position = Vector2( 0, -8 )
+script = ExtResource( 2 )
+ui_save_panel = NodePath("UI for SL and Inventory demo/UISavePanel")
+
+[node name="UI for SL and Inventory demo" type="CanvasLayer" parent="SaveLoadDemo"]
+
+[node name="UISavePanel" parent="SaveLoadDemo/UI for SL and Inventory demo" instance=ExtResource( 10 )]
+margin_right = 0.0
+margin_bottom = 0.0
+rect_scale = Vector2( 0.5, 0.5 )
+
+[editable path="maps/Wild-0"]
+[editable path="YSort/MovingEntity/player"]
+[editable path="YSort/MovingEntity/NPC"]
+[editable path="YSort/MovingEntity/NPC/DetectPress"]
+[editable path="YSort/MovingEntity/NPC/PlayerDetectionZone"]
+[editable path="YSort/MovingEntity/NPC2"]
+[editable path="YSort/MovingEntity/NPC2/DetectPress"]
+[editable path="YSort/MovingEntity/NPC2/PlayerDetectionZone"]
+[editable path="YSort/MovingEntity/NPC3"]
+[editable path="YSort/MovingEntity/NPC3/DetectPress"]
+[editable path="YSort/MovingEntity/NPC3/PlayerDetectionZone"]
+[editable path="CanvasLayer"]

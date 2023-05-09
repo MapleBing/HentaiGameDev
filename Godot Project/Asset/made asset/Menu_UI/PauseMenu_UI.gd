@@ -16,12 +16,12 @@ func _input(event):
 		resetMenu()
 	elif Input.is_action_just_pressed("Toggle_Inventory"):
 		_on_resume_pressed()
-	if Input.is_action_just_pressed("Tab_Right"):
+	if Input.is_action_just_pressed("ui_down"):
 		for node in MenuList.get_children():
 			if node.active == true:
 				node.ShiftSelection(1)
 				break
-	if Input.is_action_just_pressed("Tab_Left"):
+	if Input.is_action_just_pressed("ui_up"):
 		for node in MenuList.get_children():
 			if node.active == true:
 				node.ShiftSelection(-1)

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Map_land/UI_Container_UI.gd" type="Script" id=2]
-[ext_resource path="res://Asset/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=4]
-[ext_resource path="res://Map_land/AudioController.gd" type="Script" id=5]
+[ext_resource path="res://Asset/Sound/ExternalSongs/02TownBGM-harp.wav" type="AudioStream" id=4]
+[ext_resource path="res://Asset/Sound/AudioController.gd" type="Script" id=5]
 [ext_resource path="res://addons/h_scene_controller.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Asset/HScenes/HSceneManager.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Asset/Art/HScenes/HScene_Manager_Sc.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Asset/Items/InventoryController_V2_I.tscn" type="PackedScene" id=10]
 [ext_resource path="res://addons/minigame_manager.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Map_land/CanvasLayer.gd" type="Script" id=12]

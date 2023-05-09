@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=2]
+
+[ext_resource path="res://Asset/Art/character/0_Source/Eri_Cutout_Src.png" type="Texture" id=1]
+
+[resource]
+atlas = ExtResource( 1 )
+region = Rect2( 65.773, -8.164, 432.045, 1137.88 )
+margin = Rect2( 0, 254.032, 0, 0 )
