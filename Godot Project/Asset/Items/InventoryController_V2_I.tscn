@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Asset/Items/ItemInfo.gd" type="Script" id=1]
 [ext_resource path="res://addons/dialogue_manager/example_balloon/Open_Sans/OpenSans-Regular.ttf" type="DynamicFontData" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Asset/Items/ItemList_I.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/Items/Item_Resources/00_Test_I.tres" type="Resource" id=6]
 [ext_resource path="res://Asset/Items/InventoryController_V2_I.gd" type="Script" id=7]
+[ext_resource path="res://Asset/Items/Icons/casino_chips_I.tres" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 4
@@ -80,8 +81,12 @@ script = ExtResource( 1 )
 ItemResorce = ExtResource( 6 )
 
 [node name="ItemPortrait" type="TextureRect" parent="ItemInfo"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_left = 254.0
+margin_top = 40.0
+margin_right = 294.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 8 )
 
 [node name="ItemName" type="Label" parent="ItemInfo"]
 margin_left = 241.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spray_I.png-b631cfa596eb2c9bcc2490125c1cce44.stex"
+path="res://.import/eri_key_Sk.png-3e2fa64100133c995feb107fcec8f74b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/Spray_I.png"
-dest_files=[ "res://.import/Spray_I.png-b631cfa596eb2c9bcc2490125c1cce44.stex" ]
+source_file="res://Asset/Skills/eri_key_Sk.png"
+dest_files=[ "res://.import/eri_key_Sk.png-3e2fa64100133c995feb107fcec8f74b.stex" ]
 
 [params]
 

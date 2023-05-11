@@ -1,10 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Asset/Items/Icons/Spray_I.png" type="Texture" id=1]
+[ext_resource path="res://Asset/spray_I.png" type="Texture" id=1]
 [ext_resource path="res://Asset/made asset/Menu_UI/List_Resources/MenuEffect_Tint_UI.gd" type="Script" id=2]
 [ext_resource path="res://Asset/made asset/Menu_UI/List_Resources/Prefabs/Select_Icon_UI.gd" type="Script" id=3]
 [ext_resource path="res://SelectionCursor.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Asset/Items/MenuIcon_UI.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="CanvasItemMaterial" id=1]
 blend_mode = 1

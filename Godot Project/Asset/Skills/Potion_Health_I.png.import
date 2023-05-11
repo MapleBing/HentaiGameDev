@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/eri_key_I.png-c251123edf4a281614b6c1138df9b9ab.stex"
+path="res://.import/Potion_Health_I.png-4d2b12e8b36444f8d0d5dde97314e970.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/eri_key_I.png"
-dest_files=[ "res://.import/eri_key_I.png-c251123edf4a281614b6c1138df9b9ab.stex" ]
+source_file="res://Asset/Skills/Potion_Health_I.png"
+dest_files=[ "res://.import/Potion_Health_I.png-4d2b12e8b36444f8d0d5dde97314e970.stex" ]
 
 [params]
 

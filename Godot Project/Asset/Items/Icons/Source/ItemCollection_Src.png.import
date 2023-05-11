@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/casino_pass_I.png-2b5181d3bcfe5346fbe0c11481d93d1b.stex"
+path="res://.import/ItemCollection_Src.png-b14b16c5309ea5f9ea2c121f2f3b47d4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/casino_pass_I.png"
-dest_files=[ "res://.import/casino_pass_I.png-2b5181d3bcfe5346fbe0c11481d93d1b.stex" ]
+source_file="res://Asset/Items/Icons/Source/ItemCollection_Src.png"
+dest_files=[ "res://.import/ItemCollection_Src.png-b14b16c5309ea5f9ea2c121f2f3b47d4.stex" ]
 
 [params]
 

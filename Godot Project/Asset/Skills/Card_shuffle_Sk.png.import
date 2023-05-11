@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/maya_key_I.png-4cb4f8819a82cc189d1e2b851aab4733.stex"
+path="res://.import/Card_shuffle_Sk.png-9090f106fafd6ecad6271733478b44c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/maya_key_I.png"
-dest_files=[ "res://.import/maya_key_I.png-4cb4f8819a82cc189d1e2b851aab4733.stex" ]
+source_file="res://Asset/Skills/Card_shuffle_Sk.png"
+dest_files=[ "res://.import/Card_shuffle_Sk.png-9090f106fafd6ecad6271733478b44c7.stex" ]
 
 [params]
 

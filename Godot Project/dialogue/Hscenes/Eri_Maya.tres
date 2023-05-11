@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource( 1 )
-resource_version = 71
+resource_version = 74
 syntax_version = 2
 raw_text = "~ Interact
 do portraitNone()
@@ -73,7 +73,7 @@ Maya: Let me know when you're ready.
 do portraitLeft()
 - Erie: Could you check this out?
 	do portraitRight()
-	do checkItem(1, 1)
+	do checkItem(11, 1) #maya key
 	if result
 		maya: oh is that for me!
 	elif result == false
@@ -750,7 +750,7 @@ lines = {
 "type": "function",
 "value": [ [ {
 "type": "number",
-"value": 1
+"value": 11
 } ], [ {
 "type": "number",
 "value": 1

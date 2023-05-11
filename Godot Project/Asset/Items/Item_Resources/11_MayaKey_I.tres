@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Items/Icons/key_maya_I.tres" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+id = 11
+name = "Maya's Key"
+texture = ExtResource( 2 )
+quantity = 0
+hover_text = "Maya's Key is a device created by the ancient Mayan civilization. It allows its user to open any lock with just one touch, but it can also be used as a weapon against enemies. The key was lost during the Spanish conquest of Mexico and has been sought after ever since. In modern times, the key is kept in the Museum of Antiquities in Mexico City."
+type = 0

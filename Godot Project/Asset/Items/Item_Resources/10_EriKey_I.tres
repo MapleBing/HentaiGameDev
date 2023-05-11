@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Items/Icons/key_eri_I.tres" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+id = 10
+name = "Eri's Key"
+texture = ExtResource( 2 )
+quantity = 0
+hover_text = "The key to Eri's house, which unlocks the door to her bedroom, has been lost. It was last seen on the night that Eri disappeared. The key was made from a piece of wood found in the forest near their house, and it has a carving of a cat on one side. A similar key can be found at the entrance to the forest where Eri vanished."
+type = 0

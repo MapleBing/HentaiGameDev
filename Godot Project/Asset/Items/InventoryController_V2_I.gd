@@ -19,21 +19,22 @@ var testAsset = preload("res://Asset/Items/Item_Resources/00_Test_I.tres")
 func _ready():
 	#Initiallize objects in stored Inventory
 	getAllItems()
-	DisplayItemData(getActiveItem())
-	#Change current menu
-	SignalBus.connect("inventoryMenuShiftRight", self, "leftInventoryMenuShift")
-	SignalBus.connect("inventoryMenuShiftLeft", self, "rightInventoryMenuShift")
-	#Move Cursor
-	SignalBus.connect("inventorySlotShift", self, "shiftInventorySlot")
+	
 	#interact with item
 	SignalBus.connect("inventoryMenuConfirm", self, "confirmInventoryMenu")
 	#check for item
 	SignalBus.connect("check_for_item", self, "checkForItem")
 	
 func _input(event):
+	#if the inventory is visiable 
 	if self.visible == true:
+		#the active node will shift the selection left or right
 		if Input.is_action_just_pressed("Tab_Right"):
 			for node in SectionMenu.get_children():
+				if node.active == true:
+					node.ShiftSelection(1)
+					break
+			for node in ItemDetails.get_children():
 				if node.active == true:
 					node.ShiftSelection(1)
 					return
@@ -41,101 +42,93 @@ func _input(event):
 			for node in SectionMenu.get_children():
 				if node.active == true:
 					node.ShiftSelection(-1)
+					break
+			for node in ItemDetails.get_children():
+				print(node.name)
+				if node.active == true:
+					print("working")
+					node.ShiftSelection(-1)
 					return
 					
 		var amount = 0
 		if Input.is_action_just_pressed("Move_Up"):
 			amount = 1
-			controlInventoryListRow(amount, keyObject)
-			controlInventoryListRow(amount, consumeableObject)
-			controlInventoryListRow(amount, equipObject)
+			for node in ItemDetails.get_children():
+				if node.active == true:
+					controlInventoryListRow(amount, node)
 			return
 			
 		if Input.is_action_just_pressed("Move_Down"):
 			amount = -1
-			controlInventoryListRow(amount, keyObject)
-			controlInventoryListRow(amount, consumeableObject)
-			controlInventoryListRow(amount, equipObject)
+			for node in ItemDetails.get_children():
+				if node.active == true:
+					controlInventoryListRow(amount, node)
 			return
 			
 		if Input.is_action_just_pressed("Move_Right"):
 			amount = 1
-			controlInventoryList(amount, keyObject)
-			controlInventoryList(amount, consumeableObject)
-			controlInventoryList(amount, equipObject)
+			var node = getCurrentItem()
+			controlInventoryList(amount, node)
 			return
 			
 		if Input.is_action_just_pressed("Move_Left"):
 			amount = -1
-			controlInventoryList(amount, keyObject)
-			controlInventoryList(amount, consumeableObject)
-			controlInventoryList(amount, equipObject)
+			var node = getCurrentItem()
+			controlInventoryList(amount, node)
 			return
-			
+		DisplayItemData(getActiveItem())
 func getAllItems():
 	for itemObj in ItemBus.getAllItems():
 		addItem(itemObj)
 		
 func getActiveItem():
 	var activeItem = null
-	activeItem = getCurrentItem(getCurrentSection())
+	activeItem = getCurrentItem()
 	#if activeItem != null:
 		#return activeItem
-	return testAsset
-func getCurrentItem (section = null):
+	return activeItem
+func getCurrentItem (section = getCurrentSection()):
 	if section.visible == true:
-		for node in section.get_children():
-			if node.get_child(0).active == true:
+		for node in section.get_child(0).get_children():
+			if node.active == true:
 				return node 
 func getCurrentSection():
 	for node in ItemDetails.get_children():
-		if node.get_child(0).get_child(0).active == true:
+		if node.active == true:
 			return node 
 			
 func controlInventoryList(x = 0, section = null):
-	getCurrentItem(section).ShiftSelection(x)
+	getCurrentItem().ShiftSelection(x)
 
 func controlInventoryListRow(x = 0, section = null):
-	getCurrentItem(section).ShiftSelectionRow(x)
+	getCurrentItem().ShiftSelectionRow(x)
 	
 func addItem(itemObj):
 	var currentSlot: Node = itemSlot.instance()
 	currentSlot.find_node("ItemSprite").currentItem = itemObj
-	print(currentSlot.name)
+	currentSlot.find_node("ItemSprite").updateItem()
+	
 	match itemObj.type:
 			item.ItemTypes.EQUIPABLE:
 				equipObject.add_child(currentSlot)
 			item.ItemTypes.CONSUMEABLE:
 				consumeableObject.add_child(currentSlot)
 			item.ItemTypes.KEY:
-				consumeableObject.add_child(currentSlot)
-	
-func checkForItem(itemID = 0,quantity = 0):
-	var result  = false
-	if runThroughList(equipObject, itemID, quantity):
-		result = true
-	if runThroughList(keyObject, itemID, quantity):
-		result = true
-	if runThroughList(consumeableObject, itemID, quantity):
-		result = true
-	SignalBus.emit_signal("get_item_result", result)
+				keyObject.add_child(currentSlot)
 
-func runThroughList(itemSection, itemID = 0, quantity = 0):
-	#get itemSection.
+func checkForItem(itemID = 0, quantity = 0):
+	var result = false
 	var currentItem = false
-	itemSection.get_child_count()
-	
-	for object in itemSection.get_children():
-		currentItem = object.find_node("ItemSprite").currentItem
-		print(itemID)
-		print(currentItem.getQuantity())
-		if currentItem.getID() == itemID:
-			if currentItem.getQuantity() >= quantity:
-				return true
-	return false
+	for section in ItemDetails.get_children():
+		for object in section.get_child(0).get_children():
+			currentItem = object.find_node("ItemSprite").currentItem
+			if currentItem.getID() == itemID:
+				if currentItem.getQuantity() >= quantity:
+					result = true
+	SignalBus.emit_signal("get_item_result", result)
 	
 func DisplayItemData(node = null):
-	ItemInfo.ItemResorce = testAsset
+	ItemInfo.ItemResorce = node.find_node("ItemSprite").currentItem
 	ItemInfo.DisplayItemData()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

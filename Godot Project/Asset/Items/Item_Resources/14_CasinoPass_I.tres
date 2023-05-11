@@ -1,13 +1,13 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Items/Icons/potion_health_I.tres" type="Texture" id=2]
+[ext_resource path="res://Asset/Items/Icons/casino_pass_I.tres" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-id = 22
+id = 14
 name = ""
 texture = ExtResource( 2 )
 quantity = 0
 hover_text = ""
-type = 1
+type = 0

@@ -1,11 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=2]
+[gd_resource type="Resource" load_steps=3 format=2]
 
+[ext_resource path="res://Asset/Items/Icons/potion_magic_I.tres" type="Texture" id=1]
 [ext_resource path="res://Asset/Items/Scripts/Item_I.gd" type="Script" id=2]
 
 [resource]
 script = ExtResource( 2 )
 id = 0
 name = ""
+texture = ExtResource( 1 )
 quantity = 0
 hover_text = ""
 type = 1

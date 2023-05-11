@@ -9,7 +9,7 @@ func _ready():
 	SignalBus.connect("get_item_result", self, "getItemResult")
 	
 func checkItem(itemID, quantity):
-	SignalBus.emit_signal("check_for_item",itemID, quantity)
+	SignalBus.emit_signal("check_for_item", itemID, quantity)
 	return result
 
 func getItemResult(Result = false):

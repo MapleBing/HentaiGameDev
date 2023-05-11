@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Card_shuffle_I.png-1db30e61a1e114bb7433a750fda80d43.stex"
+path="res://.import/casino_pass_Sk.png-331c45fe0ed6d38725e83ec58668cad9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/Card_shuffle_I.png"
-dest_files=[ "res://.import/Card_shuffle_I.png-1db30e61a1e114bb7433a750fda80d43.stex" ]
+source_file="res://Asset/Skills/casino_pass_Sk.png"
+dest_files=[ "res://.import/casino_pass_Sk.png-331c45fe0ed6d38725e83ec58668cad9.stex" ]
 
 [params]
 

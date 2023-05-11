@@ -6,11 +6,8 @@ extends TextureRect
 var currentItem = item.new()
 
 # Called when the node enters the scene tree for the first time.
-func setUpItemSprite(itemId = 0, quantity = 1) -> void:
-	currentItem.setUpItem(itemId,quantity)
-	set_texture(currentItem.getTexture())
-	get_child(0).set_text(str(quantity))
-	pass
+func updateItem():
+	texture = currentItem.texture
 	
 func getID() -> int:
 	return currentItem.getID()

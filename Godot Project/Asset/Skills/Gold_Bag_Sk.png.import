@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Potion_Health_I.png-1b7ab745d67d49943e664922ecde7818.stex"
+path="res://.import/Gold_Bag_Sk.png-225e5506ea00d1d8c79a74ef6822d4cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Items/Icons/Potion_Health_I.png"
-dest_files=[ "res://.import/Potion_Health_I.png-1b7ab745d67d49943e664922ecde7818.stex" ]
+source_file="res://Asset/Skills/Gold_Bag_Sk.png"
+dest_files=[ "res://.import/Gold_Bag_Sk.png-225e5506ea00d1d8c79a74ef6822d4cd.stex" ]
 
 [params]
 
