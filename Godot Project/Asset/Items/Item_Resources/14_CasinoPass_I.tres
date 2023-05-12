@@ -6,8 +6,8 @@
 [resource]
 script = ExtResource( 1 )
 id = 14
-name = ""
+name = "Casino Pass"
 texture = ExtResource( 2 )
-quantity = 0
-hover_text = ""
+stackable = false
+hover_text = "The \"Casino Pass\" is a special item that can be used to enter any casino in the world. "
 type = 0

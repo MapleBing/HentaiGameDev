@@ -8,6 +8,6 @@ script = ExtResource( 1 )
 id = 0
 name = "Test Asset 0"
 texture = ExtResource( 2 )
-quantity = 0
+stackable = false
 hover_text = "Asset for testing purposes"
 type = 2

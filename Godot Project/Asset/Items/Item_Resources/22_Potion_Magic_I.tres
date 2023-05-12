@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource( 2 )
-id = 0
-name = ""
+id = 22
+name = "Mana Potion"
 texture = ExtResource( 1 )
-quantity = 0
-hover_text = ""
+stackable = true
+hover_text = "Magic potions are liquid substances that can be used to replenish mana by 3 bars."
 type = 1

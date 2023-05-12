@@ -16,14 +16,24 @@ onready var ItemInfo = $ItemInfo
 #	Refers to whether this current menu is active (connected: )
 onready var active = false
 var testAsset = preload("res://Asset/Items/Item_Resources/00_Test_I.tres")
+var EquipIcon = preload("res://Asset/Items/Item_Resources/00_Test_I.tres")
+var ConsumeableIcon = preload("res://Asset/Items/Item_Resources/21_Potion_Health_I.tres")
+var KeyIcon = preload("res://Asset/Items/Item_Resources/10_EriKey_I.tres")
 func _ready():
 	#Initiallize objects in stored Inventory
 	getAllItems()
-	
+	updateIcon(SectionMenu.get_child(0), EquipIcon)
+	updateIcon(SectionMenu.get_child(1), ConsumeableIcon)
+	updateIcon(SectionMenu.get_child(2), KeyIcon)
 	#interact with item
 	SignalBus.connect("inventoryMenuConfirm", self, "confirmInventoryMenu")
 	#check for item
 	SignalBus.connect("check_for_item", self, "checkForItem")
+
+func updateIcon(currentSection , icon):
+	currentSection.get_child(1).currentItem = icon
+	print(icon)
+	currentSection.get_child(1).updateItem()
 	
 func _input(event):
 	#if the inventory is visiable 
@@ -122,9 +132,10 @@ func checkForItem(itemID = 0, quantity = 0):
 	for section in ItemDetails.get_children():
 		for object in section.get_child(0).get_children():
 			currentItem = object.find_node("ItemSprite").currentItem
-			if currentItem.getID() == itemID:
-				if currentItem.getQuantity() >= quantity:
+			if currentItem.id == itemID:
+				if object.find_node("ItemSprite").quantity >= quantity or currentItem.stackable == false:
 					result = true
+					break
 	SignalBus.emit_signal("get_item_result", result)
 	
 func DisplayItemData(node = null):

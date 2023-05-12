@@ -5,9 +5,9 @@
 
 [resource]
 script = ExtResource( 1 )
-id = 22
-name = ""
+id = 21
+name = "Health Potion"
 texture = ExtResource( 2 )
-quantity = 0
-hover_text = ""
+stackable = true
+hover_text = "Health Potions are a type of medicine that can be used to restore your health by 3 bars."
 type = 1
